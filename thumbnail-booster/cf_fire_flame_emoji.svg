@@ -1,0 +1,15 @@
+<svg   <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>Fire Flame Emoji Sticker</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-VEC-2026-007</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <path d="M 400 80 C 480 260 620 320 620 500 C 620 660 520 740 400 740 C 280 740 180 660 180 500 C 180 320 320 260 400 80 Z" fill="#FF3300" stroke="#FFCC00" stroke-width="16"/>
+  <path d="M 400 240 C 450 360 540 400 540 520 C 540 620 480 670 400 670 C 320 670 260 620 260 520 C 260 400 350 360 400 240 Z" fill="#FF9900"/>
+  <path d="M 400 400 C 430 470 480 490 480 550 C 480 600 440 630 400 630 C 360 630 320 600 320 550 C 320 490 370 470 400 400 Z" fill="#FFEC00"/>
+</svg>

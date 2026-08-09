@@ -1,0 +1,14 @@
+<svg   <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>Fire Energy Flame Burst</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-VEC-2026-004</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <path d="M 400 100 C 450 250 550 300 550 450 C 550 600 450 700 400 700 C 350 700 250 600 250 450 C 250 300 350 250 400 100 Z" fill="#FF3300" stroke="#FFCC00" stroke-width="14"/>
+  <path d="M 400 250 C 430 330 480 380 480 470 C 480 560 430 620 400 620 C 370 620 320 560 320 470 C 320 380 370 330 400 250 Z" fill="#FFCC00"/>
+</svg>

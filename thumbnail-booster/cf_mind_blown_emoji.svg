@@ -1,0 +1,17 @@
+<svg   <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>Mind Blown Exploding Head Emoji</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-VEC-2026-009</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <path d="M 200 240 C 250 100 550 100 600 240 Z" fill="#FF4500" stroke="#FFD700" stroke-width="14"/>
+  <circle cx="400" cy="460" r="230" fill="#FFCC00" stroke="#FFFFFF" stroke-width="16"/>
+  <ellipse cx="320" cy="420" rx="30" ry="45" fill="#000000"/>
+  <ellipse cx="480" cy="420" rx="30" ry="45" fill="#000000"/>
+  <ellipse cx="400" cy="550" rx="60" ry="80" fill="#000000"/>
+</svg>

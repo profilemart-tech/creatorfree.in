@@ -1,0 +1,14 @@
+<svg   <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>Metallic Blue Verified Tick Badge</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-VEC-2026-012</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <circle cx="400" cy="400" r="260" fill="#1DA1F2" stroke="#FFFFFF" stroke-width="16"/>
+  <path d="M 280 400 L 360 480 L 520 320" fill="none" stroke="#FFFFFF" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

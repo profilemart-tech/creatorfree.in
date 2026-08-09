@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60" fill="none">
+  <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>YouTube Creator Badge - PRO TIP</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-BDG-2026-005</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <rect x="4" y="4" width="192" height="52" rx="16" fill="#3DDC84" stroke="#FFFFFF" stroke-width="2"/>
+  <rect x="14" y="10" width="172" height="40" rx="12" fill="#0A0A0A"/>
+  <text x="100" y="36" text-anchor="middle" fill="#3DDC84" font-family="Arial" font-size="20" font-weight="900" letter-spacing="1">PRO TIP</text>
+</svg>

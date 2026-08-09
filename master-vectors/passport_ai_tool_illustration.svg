@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>AI Background Removal Passport Photo Tool Card Illustration</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-ILL-2026-001</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <!-- Card Base -->
+  <rect x="20" y="20" width="360" height="360" rx="24" fill="#141414" stroke="#3DDC84" stroke-width="2" stroke-opacity="0.3"/>
+  
+  <!-- Passport Photo Grid Overlay (A4 Print Grid Lines) -->
+  <line x1="140" y1="60" x2="140" y2="340" stroke="#3DDC84" stroke-width="1" stroke-dasharray="4,4" stroke-opacity="0.3"/>
+  <line x1="260" y1="60" x2="260" y2="340" stroke="#3DDC84" stroke-width="1" stroke-dasharray="4,4" stroke-opacity="0.3"/>
+  <line x1="60" y1="200" x2="340" y2="200" stroke="#3DDC84" stroke-width="1" stroke-dasharray="4,4" stroke-opacity="0.3"/>
+
+  <!-- Passport Photo Card 1 (Main Person Silhouette) -->
+  <rect x="80" y="80" width="110" height="130" rx="10" fill="#1E1E1E" stroke="#3DDC84" stroke-width="2"/>
+  <circle cx="135" cy="125" r="24" fill="#3DDC84" fill-opacity="0.25" stroke="#3DDC84" stroke-width="2"/>
+  <path d="M 105 185 C 105 160 120 160 135 160 C 150 160 165 160 165 185" fill="#3DDC84" fill-opacity="0.3" stroke="#3DDC84" stroke-width="2"/>
+
+  <!-- Passport Photo Card 2 -->
+  <rect x="210" y="80" width="110" height="130" rx="10" fill="#1E1E1E" stroke="#444444" stroke-width="2"/>
+  <circle cx="265" cy="125" r="24" fill="#333333"/>
+  <path d="M 235 185 C 235 160 250 160 265 160 C 280 160 295 160 295 185" fill="#333333"/>
+
+  <!-- Passport Photo Card 3 -->
+  <rect x="80" y="230" width="110" height="130" rx="10" fill="#1E1E1E" stroke="#444444" stroke-width="2"/>
+  <circle cx="135" cy="275" r="24" fill="#333333"/>
+
+  <!-- Passport Photo Card 4 -->
+  <rect x="210" y="230" width="110" height="130" rx="10" fill="#1E1E1E" stroke="#444444" stroke-width="2"/>
+
+  <!-- AI Magic Wand & Camera Frame Overlay -->
+  <circle cx="310" cy="310" r="32" fill="#3DDC84" stroke="#FFFFFF" stroke-width="2"/>
+  <path d="M 298 310 L 322 310 M 310 298 L 310 322" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round"/>
+</svg>

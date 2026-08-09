@@ -1,0 +1,15 @@
+<svg   <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>VS Battle 3D Badge</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-VEC-2026-014</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <circle cx="400" cy="400" r="260" fill="#FFD700" stroke="#FF0000" stroke-width="20"/>
+  <text x="390" y="470" text-anchor="middle" font-size="240" font-weight="900" font-family="Arial" fill="#8B0000">VS</text>
+  <text x="380" y="460" text-anchor="middle" font-size="240" font-weight="900" font-family="Arial" fill="#FFFFFF">VS</text>
+</svg>

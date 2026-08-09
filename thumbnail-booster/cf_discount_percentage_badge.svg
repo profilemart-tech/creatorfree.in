@@ -1,0 +1,14 @@
+<svg   <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>50% OFF Discount Sale Badge</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-VEC-2026-015</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <rect x="140" y="260" width="520" height="280" rx="40" ry="40" fill="#FF0055" stroke="#FFFFFF" stroke-width="16"/>
+  <text x="400" y="430" text-anchor="middle" font-size="120" font-weight="900" font-family="Arial" fill="#FFFFFF">50% OFF</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg   <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>Explosive Starburst VIRAL Tag</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-VEC-2026-003</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <polygon points="750.0,400.0 615.8,442.9 723.4,533.9 582.9,522.2 647.5,647.5 522.2,582.9 533.9,723.4 442.9,615.8 400.0,750.0 357.1,615.8 266.1,723.4 277.8,582.9 152.5,647.5 217.1,522.2 76.6,533.9 184.2,442.9 50.0,400.0 184.2,357.1 76.6,266.1 217.1,277.8 152.5,152.5 277.8,217.1 266.1,76.6 357.1,184.2 400.0,50.0 442.9,184.2 533.9,76.6 522.2,217.1 647.5,152.5 582.9,277.8 723.4,266.1 615.8,357.1" fill="#FFCC00" stroke="#FF0000" stroke-width="16"/>
+  <text x="400" y="430" text-anchor="middle" font-size="110" font-weight="bold" font-family="Arial" fill="#FF0000">VIRAL</text>
+</svg>
