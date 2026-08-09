@@ -1,0 +1,98 @@
+/* ==========================================================================
+   CreatorsFree.in - Design System & Theme Tokens (Dark & Light Modes)
+   ========================================================================== */
+
+/* Default Dark Theme Tokens */
+:root {
+    --bg-primary: #0b0f19;
+    --bg-secondary: #0f172a;
+    --bg-card: rgba(17, 24, 39, 0.8);
+    --bg-card-hover: rgba(30, 41, 59, 0.9);
+    --bg-glass: rgba(15, 23, 42, 0.85);
+    
+    --text-primary: #ffffff;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --text-heading: #f8fafc;
+    
+    --border-color: rgba(255, 255, 255, 0.1);
+    --border-accent: rgba(61, 220, 132, 0.3);
+    
+    --accent-green: #3DDC84;
+    --accent-purple: #c084fc;
+    --accent-yellow: #facc15;
+    --accent-orange: #ff6b00;
+    --accent-blue: #38bdf8;
+    --accent-red: #ff4b4b;
+
+    --shadow-card: 0 15px 35px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 25px rgba(61, 220, 132, 0.2);
+}
+
+/* Light Theme Tokens (Non-Dark Theme) */
+[data-theme="light"] {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f1f5f9;
+    --bg-glass: rgba(255, 255, 255, 0.95);
+    
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --text-heading: #020617;
+    
+    --border-color: rgba(0, 0, 0, 0.12);
+    --border-accent: rgba(61, 220, 132, 0.5);
+
+    --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-glow: 0 0 20px rgba(61, 220, 132, 0.15);
+}
+
+/* Global Theme Transitions */
+body {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.site-header, .site-footer {
+    background-color: var(--bg-secondary) !important;
+    border-color: var(--border-color) !important;
+}
+
+.tool-glass-card, .category-box, .vfx-card, .sfx-card {
+    background-color: var(--bg-card) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+.tool-glass-card:hover, .category-box:hover, .vfx-card:hover {
+    background-color: var(--bg-card-hover) !important;
+}
+
+/* Theme Toggle Button Style */
+.theme-toggle-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+[data-theme="light"] .theme-toggle-btn {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-green);
+}

@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Mobile & Tablet Responsive System - creatorsfree.in
+   ========================================================================== */
+
+/* Prevent Mobile Input Auto-Zoom & Touch Target Optimizations */
+@media (max-width: 768px) {
+    body {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    input, select, textarea, button {
+        font-size: 16px !important; /* Prevents auto-zoom on mobile safari/chrome */
+    }
+
+    .site-header {
+        padding: 8px 0 !important;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+
+    .site-header .container {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 8px !important;
+        padding: 0 12px !important;
+    }
+
+    .site-header .logo {
+        font-size: 1.2rem !important;
+    }
+
+    /* Horizontal Touch-Scrollable Navigation Pill Bar */
+    .nav-links {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px !important;
+        padding-bottom: 6px !important;
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
+    }
+
+    .nav-links a {
+        white-space: nowrap !important;
+        font-size: 0.82rem !important;
+        padding: 6px 14px !important;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 999px !important;
+        flex-shrink: 0;
+    }
+
+    /* Mobile Dropdown Fixed Sheet */
+    .dropdown-content.mobile-active {
+        display: block !important;
+        position: fixed !important;
+        top: 65px !important;
+        left: 12px !important;
+        right: 12px !important;
+        width: auto !important;
+        max-height: 75vh !important;
+        overflow-y: auto !important;
+        background: #0f172a !important;
+        border: 2px solid #fbbf24 !important;
+        border-radius: 16px !important;
+        box-shadow: 0 25px 60px rgba(0,0,0,0.95) !important;
+        z-index: 999999 !important;
+        padding: 12px 0 !important;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    /* Mobile Button Polish */
+    .btn, .btn-secondary, .btn-primary, .btn-green {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .site-footer {
+        padding: 24px 12px;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .site-header {
+        padding: 10px 0;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .site-footer {
+        padding: 30px 15px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 1200px;
+    }
+}

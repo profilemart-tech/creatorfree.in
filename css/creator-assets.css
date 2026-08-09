@@ -1,0 +1,198 @@
+/* ==========================================================================
+   Free Creator Asset Library Hub Styles - creatorsfree.in
+   ========================================================================== */
+
+:root {
+  --bg-dark: #0a0f1d;
+  --panel-bg: #111827;
+  --panel-card: #1e293b;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --primary: #38bdf8;
+  --accent-yellow: #fbbf24;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --radius-lg: 24px;
+  --radius-md: 14px;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.assets-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px 16px 80px 16px;
+}
+
+.assets-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.assets-header h1 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #ffffff 0%, #fbbf24 50%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 12px 0;
+}
+
+.assets-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Filter & Search Bar */
+.assets-filter-bar {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.assets-search-input {
+  width: 100%;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  color: #f8fafc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.assets-search-input:focus {
+  outline: none;
+  border-color: var(--accent-yellow);
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.2);
+}
+
+.assets-cats-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.assets-cat-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: #cbd5e1;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.assets-cat-btn.active {
+  background: var(--accent-yellow);
+  color: #0f172a;
+  border-color: var(--accent-yellow);
+  box-shadow: 0 6px 16px rgba(251, 191, 36, 0.3);
+}
+
+/* Asset Cards Grid */
+.assets-main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.asset-hub-card {
+  background: var(--panel-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.asset-hub-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-yellow);
+}
+
+.asset-preview-frame {
+  width: 100%;
+  height: 180px;
+  background: #0f172a;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 14px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.asset-preview-frame img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+}
+
+.asset-hub-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 6px 0;
+}
+
+.asset-hub-tag {
+  font-size: 0.78rem;
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+.asset-hub-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-asset-download {
+  flex: 1;
+  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+  color: #0f172a;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-asset-maker {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
