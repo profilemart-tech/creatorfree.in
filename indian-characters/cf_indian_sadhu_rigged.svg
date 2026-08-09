@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" fill="none">
+  <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>Indian Sadhu Baba Holy Saint 2D Character</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-CHR-2026-005</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <g id="Long_Beard">
+    <!-- Long White/Gray Beard -->
+    <path d="M 410 250 C 410 440, 590 440, 590 250 Z" fill="#E7E5E4" stroke="#1A1A1A" stroke-width="4"/>
+  </g>
+  <g id="Head_Front">
+    <circle cx="500" cy="230" r="75" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/>
+    <!-- Tripundra Bhasma -->
+    <line x1="460" y1="190" x2="540" y2="190" stroke="#E7E5E4" stroke-width="6"/>
+    <line x1="460" y1="200" x2="540" y2="200" stroke="#E7E5E4" stroke-width="6"/>
+    <circle cx="500" cy="195" r="5" fill="#DC2626"/>
+  </g>
+  <g id="Eye_Left"><ellipse cx="460" cy="225" rx="12" ry="10" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/><circle cx="460" cy="225" r="5" fill="#1A1A1A"/></g>
+  <g id="Eye_Right"><ellipse cx="540" cy="225" rx="12" ry="10" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/><circle cx="540" cy="225" r="5" fill="#1A1A1A"/></g>
+  <g id="Torso_Bhagwa">
+    <!-- Saffron Robes -->
+    <path d="M 400 320 H 600 L 630 850 H 370 Z" fill="#EA580C" stroke="#1A1A1A" stroke-width="4"/>
+    <!-- Rudraksha Mala -->
+    <circle cx="500" cy="380" r="8" fill="#78350F"/>
+    <circle cx="480" cy="400" r="8" fill="#78350F"/>
+    <circle cx="520" cy="400" r="8" fill="#78350F"/>
+  </g>
+  <g id="Arm_Upper_Left"><rect x="330" y="340" width="55" height="130" rx="20" fill="#EA580C" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Arm_Lower_Left"><rect x="325" y="450" width="45" height="120" rx="18" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Hand_Left"><circle cx="345" cy="585" r="25" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Arm_Upper_Right"><rect x="615" y="340" width="55" height="130" rx="20" fill="#EA580C" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Arm_Lower_Right"><rect x="630" y="450" width="45" height="120" rx="18" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Hand_Right"><circle cx="655" cy="585" r="25" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Foot_Left"><path d="M 420 850 H 470 V 900 Z" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Foot_Right"><path d="M 530 850 H 580 V 900 Z" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+</svg>

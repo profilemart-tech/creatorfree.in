@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>Magic Wand AI Tool Creator Icon</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-ICON-2026-005</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <path d="M 14 50 L 42 22" stroke="#3DDC84" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 42 22 L 50 14 L 38 26 Z" fill="#3DDC84" stroke="#3DDC84" stroke-width="2"/>
+  <path d="M 24 10 V 16 M 21 13 H 27 M 48 34 V 40 M 45 37 H 51 M 50 10 V 14 M 48 12 H 52" stroke="#3DDC84" stroke-width="2" stroke-linecap="round"/>
+</svg>

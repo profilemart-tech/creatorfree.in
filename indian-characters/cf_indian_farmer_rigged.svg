@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" fill="none">
+  <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>Indian Farmer 2D Character (Ramu Kaka)</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-CHR-2026-001</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <g id="Head_Back">
+    <circle cx="500" cy="250" r="90" fill="#F3D2B5"/>
+  </g>
+  <g id="Turban_Gamcha">
+    <!-- Red Gamcha / Turban -->
+    <path d="M 400 200 C 400 120, 600 120, 600 200 C 600 230, 400 230, 400 200 Z" fill="#DC2626" stroke="#1A1A1A" stroke-width="4"/>
+    <path d="M 570 200 Q 620 250 600 320" stroke="#DC2626" stroke-width="24" stroke-linecap="round"/>
+  </g>
+  <g id="Head_Front">
+    <path d="M 420 220 C 420 180, 580 180, 580 220 V 300 C 580 370, 420 370, 420 300 Z" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/>
+  </g>
+  <g id="Mustache">
+    <path d="M 440 310 Q 500 340 560 310 Q 500 325 440 310 Z" fill="#262626"/>
+  </g>
+  <g id="Eye_Left">
+    <ellipse cx="460" cy="270" rx="14" ry="18" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+    <circle cx="460" cy="270" r="8" fill="#1A1A1A"/>
+  </g>
+  <g id="Eye_Right">
+    <ellipse cx="540" cy="270" rx="14" ry="18" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+    <circle cx="540" cy="270" r="8" fill="#1A1A1A"/>
+  </g>
+  <g id="Mouth_Smile">
+    <path d="M 470 330 Q 500 355 530 330" stroke="#1A1A1A" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g id="Torso_Kurta">
+    <path d="M 410 380 H 590 L 610 650 H 390 Z" fill="#F5F5F4" stroke="#1A1A1A" stroke-width="4"/>
+    <!-- Red Gamcha Drape -->
+    <path d="M 430 380 Q 500 480 440 600" stroke="#DC2626" stroke-width="20" fill="none"/>
+  </g>
+  <g id="Arm_Upper_Left"><rect x="340" y="390" width="50" height="120" rx="20" fill="#F5F5F4" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Arm_Lower_Left"><rect x="335" y="490" width="45" height="120" rx="18" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Hand_Left"><circle cx="355" cy="625" r="25" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Arm_Upper_Right"><rect x="610" y="390" width="50" height="120" rx="20" fill="#F5F5F4" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Arm_Lower_Right"><rect x="620" y="490" width="45" height="120" rx="18" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Hand_Right"><circle cx="645" cy="625" r="25" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Leg_Upper_Left"><rect x="420" y="640" width="60" height="150" rx="15" fill="#E7E5E4" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Leg_Lower_Left"><rect x="425" y="770" width="50" height="140" rx="15" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Foot_Left"><path d="M 390 910 H 480 V 950 Z" fill="#78350F" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Leg_Upper_Right"><rect x="520" y="640" width="60" height="150" rx="15" fill="#E7E5E4" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Leg_Lower_Right"><rect x="525" y="770" width="50" height="140" rx="15" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Foot_Right"><path d="M 520 910 H 610 V 950 Z" fill="#78350F" stroke="#1A1A1A" stroke-width="4"/></g>
+</svg>

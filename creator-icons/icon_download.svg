@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>Download Creator Icon</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-ICON-2026-003</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <path d="M 32 10 V 38 M 32 38 L 20 26 M 32 38 L 44 26" fill="none" stroke="#3DDC84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 12 44 V 50 C 12 52 14 54 16 54 H 48 C 50 54 52 52 52 50 V 44" fill="#3DDC84" fill-opacity="0.15" stroke="#3DDC84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

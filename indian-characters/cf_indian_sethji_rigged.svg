@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" fill="none">
+  <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>Indian Sethji Businessman 2D Character</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-CHR-2026-003</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <g id="Pagri_Hat">
+    <!-- Red/Gold Marwari Pagri -->
+    <path d="M 380 180 Q 500 100 620 180 C 620 220 380 220 380 180 Z" fill="#EA580C" stroke="#1A1A1A" stroke-width="4"/>
+    <circle cx="500" cy="150" r="18" fill="#FACC15"/>
+  </g>
+  <g id="Head_Front">
+    <circle cx="500" cy="260" r="85" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/>
+    <!-- Chandan Tilak -->
+    <path d="M 495 210 H 505 V 230 H 495 Z" fill="#DC2626"/>
+  </g>
+  <g id="Eye_Left"><ellipse cx="460" cy="250" rx="14" ry="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/><circle cx="460" cy="250" r="6" fill="#1A1A1A"/></g>
+  <g id="Eye_Right"><ellipse cx="540" cy="250" rx="14" ry="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/><circle cx="540" cy="250" r="6" fill="#1A1A1A"/></g>
+  <g id="Mustache_Seth"><path d="M 440 280 C 480 310 520 310 560 280 Q 500 300 440 280 Z" fill="#1C1917"/></g>
+  <g id="Torso_BigBelly">
+    <!-- Big Belly Kurta -->
+    <circle cx="500" cy="520" r="160" fill="#FEF08A" stroke="#1A1A1A" stroke-width="4"/>
+    <!-- Gold Chain -->
+    <path d="M 420 400 Q 500 500 580 400" stroke="#EAB308" stroke-width="12" fill="none"/>
+  </g>
+  <g id="Arm_Upper_Left"><rect x="300" y="420" width="60" height="110" rx="20" fill="#FEF08A" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Arm_Lower_Left"><rect x="295" y="510" width="50" height="110" rx="18" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Hand_Left"><circle cx="320" cy="630" r="28" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Arm_Upper_Right"><rect x="640" y="420" width="60" height="110" rx="20" fill="#FEF08A" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Arm_Lower_Right"><rect x="655" y="510" width="50" height="110" rx="18" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Hand_Right"><circle cx="680" cy="630" r="28" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Leg_Upper_Left"><rect x="410" y="670" width="70" height="130" rx="15" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Leg_Lower_Left"><rect x="420" y="780" width="55" height="120" rx="15" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Foot_Left"><path d="M 380 900 H 475 V 940 Z" fill="#78350F" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Leg_Upper_Right"><rect x="520" y="670" width="70" height="130" rx="15" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Leg_Lower_Right"><rect x="525" y="780" width="55" height="120" rx="15" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Foot_Right"><path d="M 525 900 H 620 V 940 Z" fill="#78350F" stroke="#1A1A1A" stroke-width="4"/></g>
+</svg>

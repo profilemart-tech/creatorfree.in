@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>Settings Gear Creator Icon</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-ICON-2026-011</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <circle cx="32" cy="32" r="10" fill="#3DDC84" fill-opacity="0.2" stroke="#3DDC84" stroke-width="2"/>
+  <path d="M 32 8 V 14 M 32 50 V 56 M 8 32 H 14 M 50 32 H 56 M 15 15 L 19 19 M 45 45 L 49 49 M 15 49 L 19 45 M 45 19 L 49 15" stroke="#3DDC84" stroke-width="2" stroke-linecap="round"/>
+</svg>

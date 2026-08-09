@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>Blog Document Creator Icon</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-ICON-2026-009</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <path d="M 14 12 C 14 10 16 8 18 8 H 36 L 50 22 V 52 C 50 54 48 56 46 56 H 18 C 16 56 14 54 14 52 Z" fill="#3DDC84" fill-opacity="0.12" stroke="#3DDC84" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M 36 8 V 22 H 50" fill="none" stroke="#3DDC84" stroke-width="2"/>
+  <path d="M 22 30 H 42 M 22 38 H 42 M 22 46 H 34" stroke="#3DDC84" stroke-width="2" stroke-linecap="round"/>
+</svg>

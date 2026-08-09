@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>Passport Photo Creator Icon</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-ICON-2026-007</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <rect x="12" y="10" width="40" height="44" rx="6" fill="#3DDC84" fill-opacity="0.1" stroke="#3DDC84" stroke-width="2"/>
+  <circle cx="32" cy="26" r="8" fill="#3DDC84" fill-opacity="0.25" stroke="#3DDC84" stroke-width="2"/>
+  <path d="M 18 48 C 18 38 24 38 32 38 C 40 38 46 38 46 48" fill="#3DDC84" fill-opacity="0.2" stroke="#3DDC84" stroke-width="2" stroke-linecap="round"/>
+</svg>

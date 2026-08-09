@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" fill="none">
+  <metadata id="cf-metadata">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>Indian Panditji Priest 2D Character</dc:title>
+        <dc:creator>CreatorsFree.in</dc:creator>
+        <dc:rights>© 2026 CreatorsFree.in - All Rights Reserved</dc:rights>
+        <dc:identifier>CF-CHR-2026-004</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <g id="Hair_Shikha">
+    <!-- Choti / Tuft of Hair -->
+    <path d="M 500 130 C 530 100, 560 140, 520 160 Z" fill="#1C1917"/>
+  </g>
+  <g id="Head_Front">
+    <circle cx="500" cy="240" r="80" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/>
+    <!-- Tripundra & Red Bindi -->
+    <line x1="460" y1="200" x2="540" y2="200" stroke="#FACC15" stroke-width="6"/>
+    <line x1="460" y1="210" x2="540" y2="210" stroke="#FACC15" stroke-width="6"/>
+    <circle cx="500" cy="205" r="5" fill="#DC2626"/>
+  </g>
+  <g id="Eye_Left"><ellipse cx="460" cy="235" rx="14" ry="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/><circle cx="460" cy="235" r="6" fill="#1A1A1A"/></g>
+  <g id="Eye_Right"><ellipse cx="540" cy="235" rx="14" ry="12" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/><circle cx="540" cy="235" r="6" fill="#1A1A1A"/></g>
+  <g id="Mouth_Smile"><path d="M 470 270 Q 500 290 530 270" stroke="#1A1A1A" stroke-width="5" stroke-linecap="round"/></g>
+  <g id="Torso_Janeu">
+    <!-- Upper Body Bare with Yellow Angavastram -->
+    <path d="M 420 320 H 580 L 610 650 H 390 Z" fill="#FEF08A" stroke="#1A1A1A" stroke-width="4"/>
+    <!-- White Janeu (Sacred Thread) -->
+    <path d="M 430 320 L 570 520" stroke="#FFFFFF" stroke-width="6"/>
+  </g>
+  <g id="Arm_Upper_Left"><rect x="350" y="330" width="50" height="120" rx="20" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Arm_Lower_Left"><rect x="345" y="430" width="45" height="120" rx="18" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Hand_Left"><circle cx="365" cy="565" r="25" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Arm_Upper_Right"><rect x="600" y="330" width="50" height="120" rx="20" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Arm_Lower_Right"><rect x="610" y="430" width="45" height="120" rx="18" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Hand_Right"><circle cx="635" cy="565" r="25" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Leg_Upper_Left"><rect x="420" y="640" width="60" height="150" rx="15" fill="#F59E0B" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Leg_Lower_Left"><rect x="425" y="770" width="50" height="140" rx="15" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Foot_Left"><path d="M 390 910 H 480 V 950 Z" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Leg_Upper_Right"><rect x="520" y="640" width="60" height="150" rx="15" fill="#F59E0B" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Leg_Lower_Right"><rect x="525" y="770" width="50" height="140" rx="15" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+  <g id="Foot_Right"><path d="M 520 910 H 610 V 950 Z" fill="#F3D2B5" stroke="#1A1A1A" stroke-width="4"/></g>
+</svg>
