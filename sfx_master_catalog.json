@@ -1,0 +1,667 @@
+{
+    "organization": "CreatorsFree.in",
+    "cdn_repository": "https://github.com/0605yudhik/creatorsfree-sfx",
+    "total_sound_effects": 47,
+    "metadata_standard": {
+        "artist_IART": "CreatorsFree.in",
+        "copyright_ICOP": "© 2026 CreatorsFree.in - All Rights Reserved",
+        "album_IPRD": "CF Series Sound Effects",
+        "software_ISFT": "CreatorsFree Audio Metadata Tagging Engine"
+    },
+    "sounds": [
+        {
+            "id": "youtube_plant_growth_subscribe_vfx",
+            "name": "YouTube Pot Plant Growth Subscribe Button VFX with Organic SFX (यूट्यूब गमले से पौधा और फूल सब्सक्राइब बटन Overlay)",
+            "category": "vfx",
+            "icon": "🪴🌱",
+            "content_id": "CF-VFX-2026-047",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_youtube_plant_growth_subscribe_vfx_1080p.mp4",
+            "tags": [
+                "youtube pot subscribe button",
+                "plant growth subscribe vfx",
+                "podha ugne wala subscribe button",
+                "ankur phutne wala subscribe",
+                "flower bloom subscribe vfx",
+                "organic growth subscribe overlay"
+            ]
+        },
+        {
+            "id": "lord_hanuman_gada_subscribe_vfx",
+            "name": "Lord Hanuman Golden Gada Subscribe Button VFX with Spiritual SFX (श्री बजरंगबली सुनहरी गदा सब्सक्राइब बटन Overlay)",
+            "category": "vfx",
+            "icon": "🚩🔱",
+            "content_id": "CF-VFX-2026-046",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_lord_hanuman_gada_subscribe_vfx_1080p.mp4",
+            "tags": [
+                "lord hanuman subscribe button",
+                "bajrangbali gada subscribe button",
+                "hanumanji subscribe vfx",
+                "jai shree ram subscribe",
+                "golden gada subscribe vfx",
+                "devotional hanuman button",
+                "spiritual youtube overlay"
+            ]
+        },
+        {
+            "id": "red_hindu_flag_subscribe_vfx",
+            "name": "Red Saffron Hindu Flag Subscribe Button VFX with Spiritual SFX (लाल/भगवा त्रिकोण धर्मध्वज सब्सक्राइब बटन Overlay)",
+            "category": "vfx",
+            "icon": "🚩🕉️",
+            "content_id": "CF-VFX-2026-045",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_red_hindu_flag_subscribe_vfx_1080p.mp4",
+            "tags": [
+                "red hindu flag subscribe button",
+                "bhagwa dhwaj subscribe button",
+                "hindu flag vfx",
+                "saffron flag subscribe",
+                "om symbol flag subscribe",
+                "devotional hindu button vfx",
+                "spiritual flag subscribe"
+            ]
+        },
+        {
+            "id": "lord_shiva_blessing_subscribe_vfx",
+            "name": "Lord Shiva Divine Blessing Subscribe Button VFX with Divine SFX (भगवान शिव त्रिशूल दिव्य आशीर्वाद सब्सक्राइब बटन Overlay)",
+            "category": "vfx",
+            "icon": "🔱🕉️",
+            "content_id": "CF-VFX-2026-044",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_lord_shiva_blessing_subscribe_vfx_1080p.mp4",
+            "tags": [
+                "lord shiva subscribe button",
+                "shiva blessing vfx",
+                "trishul subscribe button",
+                "har har mahadev subscribe",
+                "om symbol subscribe",
+                "devotional subscribe vfx",
+                "spiritual youtube button"
+            ]
+        },
+        {
+            "id": "cyber_subscribe_button_22nd_century_vfx",
+            "name": "22nd Century Cyberpunk Holographic Subscribe Button VFX (22वीं सदी का फ्यूचरिस्टिक सब्सक्राइब बटन Overlay)",
+            "category": "vfx",
+            "icon": "🔮🔔",
+            "content_id": "CF-VFX-2026-043",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cyber_subscribe_button_22nd_century_vfx_1080p.mp4",
+            "tags": [
+                "22nd century subscribe button",
+                "cyberpunk subscribe vfx",
+                "holographic subscribe button",
+                "futuristic subscribe overlay",
+                "neon bell icon vfx",
+                "sci fi youtube subscribe"
+            ]
+        },
+        {
+            "id": "cartoon_running_speed_dash_vfx",
+            "name": "Cartoon Running Speed Dash & Dust Trail VFX (कार्टून के भागने पर धुएं और स्पीड लाइंस का Overlay)",
+            "category": "vfx",
+            "icon": "🏃‍♂️💨",
+            "content_id": "CF-VFX-2026-042",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_running_speed_dash_vfx_1080p.mp4",
+            "tags": [
+                "cartoon running vfx",
+                "bhagne par dhua vfx",
+                "speed dash lines",
+                "running dust trail",
+                "tom and jerry running vfx",
+                "fast run overlay"
+            ]
+        },
+        {
+            "id": "dizzy_stars_comedy_vfx",
+            "name": "Cartoon Dizzy Head Stars Comedy VFX (चक्कर आने पर सिर के चारों तरफ घूमने वाले तारे Overlay)",
+            "category": "vfx",
+            "icon": "💫⭐",
+            "content_id": "CF-VFX-2026-041",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_dizzy_stars_vfx_1080p.mp4",
+            "tags": [
+                "dizzy stars vfx",
+                "chakkar aane wale tare",
+                "head spinning stars",
+                "funny comedy overlay",
+                "tom and jerry stars",
+                "cartoon dizzy vfx"
+            ]
+        },
+        {
+            "id": "cloud_lightning_text_vfx",
+            "name": "Cloud Storm Lightning Text Strike VFX (बादल से बिजली कड़कने का टेक्स्ट Overlay)",
+            "category": "vfx",
+            "icon": "☁️⚡",
+            "content_id": "CF-VFX-2026-040",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cloud_lightning_text_vfx_1080p.mp4",
+            "tags": [
+                "cloud lightning vfx",
+                "lightning text strike",
+                "storm cloud vfx",
+                "badal aur bijli vfx",
+                "thunder text overlay",
+                "text reveal vfx"
+            ]
+        },
+        {
+            "id": "electric_lightning_vfx",
+            "name": "High Voltage Electric Lightning Shockwave VFX (बिजली का शॉकवेव रिंग Overlay)",
+            "category": "vfx",
+            "icon": "🌩️",
+            "content_id": "CF-VFX-2026-039",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_electric_lightning_vfx_1080p.mp4",
+            "tags": [
+                "electric lightning vfx",
+                "lightning ring mp4",
+                "shockwave vfx",
+                "bijli ki awaz",
+                "punch impact vfx",
+                "action reels overlay",
+                "electric burst"
+            ]
+        },
+        {
+            "id": "sci_fi_energy_ring_vfx",
+            "name": "Sci-Fi Glowing Energy Ring VFX (फ्यूचरिस्टिक ऊर्जा रिंग Overlay)",
+            "category": "vfx",
+            "icon": "⚡",
+            "content_id": "CF-VFX-2026-038",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_futuristic_sci_fi_ring_1080p.mp4",
+            "tags": [
+                "sci fi energy ring",
+                "glowing ring vfx",
+                "futuristic ring",
+                "energy ring mp4",
+                "tech overlay",
+                "vfx download",
+                "ring animation"
+            ]
+        },
+        {
+            "id": "slap_var1",
+            "name": "Cinematic Heavy Slap 1 (थप्पड़ की आवाज़)",
+            "category": "cinematic",
+            "icon": "✋",
+            "content_id": "CF-SFX-2026-001",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_slap_heavy_v1.wav",
+            "tags": [
+                "slap",
+                "thappad ki awaz",
+                "thappad sound",
+                "hit",
+                "punch",
+                "face"
+            ]
+        },
+        {
+            "id": "slap_var2",
+            "name": "Cinematic Slap Impact 2 (थप्पड़ साउंड)",
+            "category": "cinematic",
+            "icon": "💥",
+            "content_id": "CF-SFX-2026-002",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_slap_heavy_v2.wav",
+            "tags": [
+                "slap",
+                "thappad ki awaz",
+                "impact",
+                "meme"
+            ]
+        },
+        {
+            "id": "slap_var3",
+            "name": "Punchy Face Slap 3 (थप्पड़ की आवाज)",
+            "category": "cinematic",
+            "icon": "🥊",
+            "content_id": "CF-SFX-2026-003",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_slap_heavy_v3.wav",
+            "tags": [
+                "slap",
+                "thappad ki awaz",
+                "fight",
+                "comedy"
+            ]
+        },
+        {
+            "id": "slap_var4",
+            "name": "Dramatic Slap Hit 4 (ड्रामा थप्पड़)",
+            "category": "cinematic",
+            "icon": "⚡",
+            "content_id": "CF-SFX-2026-004",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_slap_heavy_v4.wav",
+            "tags": [
+                "slap",
+                "thappad ki awaz",
+                "dramatic",
+                "drama"
+            ]
+        },
+        {
+            "id": "slip_var1",
+            "name": "Cartoon Slip & Fall 1 (गिरने की आवाज़)",
+            "category": "funny",
+            "icon": "🍌",
+            "content_id": "CF-SFX-2026-005",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_slip_v1.wav",
+            "tags": [
+                "slip",
+                "girne ki awaz",
+                "cartoon",
+                "fail"
+            ]
+        },
+        {
+            "id": "slip_var2",
+            "name": "Cartoon Slip & Fall 2 (फनी गिरने की आवाज)",
+            "category": "funny",
+            "icon": "🤪",
+            "content_id": "CF-SFX-2026-006",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_slip_v2.wav",
+            "tags": [
+                "slip",
+                "girne ki awaz",
+                "meme",
+                "shorts"
+            ]
+        },
+        {
+            "id": "slip_var3",
+            "name": "Cartoon Slip & Fall 3 (कार्टून स्लिप)",
+            "category": "funny",
+            "icon": "🤸",
+            "content_id": "CF-SFX-2026-007",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_slip_v3.wav",
+            "tags": [
+                "slip",
+                "girne ki awaz",
+                "stunt",
+                "reels"
+            ]
+        },
+        {
+            "id": "slip_var4",
+            "name": "Cartoon Slip & Fall 4 (चक्कर और गिरावट)",
+            "category": "funny",
+            "icon": "💫",
+            "content_id": "CF-SFX-2026-008",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_slip_v4.wav",
+            "tags": [
+                "slip",
+                "girne ki awaz",
+                "dizzy",
+                "funny"
+            ]
+        },
+        {
+            "id": "ballywood_dhishum1",
+            "name": "Bollywood Action Dhishum 1 (ढिशुम साउंड)",
+            "category": "cinematic",
+            "icon": "🎬",
+            "content_id": "CF-SFX-2026-009",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_bollywood_dhishum_v1.wav",
+            "tags": [
+                "dhishum",
+                "dishoom sound effect",
+                "bollywood",
+                "fight"
+            ]
+        },
+        {
+            "id": "ballywood_dhishum2",
+            "name": "Bollywood Action Dhishum 2 (बॉलीवुड एक्शन)",
+            "category": "cinematic",
+            "icon": "💥",
+            "content_id": "CF-SFX-2026-010",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_bollywood_dhishum_v2.wav",
+            "tags": [
+                "dhishum",
+                "dishoom sound effect",
+                "action",
+                "punch"
+            ]
+        },
+        {
+            "id": "throat_clearing1",
+            "name": "Dry Throat Clearing Ahem 1 (खांसी / गला साफ़)",
+            "category": "funny",
+            "icon": "🗣️",
+            "content_id": "CF-SFX-2026-011",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_throat_clearing_v1.wav",
+            "tags": [
+                "khansi ki awaz",
+                "khansi sound effect",
+                "gala saaf karne ki awaz"
+            ]
+        },
+        {
+            "id": "throat_clearing2",
+            "name": "Dry Throat Clearing Ahem 2 (खांसी की आवाज)",
+            "category": "funny",
+            "icon": "🎙️",
+            "content_id": "CF-SFX-2026-012",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_throat_clearing_v2.wav",
+            "tags": [
+                "khansi ki awaz",
+                "cough sound effect",
+                "ahem"
+            ]
+        },
+        {
+            "id": "body_scratch1",
+            "name": "Fingernail Scratch Sound 1 (खुजली की आवाज़)",
+            "category": "funny",
+            "icon": "💅",
+            "content_id": "CF-SFX-2026-013",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_body_scratch_v1.wav",
+            "tags": [
+                "khujli ki awaz",
+                "scratching sound effect",
+                "itch"
+            ]
+        },
+        {
+            "id": "body_scratch2",
+            "name": "Fingernail Scratch Sound 2 (खुजली साउंड)",
+            "category": "funny",
+            "icon": "✋",
+            "content_id": "CF-SFX-2026-014",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_body_scratch_v2.wav",
+            "tags": [
+                "khujli ki awaz",
+                "scratch",
+                "body"
+            ]
+        },
+        {
+            "id": "body_scratch3",
+            "name": "Fingernail Scratch Sound 3 (खुजली आवाज)",
+            "category": "funny",
+            "icon": "🖐️",
+            "content_id": "CF-SFX-2026-015",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_body_scratch_v3.wav",
+            "tags": [
+                "khujli ki awaz",
+                "fingernail",
+                "skin"
+            ]
+        },
+        {
+            "id": "body_scratch4",
+            "name": "Fingernail Scratch Sound 4 (त्वचा खुजली)",
+            "category": "funny",
+            "icon": "✌️",
+            "content_id": "CF-SFX-2026-016",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_body_scratch_v4.wav",
+            "tags": [
+                "khujli ki awaz",
+                "itch",
+                "scratch"
+            ]
+        },
+        {
+            "id": "punch_var1",
+            "name": "80s Bollywood Punch 1 (मारपीट पंच साउंड)",
+            "category": "cinematic",
+            "icon": "👊",
+            "content_id": "CF-SFX-2026-017",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_bollywood_punch_v1.wav",
+            "tags": [
+                "punch",
+                "marpeet sound effect",
+                "bollywood",
+                "fight"
+            ]
+        },
+        {
+            "id": "punch_var2",
+            "name": "80s Bollywood Punch 2 (एक्शन पंच)",
+            "category": "cinematic",
+            "icon": "💥",
+            "content_id": "CF-SFX-2026-018",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_bollywood_punch_v2.wav",
+            "tags": [
+                "punch",
+                "dishoom",
+                "action"
+            ]
+        },
+        {
+            "id": "punch_var3",
+            "name": "80s Bollywood Punch 3 (मुक्का साउंड)",
+            "category": "cinematic",
+            "icon": "🥊",
+            "content_id": "CF-SFX-2026-019",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_bollywood_punch_v3.wav",
+            "tags": [
+                "punch",
+                "hit",
+                "heavy"
+            ]
+        },
+        {
+            "id": "punch_var4",
+            "name": "80s Bollywood Punch 4 (पावर पंच)",
+            "category": "cinematic",
+            "icon": "⚡",
+            "content_id": "CF-SFX-2026-020",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_bollywood_punch_v4.wav",
+            "tags": [
+                "punch",
+                "power",
+                "smash"
+            ]
+        },
+        {
+            "id": "deep_breath_v1",
+            "name": "Calm Deep Breathing 1 (गहरी सांस की आवाज)",
+            "category": "cinematic",
+            "icon": "🧘",
+            "content_id": "CF-SFX-2026-021",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_deep_breathing_v1.wav",
+            "tags": [
+                "saans ki awaz",
+                "breathing sound effect",
+                "meditation"
+            ]
+        },
+        {
+            "id": "deep_breath_v2",
+            "name": "Calm Deep Breathing 2 (गहरी सांस की आवाज)",
+            "category": "cinematic",
+            "icon": "🧘",
+            "content_id": "CF-SFX-2026-022",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_deep_breathing_v2.wav",
+            "tags": [
+                "saans ki awaz",
+                "breathing sound effect",
+                "calm"
+            ]
+        },
+        {
+            "id": "deep_breath_v3",
+            "name": "Calm Deep Breathing 3 (गहरी सांस की आवाज)",
+            "category": "cinematic",
+            "icon": "🧘",
+            "content_id": "CF-SFX-2026-023",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_deep_breathing_v3.wav",
+            "tags": [
+                "saans ki awaz",
+                "deep breath",
+                "relax"
+            ]
+        },
+        {
+            "id": "deep_breath_v4",
+            "name": "Calm Deep Breathing 4 (गहरी सांस की आवाज)",
+            "category": "cinematic",
+            "icon": "🧘",
+            "content_id": "CF-SFX-2026-024",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_deep_breathing_v4.wav",
+            "tags": [
+                "saans ki awaz",
+                "breathing",
+                "calm"
+            ]
+        },
+        {
+            "id": "finger_snap_v1",
+            "name": "Double Finger Snap (चुटकी बजाने की आवाज़)",
+            "category": "tech",
+            "icon": "🤌",
+            "content_id": "CF-SFX-2026-025",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_finger_snap_v1.wav",
+            "tags": [
+                "chutki ki awaz",
+                "finger snap sound effect",
+                "snap"
+            ]
+        },
+        {
+            "id": "fast_breath_v1",
+            "name": "Exhausted Heavy Breathing (हाँफने की आवाज़)",
+            "category": "funny",
+            "icon": "🏃",
+            "content_id": "CF-SFX-2026-026",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_fast_breathing_v1.wav",
+            "tags": [
+                "hanfne ki awaz",
+                "heavy breathing sound",
+                "tired"
+            ]
+        },
+        {
+            "id": "relieved_breath_v1",
+            "name": "Relieved Deep Breath 1 (चैन की सांस)",
+            "category": "cinematic",
+            "icon": "😌",
+            "content_id": "CF-SFX-2026-027",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_relieved_breath_v1.wav",
+            "tags": [
+                "chain ki saans",
+                "relief breath sound",
+                "sigh"
+            ]
+        },
+        {
+            "id": "relieved_breath_v2",
+            "name": "Relieved Deep Breath 2 (चैन की सांस)",
+            "category": "cinematic",
+            "icon": "😌",
+            "content_id": "CF-SFX-2026-028",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_relieved_breath_v2.wav",
+            "tags": [
+                "chain ki saans",
+                "relief breath",
+                "peace"
+            ]
+        },
+        {
+            "id": "relieved_breath_v3",
+            "name": "Relieved Deep Breath 3 (चैन की सांस)",
+            "category": "cinematic",
+            "icon": "😌",
+            "content_id": "CF-SFX-2026-029",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_relieved_breath_v3.wav",
+            "tags": [
+                "chain ki saans",
+                "sigh sound effect"
+            ]
+        },
+        {
+            "id": "sharp_gasp_v1",
+            "name": "Sudden Shocked Gasp 1 (चौंकने की आवाज़)",
+            "category": "funny",
+            "icon": "😱",
+            "content_id": "CF-SFX-2026-030",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_sharp_gasp_v1.wav",
+            "tags": [
+                "chowkne ki awaz",
+                "gasp sound effect",
+                "shock"
+            ]
+        },
+        {
+            "id": "sharp_gasp_v2",
+            "name": "Sudden Shocked Gasp 2 (हैरानी की आवाज)",
+            "category": "funny",
+            "icon": "😱",
+            "content_id": "CF-SFX-2026-031",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_sharp_gasp_v2.wav",
+            "tags": [
+                "chowkne ki awaz",
+                "shocked gasp sound",
+                "surprise"
+            ]
+        },
+        {
+            "id": "sharp_gasp_v3",
+            "name": "Sudden Shocked Gasp 3 (शॉक साउंड)",
+            "category": "funny",
+            "icon": "😱",
+            "content_id": "CF-SFX-2026-032",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_sharp_gasp_v3.wav",
+            "tags": [
+                "chowkne ki awaz",
+                "shock sound"
+            ]
+        },
+        {
+            "id": "sharp_gasp_v4",
+            "name": "Sudden Shocked Gasp 4 (चौंकना)",
+            "category": "funny",
+            "icon": "😱",
+            "content_id": "CF-SFX-2026-033",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_sharp_gasp_v4.wav",
+            "tags": [
+                "chowkne ki awaz",
+                "surprise"
+            ]
+        },
+        {
+            "id": "cartoon_fart_v1",
+            "name": "Funny Cartoon Fart 1 (पाद की आवाज़)",
+            "category": "funny",
+            "icon": "💨",
+            "content_id": "CF-SFX-2026-034",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_fart_v1.wav",
+            "tags": [
+                "paad ki awaz",
+                "fart sound effect",
+                "funny fart"
+            ]
+        },
+        {
+            "id": "cartoon_fart_v2",
+            "name": "Funny Cartoon Fart 2 (फनी पाद साउंड)",
+            "category": "funny",
+            "icon": "💨",
+            "content_id": "CF-SFX-2026-035",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_fart_v2.wav",
+            "tags": [
+                "paad ki awaz",
+                "comedy fart",
+                "meme"
+            ]
+        },
+        {
+            "id": "cartoon_fart_v3",
+            "name": "Funny Cartoon Fart 3 (कॉमेडी पाद की आवाज)",
+            "category": "funny",
+            "icon": "💨",
+            "content_id": "CF-SFX-2026-036",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_fart_v3.wav",
+            "tags": [
+                "paad ki awaz",
+                "funny fart sound"
+            ]
+        },
+        {
+            "id": "cartoon_fart_v4",
+            "name": "Funny Cartoon Fart 4 (कॉमिक फार्ट)",
+            "category": "funny",
+            "icon": "💨",
+            "content_id": "CF-SFX-2026-037",
+            "file": "https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_fart_v4.wav",
+            "tags": [
+                "paad ki awaz",
+                "fart sound effect"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Indian Resume & CV Builder Online (No MS Word Needed) - Creators Free</title>
+    <meta name="description" content="Create a job-ready Indian resume or CV online for free without MS Word skills. 100% Private: zero data saved on server! Features Education Table, Indian Declaration line, live A4 preview, direct PDF & Word (.doc) download.">
+    <meta name="keywords" content="free resume builder India online, Indian resume format download PDF, download resume Word doc, fresher resume maker without MS Word, CV builder with education table and declaration, safe online resume generator no data saved">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/resume-builder.css">
+
+    <!-- Client-Side PDF Generation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+    <script src="js/header-footer.js" defer></script>
+    <script src="js/resume-builder.js" defer></script>
+    <!-- Vercel Web Analytics Real Visitor Tracking -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets & FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Indian Resume & CV Builder Tool",
+          "url": "https://creatorsfree.in/resume-creator.html",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+          },
+          "description": "Free privacy-first web application to create professional Indian style resumes and CVs with education tables, declaration lines, direct PDF download, Word doc export, and sharing."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is my personal information saved on Creators Free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No! We strictly guarantee 100% privacy. Your personal details are never uploaded or saved on any server. Everything is processed 100% locally inside your own browser."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need MS Word or design skills to build my resume?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not at all! You can easily type your information into our clean form fields or click 'Load Sample Indian Resume' to pre-fill realistic example data, then replace it with your details."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What formats can I download my resume in?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can download your resume directly as a high-quality PDF file, an editable Microsoft Word (.doc) document, or print it directly on standard A4 paper."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="builder-container">
+        <!-- Hero Header -->
+        <header class="builder-header">
+            <h1>Free Indian Resume & CV Builder Online</h1>
+            <p>Create a job-ready professional resume in minutes without MS Word skills. Ideal for freshers and experienced candidates across India.</p>
+        </header>
+
+        <!-- Answer-First Snippet for Google AI Overviews & Search Snippets -->
+        <div class="answer-snippet-box" style="background:rgba(15,23,42,0.8); border:1px solid rgba(61,220,132,0.3); border-radius:12px; padding:16px; margin-bottom:20px; font-size:0.92rem; color:#cbd5e1; line-height:1.6;">
+            <p style="margin:0;"><strong>CreatorsFree Mobile CV & Resume Builder</strong> ek free online tool hai jisse freshers aur experienced job seekers mobile ya PC par bina MS Word skills ke professional Indian-style resume aur CV bana sakte hain. ATS-friendly clean layout, education details table, Indian declaration line, live A4 preview, aur instant 1-click PDF/Word export — 100% private, bina login ke.</p>
+        </div>
+
+        <!-- Quick Banner for Sample Pre-fill & Mobile Version Link -->
+        <div class="sample-bar">
+            <span>📱 <strong>Using a Mobile Phone?</strong> Try our <a href="mobile-resume-builder.html" style="color:var(--primary); font-weight:700;">Mobile Step-by-Step Resume Builder</a> for easy 4-step wizard editing.</span>
+            <button class="btn btn-sample" id="btnLoadSample">✨ Load Sample Indian Resume</button>
+        </div>
+
+        <!-- Main Workspace Layout -->
+        <div class="builder-layout">
+            
+            <!-- Left Form Panel -->
+            <section class="form-panel">
+                <div class="linked-toggle-bar" style="display:flex; justify-content:space-between; align-items:center; background:#1e293b; border:1px solid var(--border-color); border-radius:12px; padding:10px 16px; margin-bottom:16px;">
+                    <span style="color:#cbd5e1; font-size:0.9rem; font-weight:600;">✏️ Editing Form</span>
+                    <a href="javascript:void(0)" class="link-view-preview" style="color:#38bdf8; font-weight:800; font-size:0.95rem; text-decoration:underline;">👁️ View Full Resume Preview ➔</a>
+                </div>
+                
+                <!-- Theme & Template Settings -->
+                <div class="section-box">
+                    <h2>🎨 Theme & Style Settings</h2>
+                    
+                    <label>Choose Resume Accent Color</label>
+                    <div class="theme-selector">
+                        <div class="theme-swatch active" style="background:#1e3a8a;" data-color="#1e3a8a" data-light="#e0e7ff" title="Navy Blue"></div>
+                        <div class="theme-swatch" style="background:#065f46;" data-color="#065f46" data-light="#d1fae5" title="Forest Emerald"></div>
+                        <div class="theme-swatch" style="background:#581c87;" data-color="#581c87" data-light="#f3e8ff" title="Royal Purple"></div>
+                        <div class="theme-swatch" style="background:#334155;" data-color="#334155" data-light="#f1f5f9" title="Executive Slate"></div>
+                        <div class="theme-swatch" style="background:#111827;" data-color="#111827" data-light="#e2e8f0" title="Charcoal Black"></div>
+                    </div>
+
+                    <label>Select Resume Format Style</label>
+                    <div class="templates-grid">
+                        <div class="template-item active" data-template="standard">Standard Indian</div>
+                        <div class="template-item" data-template="fresher">Fresher / Student</div>
+                        <div class="template-item" data-template="modern">Modern Executive</div>
+                        <div class="template-item" data-template="simple">Simple Clean</div>
+                    </div>
+                </div>
+
+                <!-- 1. Personal Information -->
+                <div class="section-box">
+                    <h2>👤 Personal Information</h2>
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="nameInput">Full Name *</label>
+                            <input type="text" id="nameInput" placeholder="e.g. Rahul Sharma">
+                        </div>
+                        <div class="field-group">
+                            <label for="phoneInput">Phone Number (+91) *</label>
+                            <input type="tel" id="phoneInput" placeholder="+91 XXXXXXXXXX">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="emailInput">Email Address *</label>
+                            <input type="email" id="emailInput" placeholder="xxxx@xxx.com">
+                        </div>
+                        <div class="field-group">
+                            <label for="addressInput">Current Location (City, State) *</label>
+                            <input type="text" id="addressInput" placeholder="e.g. New Delhi, India">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="linkedinInput">LinkedIn / Portfolio URL (Optional)</label>
+                            <input type="url" id="linkedinInput" placeholder="e.g. linkedin.com/in/rahul">
+                        </div>
+                        <div class="field-group">
+                            <label for="photoFileInput">Profile Photo (Optional)</label>
+                            <input type="file" id="photoFileInput" accept="image/*">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Objective / Summary -->
+                <div class="section-box">
+                    <h2>🎯 Career Objective / Professional Summary</h2>
+                    <div class="field-group">
+                        <label for="objectiveInput">Write your objective or select a sample prompt below:</label>
+                        <textarea id="objectiveInput" placeholder="Write a short summary about your skills and goals..."></textarea>
+
+                        <div class="sample-chips">
+                            <span class="sample-chip" data-type="fresher">+ Fresher / Student</span>
+                            <span class="sample-chip" data-type="it">+ IT / Developer</span>
+                            <span class="sample-chip" data-type="sales">+ Sales & Marketing</span>
+                            <span class="sample-chip" data-type="teacher">+ Teacher / Educator</span>
+                            <span class="sample-chip" data-type="admin">+ Office Admin / Bank</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Educational Qualifications -->
+                <div class="section-box">
+                    <h2>🎓 Educational Qualifications</h2>
+                    <span class="hint-text" style="margin-bottom:12px;">Appears as a clean table on your resume (Standard format in India).</span>
+                    
+                    <div id="eduContainer">
+                        <!-- Education rows rendered dynamically -->
+                    </div>
+
+                    <button type="button" class="btn-add" id="btnAddEdu">+ Add Another Education / Class</button>
+                </div>
+
+                <!-- 4. Work Experience -->
+                <div class="section-box">
+                    <h2>💼 Work Experience / Internships</h2>
+                    
+                    <div id="expContainer">
+                        <!-- Experience rows rendered dynamically -->
+                    </div>
+
+                    <button type="button" class="btn-add" id="btnAddExp">+ Add Work Experience / Internship</button>
+                </div>
+
+                <!-- 5. Projects -->
+                <div class="section-box">
+                    <h2>🚀 Academic / Personal Projects</h2>
+                    
+                    <div id="projContainer">
+                        <!-- Project rows rendered dynamically -->
+                    </div>
+
+                    <button type="button" class="btn-add" id="btnAddProj">+ Add Project</button>
+                </div>
+
+                <!-- 6. Skills, Languages & Certifications -->
+                <div class="section-box">
+                    <h2>⚡ Skills, Certifications & Languages</h2>
+                    <div class="field-group">
+                        <label for="skillsInput">Key Skills (Comma separated)</label>
+                        <input type="text" id="skillsInput" placeholder="e.g. JavaScript, HTML5, Excel, Communication, Teamwork">
+                    </div>
+                    <div class="field-group">
+                        <label for="languagesInput">Languages Known</label>
+                        <input type="text" id="languagesInput" placeholder="e.g. English, Hindi, Punjabi">
+                    </div>
+                    <div class="field-group">
+                        <label for="certsInput">Certifications & Achievements (Optional)</label>
+                        <textarea id="certsInput" placeholder="e.g. Google Digital Marketing Certificate, College Hackathon Winner"></textarea>
+                    </div>
+                </div>
+
+                <!-- 7. Indian Resume Declaration Section -->
+                <div class="section-box">
+                    <h2>📜 Declaration (Standard Indian CV Requirement)</h2>
+                    <div class="field-group">
+                        <label for="declTextInput">Declaration Statement</label>
+                        <textarea id="declTextInput" style="min-height:50px;">I hereby declare that all the information provided above is true and correct to the best of my knowledge and belief.</textarea>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="declDateInput">Date</label>
+                            <input type="date" id="declDateInput">
+                        </div>
+                        <div class="field-group">
+                            <label for="declPlaceInput">Place (City)</label>
+                            <input type="text" id="declPlaceInput" placeholder="e.g. New Delhi">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Right Live Preview Panel -->
+            <section class="preview-panel">
+                <div style="display:flex; justify-content:space-between; align-items:center; background:#1e293b; border:1px solid var(--border-color); border-radius:12px; padding:10px 16px; margin-bottom:16px;">
+                    <a href="javascript:void(0)" class="link-back-edit" style="color:#38bdf8; font-weight:800; font-size:0.95rem; text-decoration:underline;">⬅️ Back to Edit Resume</a>
+                    <span style="font-size:0.85rem; color:#94a3b8; font-weight:600;">Full A4 Preview</span>
+                </div>
+
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                    <h2 style="font-size:1.2rem; color:var(--text-main); margin:0;">👁️ Live Resume Preview</h2>
+                    <span style="font-size:0.8rem; color:var(--primary); font-weight:600;">Standard A4 Size</span>
+                </div>
+
+                <div class="a4-wrapper">
+                    <!-- Live rendered A4 Resume Document -->
+                    <div id="resumePreview">
+                        <!-- Rendered dynamically by JS -->
+                    </div>
+                </div>
+
+                <div class="export-bar">
+                    <button class="btn btn-primary" id="btnDownloadPdfDirect">📥 Download PDF File</button>
+                    <button class="btn btn-secondary" id="btnDownloadDoc" style="background:#1d4ed8; color:#fff; border:none;">📄 Download Word (.doc)</button>
+                    <button class="btn btn-secondary" id="btnPrintPdf" style="background:#059669; color:#fff; border:none;">🖨️ Print Resume</button>
+                    <button class="btn btn-secondary" id="btnShareResume" style="background:#0891b2; color:#fff; border:none;">🔗 Share Resume</button>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- SEO Article & Privacy Guarantee Section -->
+        <article class="seo-article">
+            
+            <!-- 100% Privacy & Security Guarantee Banner -->
+            <div class="privacy-banner">
+                <div class="privacy-banner-icon">🛡️</div>
+                <div>
+                    <h3>100% Private & Secure Guarantee</h3>
+                    <p>Your privacy is our highest priority! <strong>No personal data is saved, uploaded, or stored on our servers.</strong> All text, resume details, and files are processed 100% locally inside your web browser. You are completely safe here.</p>
+                </div>
+            </div>
+
+            <h2>Free Indian Resume & CV Builder Online – Build Professional Resumes Without MS Word</h2>
+            <p>Are you applying for jobs across India but struggling with complicated Microsoft Word formatting, broken tables, or unaligned text? Creating a professional, ATS-friendly resume shouldn't require complex software skills. <strong>Creators Free Indian Resume Builder</strong> allows college freshers, experienced working professionals, teachers, engineers, sales managers, and government/banking job applicants to craft an elegant, Indian-style CV in just a few minutes.</p>
+
+            <h3>Key Features Tailored for Job Seekers in India</h3>
+            <ul>
+                <li><strong>No MS Word Skills Required:</strong> Simply type your details into easy form fields or click <em>"Load Sample Indian Resume"</em> to pre-fill realistic example data and swap it with your info.</li>
+                <li><strong>Standard Educational Qualifications Table:</strong> Indian recruiters expect clear tables detailing your Degree/Course, School/Board, Passing Year, and Percentage/CGPA. Our tool automatically formats your education into a neat table.</li>
+                <li><strong>Standard Indian Declaration & Signature:</strong> Includes the essential Indian declaration line (<em>"I hereby declare that all the information provided above is true..."</em>) complete with Date, Place, and Signature fields.</li>
+                <li><strong>Pre-written Career Objectives:</strong> Instant click-to-insert sample objectives for Freshers, IT Developers, Sales Professionals, Teachers, and Office Administrators.</li>
+                <li><strong>Multiple Accent Colors & Styles:</strong> Choose between Navy Blue, Forest Emerald, Royal Purple, Executive Slate, or Charcoal Black themes with 4 clean templates.</li>
+                <li><strong>Instant PDF & Word Exports:</strong> Download your finished resume as a crisp PDF file, an editable Microsoft Word (.doc) document, or print directly on standard A4 paper.</li>
+            </ul>
+
+            <h3>Explore More Free Web Tools on Creators Free</h3>
+            <p>Check out our growing suite of free online utilities designed to save your time and money:</p>
+            <ul>
+                <li>📱 <strong>Mobile Resume Builder:</strong> On a mobile phone? Try our <a href="mobile-resume-builder.html">Mobile Step-by-Step Resume Builder</a> for easy 4-step wizard editing.</li>
+                <li>📸 <strong>Passport Photo Printing Tool:</strong> Need passport-size photos for your job application or passport form? Use our <a href="a4-photo-printer.html">Free A4 Passport Photo Printer Tool</a> to arrange photos with custom background colors, date stamps, and zero paper waste!</li>
+                <li>🏠 <strong>Explore All Tools:</strong> Visit our <a href="index.html">Creators Free Homepage</a> to access all our free web apps and utilities.</li>
+            </ul>
+
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <div class="faq-box">
+                <h4>🔒 Is my personal information saved or tracked on Creators Free?</h4>
+                <p>No! We strictly guarantee 100% privacy. None of your data, phone numbers, email addresses, or photos are uploaded to any server. Everything stays 100% safe inside your device browser.</p>
+            </div>
+
+            <div class="faq-box">
+                <h4>📄 How do I download my resume as a PDF or Word file?</h4>
+                <p>Simply click the <strong>"Download PDF File"</strong> button for a direct `.pdf` file download, or click <strong>"Download Word (.doc)"</strong> to save an editable Word document for later editing.</p>
+            </div>
+
+            <div class="faq-box">
+                <h4>🎓 Is this resume format suitable for freshers in India?</h4>
+                <p>Yes! Our tool is specially designed for Indian freshers and experienced job seekers alike. It highlights your academic achievements, projects, key skills, and includes standard Indian resume sections.</p>
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- Floating 1-Touch Instant Live Preview Button -->
+    <button id="btnFloatingPreview" type="button" class="floating-preview-btn">
+        👁️ Quick Preview A4
+    </button>
+
+    <!-- Floating 1-Touch Instant Live Preview Modal -->
+    <div id="quickPreviewModal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>👁️ Live A4 Resume Preview</h3>
+                <button id="btnCloseModal" type="button" class="modal-close-btn">❌ Close</button>
+            </div>
+            <div class="modal-body" id="modalPreviewBody">
+                <!-- Cloned A4 Resume Live Preview -->
+            </div>
+            <div class="modal-footer">
+                <button id="modalBtnPdf" type="button" class="btn btn-pdf" style="background:#10b981; color:#ffffff; border:none; padding:10px 20px; border-radius:999px; font-weight:700; cursor:pointer;">📥 Download PDF</button>
+                <button id="modalBtnDoc" type="button" class="btn btn-doc" style="background:#38bdf8; color:#0f172a; border:none; padding:10px 20px; border-radius:999px; font-weight:700; cursor:pointer;">📄 Download Word (.doc)</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+</body>
+</html>

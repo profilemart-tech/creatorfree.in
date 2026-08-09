@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Filters - Creators Free</title>
+    <meta name="description" content="Apply Instagram-style photo filters online and download your edited image instantly.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/header-footer.js" defer></script>
+    <script src="js/instagram-filters.js" defer></script>
+    <style>
+        .filter-tool {
+            padding: 40px 0;
+        }
+        .filter-tool .tool-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 24px;
+        }
+        .filter-panel,
+        .preview-panel {
+            background: #111827;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+        }
+        .filter-panel h2,
+        .preview-panel h2 {
+            margin-top: 0;
+            color: #f8fafc;
+            font-size: 1.7rem;
+        }
+        .filter-panel .field {
+            margin-bottom: 18px;
+        }
+        .filter-panel label {
+            display: block;
+            margin-bottom: 8px;
+            color: #cbd5e1;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .filter-panel select,
+        .filter-panel input[type="range"],
+        .filter-panel input[type="file"] {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: #0f172a;
+            color: #f8fafc;
+            padding: 12px 14px;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+        }
+        .filter-panel input[type="range"] {
+            height: 10px;
+            padding: 0;
+        }
+        .filter-panel .range-value {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.88rem;
+            color: #94a3b8;
+            margin-top: 6px;
+        }
+        .filter-panel .preset-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+        .filter-panel .preset-list button {
+            background: #1e293b;
+            color: #f8fafc;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 12px 14px;
+            cursor: pointer;
+            transition: transform 0.15s ease, background 0.15s ease;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+        .filter-panel .preset-list button:hover {
+            transform: translateY(-1px);
+            background: #0f172a;
+        }
+        .preview-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            align-items: center;
+        }
+        .preview-panel .canvas-wrap {
+            width: 100%;
+            background: #0f172a;
+            border-radius: 22px;
+            padding: 18px;
+            border: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            justify-content: center;
+        }
+        #filterCanvas {
+            width: 100%;
+            max-width: 100%;
+            background: #000;
+            border-radius: 18px;
+            box-shadow: 0 18px 35px rgba(0,0,0,0.22);
+        }
+        .preview-panel .note {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+        .preview-panel .btn-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+        }
+        .preview-panel button {
+            padding: 12px 18px;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            background: #38bdf8;
+            color: #0f172a;
+            font-weight: 700;
+            transition: transform 0.15s ease, filter 0.15s ease;
+        }
+        .preview-panel button:hover {
+            transform: translateY(-1px);
+        }
+        .preview-panel .filter-tag {
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+        .preview-panel .filter-tag span {
+            display: inline-block;
+            background: rgba(255,255,255,0.08);
+            padding: 8px 12px;
+            border-radius: 999px;
+        }
+        @media (max-width: 980px) {
+            .filter-tool .tool-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main class="container filter-tool">
+        <section class="hero-small">
+            <div class="container" style="text-align:center;">
+                <h1>Instagram Photo Filters</h1>
+                <p>Upload a photo, try Instagram-style filters, adjust brightness and contrast, then download your edited image.</p>
+            </div>
+        </section>
+
+        <section class="tool-grid">
+            <div class="filter-panel">
+                <h2>Upload & Filter Controls</h2>
+                <div class="field">
+                    <label for="photoUpload">Upload Your Photo</label>
+                    <input type="file" id="photoUpload" accept="image/*">
+                </div>
+                <div class="field">
+                    <label for="filterPreset">Choose Filter Preset</label>
+                    <select id="filterPreset">
+                        <option value="normal">Normal</option>
+                        <option value="clarendon">Clarendon</option>
+                        <option value="juno">Juno</option>
+                        <option value="lark">Lark</option>
+                        <option value="valencia">Valencia</option>
+                        <option value="xpro2">X-Pro II</option>
+                        <option value="moon">Moon</option>
+                        <option value="reyes">Reyes</option>
+                        <option value="skyline">Skyline</option>
+                        <option value="lofi">Lofi</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Brightness</label>
+                    <input type="range" id="brightnessRange" min="0.5" max="1.8" value="1" step="0.01">
+                    <div class="range-value"><span>0.5</span><span id="brightnessVal">100%</span><span>180%</span></div>
+                </div>
+                <div class="field">
+                    <label>Contrast</label>
+                    <input type="range" id="contrastRange" min="0.5" max="1.8" value="1" step="0.01">
+                    <div class="range-value"><span>0.5</span><span id="contrastVal">100%</span><span>180%</span></div>
+                </div>
+                <div class="field">
+                    <label>Saturation</label>
+                    <input type="range" id="saturationRange" min="0" max="2" value="1" step="0.01">
+                    <div class="range-value"><span>0%</span><span id="saturationVal">100%</span><span>200%</span></div>
+                </div>
+                <div class="field">
+                    <label>Warmth / Tint</label>
+                    <input type="range" id="warmthRange" min="0" max="360" value="0" step="1">
+                    <div class="range-value"><span>0°</span><span id="warmthVal">0°</span><span>360°</span></div>
+                </div>
+                <div class="field" style="margin-top: 10px;">
+                    <label>Quick Presets</label>
+                    <div class="preset-list">
+                        <button type="button" data-preset="clarendon">Clarendon</button>
+                        <button type="button" data-preset="juno">Juno</button>
+                        <button type="button" data-preset="lark">Lark</button>
+                        <button type="button" data-preset="valencia">Valencia</button>
+                        <button type="button" data-preset="moon">Moon</button>
+                        <button type="button" data-preset="xpro2">X-Pro II</button>
+                        <button type="button" data-preset="reyes">Reyes</button>
+                        <button type="button" data-preset="skyline">Skyline</button>
+                        <button type="button" data-preset="lofi">Lofi</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-panel">
+                <h2>Live Preview</h2>
+                <div class="canvas-wrap">
+                    <canvas id="filterCanvas" width="1080" height="1080"></canvas>
+                </div>
+                <div class="filter-tag">Current filter: <span id="currentFilterName">Normal</span></div>
+                <p class="note">Upload a photo to see the preview. Use the sliders to fine-tune lighting and color.</p>
+                <div class="btn-group">
+                    <button id="downloadPng">Download PNG</button>
+                    <button id="downloadJpg">Download JPG</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

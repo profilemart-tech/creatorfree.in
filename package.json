@@ -1,0 +1,9 @@
+{
+  "name": "creators-free-website",
+  "version": "1.0.0",
+  "description": "Creators Free Web App Tools",
+  "scripts": {
+    "start": "live-server ."
+  },
+  "license": "MIT"
+}

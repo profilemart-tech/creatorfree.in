@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Sound Effects Download - थप्पड़, खांसी, डकार, ढिशुम sound effect MP3/WAV | CreatorsFree</title>
+    <meta name="description" content="Download 100% free royalty-free Sound Effects (SFX) for YouTube videos, Shorts & Reels. Thappad ki awaz, Khansi ki awaz, Dakar ki awaz, Dishoom sound effect, Vine boom & Whoosh in HD MP3/WAV.">
+    <meta name="keywords" content="thappad ki awaz download, khansi ki awaz, dakar ki awaz mp3, dishoom sound effect, sound effects download free, youtube sfx free, meme sound effects">
+    <link rel="canonical" href="https://creatorsfree.in/sound-effects.html">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/header-footer.js" defer></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Free Sound Effects (SFX) Generator & Downloader - CreatorsFree",
+      "url": "https://creatorsfree.in/sound-effects.html",
+      "description": "Free royalty-free Sound Effects library for YouTubers and video editors. Download Thappad ki awaz, Khansi ki awaz, Dakar ki awaz, Dishoom sound effect and meme SFX.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "All"
+    }
+    </script>
+
+    <style>
+        .sfx-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px 80px 20px;
+        }
+
+        .sfx-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .sfx-header h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffffff 0%, #38bdf8 50%, #3DDC84 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0 0 10px 0;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 12px;
+            margin-bottom: 28px;
+            scrollbar-width: thin;
+        }
+
+        .tab-btn {
+            background: #111827;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #94a3b8;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+            background: rgba(56, 189, 248, 0.15);
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+
+        .tab-btn.active {
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+        }
+
+        /* SFX Grid */
+        .sfx-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .sfx-card {
+            background: #111827;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 16px;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sfx-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(61, 220, 132, 0.4);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .sfx-card-top {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .sfx-icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            flex-shrink: 0;
+        }
+
+        .sfx-info h3 {
+            margin: 0 0 4px 0;
+            font-size: 1.05rem;
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        .sfx-badge {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #3DDC84;
+            background: rgba(61, 220, 132, 0.12);
+            padding: 2px 8px;
+            border-radius: 999px;
+            text-transform: uppercase;
+        }
+
+        .sfx-card-controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-play {
+            flex: 1;
+            background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+            color: #ffffff;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-play:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+        }
+
+        .btn-download {
+            background: #1e293b;
+            color: #3DDC84;
+            border: 1px solid rgba(61, 220, 132, 0.3);
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-download:hover {
+            background: rgba(61, 220, 132, 0.15);
+            border-color: #3DDC84;
+            transform: scale(1.02);
+        }
+
+        /* Playing Wave Animation */
+        .wave-anim {
+            display: none;
+            align-items: center;
+            gap: 3px;
+            height: 14px;
+        }
+
+        .wave-anim.playing {
+            display: flex;
+        }
+
+        .wave-bar {
+            width: 3px;
+            height: 100%;
+            background: #3DDC84;
+            border-radius: 2px;
+            animation: bounce 0.6s infinite alternate;
+        }
+
+        .wave-bar:nth-child(2) { animation-delay: 0.15s; }
+        .wave-bar:nth-child(3) { animation-delay: 0.3s; }
+
+        @keyframes bounce {
+            0% { height: 4px; }
+            100% { height: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="sfx-container">
+        <header class="sfx-header">
+            <h1>Free Sound Effects (SFX) for Video Editors</h1>
+            <p style="color:#cbd5e1; max-width:700px; margin:0 auto; font-size:1.05rem;">Royalty-free high quality audio effects for YouTube videos, Instagram Reels, Gaming streams, and Vlogs.</p>
+        </header>
+
+        <!-- Answer-First Snippet for Google AI Overviews -->
+        <div class="answer-snippet-box" style="background:rgba(15,23,42,0.8); border:1px solid rgba(61,220,132,0.3); border-radius:12px; padding:16px; margin-bottom:24px; font-size:0.92rem; color:#cbd5e1; line-height:1.6;">
+            <p style="margin:0;"><strong>CreatorsFree Sound Effects Hub</strong> ek 100% free royalty-free audio library hai jahan se Indian YouTubers aur video editors Whoosh, Pop, Vine Boom, Mouse Click, Bell Notification, aur Meme SFX ko 1-click mein preview aur high-quality WAV/MP3 format mein download kar sakte hain — bina copyright strike aur bina watermark ke.</p>
+        </div>
+
+        <!-- Live Instant Search Engine Bar -->
+        <div class="search-box-container" style="margin-bottom: 24px; position: relative;">
+            <div style="position: relative; display: flex; align-items: center;">
+                <span style="position: absolute; left: 18px; font-size: 1.2rem; color: #94a3b8; pointer-events: none;">🔍</span>
+                <input type="text" id="sfxSearchInput" placeholder="Search sound effects (e.g., Slap, Punch, Whoosh, Click, Vine Boom, Bollywood)..." 
+                    style="width: 100%; background: #0f172a; border: 2px solid rgba(61, 220, 132, 0.3); border-radius: 14px; padding: 16px 45px 16px 50px; color: #fff; font-size: 1.02rem; font-weight: 600; outline: none; transition: all 0.2s ease; box-shadow: 0 4px 20px rgba(0,0,0,0.4);"
+                    oninput="handleSFXSearch(this.value)">
+                <button id="btnClearSFXSearch" onclick="clearSFXSearch()" 
+                    style="position: absolute; right: 14px; background: rgba(255,255,255,0.1); border: none; color: #cbd5e1; font-size: 1.1rem; border-radius: 50%; width: 28px; height: 28px; display: none; align-items: center; justify-content: center; cursor: pointer;">✕</button>
+            </div>
+            <div id="searchCounter" style="margin-top: 10px; font-size: 0.88rem; color: #94a3b8; font-weight: 600; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <span id="matchCountText">⚡ 20 Royalty-Free Sound Effects Available</span>
+                <span style="color: #3DDC84; font-size: 0.8rem; font-weight: 700; background: rgba(61,220,132,0.1); padding: 3px 10px; border-radius: 99px; border: 1px solid rgba(61,220,132,0.2);">🔍 Instant Live Search Engine</span>
+            </div>
+        </div>
+
+        <!-- Filter Categories -->
+        <div class="filter-tabs">
+            <button class="tab-btn active" onclick="filterCategory('all')">🔥 All Assets</button>
+            <button class="tab-btn" onclick="filterCategory('vfx')">⚡ VFX Video Overlays</button>
+            <button class="tab-btn" onclick="filterCategory('transitions')">💨 Transitions & Whooshes</button>
+            <button class="tab-btn" onclick="filterCategory('tech')">💻 Tech & UI Clicks</button>
+            <button class="tab-btn" onclick="filterCategory('meme')">🎭 Meme & Vine SFX</button>
+            <button class="tab-btn" onclick="filterCategory('cinematic')">🎬 Cinematic & Bass</button>
+            <button class="tab-btn" onclick="filterCategory('funny')">😂 Comedy & Funny</button>
+        </div>
+
+        <!-- SFX Grid Workspace -->
+        <div class="sfx-grid" id="sfxGrid">
+            <!-- Rendered by JS -->
+        </div>
+
+        <!-- SEO Article Section (Bilingual Hindi + English Keywords) -->
+        <article class="seo-article-container" style="margin-top:50px; background:#111827; border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:28px; color:#cbd5e1; font-size:0.95rem; line-height:1.7;">
+            <h2 style="color:#fff; margin-top:0; font-size:1.5rem;">Free Sound Effects Download for YouTube & Video Editing (थप्पड़, खांसी, डकार & डिगुम SFX)</h2>
+            <p><strong>CreatorsFree.in</strong> Indian YouTubers, Instagram Reels editors, aur meme creators ke liye 100% free royalty-free Sound Effects (SFX) pradhan karta hai. Yahan se aap bina kisi copyright strike aur watermark ke sabhi viral audio clips ko 1-click mein WAV/MP3 format mein preview aur download kar sakte hain.</p>
+
+            <h3 style="color:#3DDC84; font-size:1.2rem; margin-top:24px;">🔥 Top Viral Sound Effects (हिंदी एवं Hinglish कीवर्ड्स)</h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; margin-top:16px;">
+                <div style="background:#0f172a; padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.08);">
+                    <h4 style="color:#38bdf8; margin:0 0 8px 0;">✋ थप्पड़ की आवाज़ (Thappad Sound Effect)</h4>
+                    <p style="margin:0; font-size:0.88rem;">Comedy skits, roasting videos, aur meme shorts ke liye cinematic heavy thappad ki awaz MP3 download free.</p>
+                </div>
+                <div style="background:#0f172a; padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.08);">
+                    <h4 style="color:#3DDC84; margin:0 0 8px 0;">🗣️ खांसी और गला साफ़ (Khansi Sound Effect)</h4>
+                    <p style="margin:0; font-size:0.88rem;">Awkward silences, prank videos, aur funny moments ke liye dry cough & gala saaf karne ki awaz MP3.</p>
+                </div>
+                <div style="background:#0f172a; padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.08);">
+                    <h4 style="color:#fbbf24; margin:0 0 8px 0;">😮‍💨 डकार की आवाज़ (Burp & Dakar Sound)</h4>
+                    <p style="margin:0; font-size:0.88rem;">Funny reaction vlogs, food challenges, aur meme editing ke liye loud burp & dakar ki awaz sound effect.</p>
+                </div>
+                <div style="background:#0f172a; padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.08);">
+                    <h4 style="color:#f43f5e; margin:0 0 8px 0;">💥 बॉलीवुड ढिशुम (Dishoom Action SFX)</h4>
+                    <p style="margin:0; font-size:0.88rem;">80s & 90s retro Bollywood fight scenes, marpeet sound, aur heavy action punch impact audio clips.</p>
+                </div>
+                <div style="background:#0f172a; padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.08);">
+                    <h4 style="color:#a855f7; margin:0 0 8px 0;">🍌 कार्टून गिरने की आवाज़ (Slip & Fall Sound)</h4>
+                    <p style="margin:0; font-size:0.88rem;">Funny stumble, banana slip, dizzy spin, aur kisaan/cartoon girne ki awaz for viral Reels.</p>
+                </div>
+                <div style="background:#0f172a; padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.08);">
+                    <h4 style="color:#38bdf8; margin:0 0 8px 0;">💨 Whoosh & Subscribe Bell (हूश & घंटी)</h4>
+                    <p style="margin:0; font-size:0.88rem;">Text transition whoosh, mouse click, aur Subscribe press bell chime notification audio.</p>
+                </div>
+            </div>
+
+            <h3 style="color:#fff; margin-top:28px; font-size:1.2rem;">Kya ye sound effects monetized YouTube channel par use kar sakte hain?</h3>
+            <p>Haan! <strong>CreatorsFree.in</strong> ke sabhi sound effects 100% royalty-free hain. Aap inhein YouTube monetized videos, Instagram Reels, Facebook Watch, aur client projects mein bina kisi copyright strike ya claim ke bina jhijhak use kar sakte hain.</p>
+        </article>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Sound Effects & VFX Database with Web Audio API & GitHub CDN
+        const soundList = [
+            // Sci-Fi & Comedy VFX Video Overlays
+            { id: 'youtube_plant_growth_subscribe_vfx', name: 'YouTube Pot Plant Growth Subscribe Button VFX with Organic SFX (यूट्यूब गमले से पौधा और फूल सब्सक्राइब बटन Overlay)', category: 'vfx', icon: '🪴🌱', type: 'video', file: 'media/videos/youtube_plant_growth_subscribe_vfx/1080p60/YouTubePlantGrowthSubscribeVFX.mp4', badge: '1080p 60fps', tags: ['youtube pot subscribe button', 'plant growth subscribe vfx', 'podha ugne wala subscribe button', 'ankur phutne wala subscribe', 'flower bloom subscribe vfx', 'organic growth subscribe overlay', 'vfx'] },
+            { id: 'lord_hanuman_gada_subscribe_vfx', name: 'Lord Hanuman Golden Gada Subscribe Button VFX with Spiritual SFX (श्री बजरंगबली सुनहरी गदा सब्सक्राइब बटन Overlay)', category: 'vfx', icon: '🚩🔱', type: 'video', file: 'media/videos/lord_hanuman_gada_subscribe_vfx/1080p60/LordHanumanGadaSubscribeVFX.mp4', badge: '1080p 60fps', tags: ['lord hanuman subscribe button', 'bajrangbali gada subscribe button', 'hanumanji subscribe vfx', 'jai shree ram subscribe', 'golden gada subscribe vfx', 'devotional hanuman button', 'spiritual youtube overlay', 'vfx'] },
+            { id: 'red_hindu_flag_subscribe_vfx', name: 'Red Saffron Hindu Flag Subscribe Button VFX with Spiritual SFX (लाल/भगवा त्रिकोण धर्मध्वज सब्सक्राइब बटन Overlay)', category: 'vfx', icon: '🚩🕉️', type: 'video', file: 'media/videos/red_hindu_flag_subscribe_vfx/1080p60/RedHinduFlagSubscribeVFX.mp4', badge: '1080p 60fps', tags: ['red hindu flag subscribe button', 'bhagwa dhwaj subscribe button', 'hindu flag vfx', 'saffron flag subscribe', 'om symbol flag subscribe', 'devotional hindu button vfx', 'spiritual flag subscribe', 'vfx'] },
+            { id: 'lord_shiva_blessing_subscribe_vfx', name: 'Lord Shiva Divine Blessing Subscribe Button VFX with Divine SFX (भगवान शिव त्रिशूल दिव्य आशीर्वाद सब्सक्राइब बटन Overlay)', category: 'vfx', icon: '🔱🕉️', type: 'video', file: 'media/videos/lord_shiva_blessing_subscribe_vfx/1080p60/LordShivaBlessingSubscribeVFX.mp4', badge: '1080p 60fps', tags: ['lord shiva subscribe button', 'shiva blessing vfx', 'trishul subscribe button', 'har har mahadev subscribe', 'om symbol subscribe', 'devotional subscribe vfx', 'spiritual youtube button', 'vfx'] },
+            { id: 'cyber_subscribe_button_22nd_century_vfx', name: '22nd Century Cyberpunk Holographic Subscribe Button VFX (22वीं सदी का फ्यूचरिस्टिक सब्सक्राइब बटन Overlay)', category: 'vfx', icon: '🔮🔔', type: 'video', file: 'media/videos/cyber_subscribe_button_22nd_century_vfx/1080p60/CyberSubscribeButton22ndCenturyVFX.mp4', badge: '1080p 60fps', tags: ['22nd century subscribe button', 'cyberpunk subscribe vfx', 'holographic subscribe button', 'futuristic subscribe overlay', 'neon bell icon vfx', 'sci fi youtube subscribe', 'vfx'] },
+            { id: 'cartoon_running_speed_dash_vfx', name: 'Cartoon Running Speed Dash & Dust Trail VFX (कार्टून के भागने पर धुएं और स्पीड लाइंस का Overlay)', category: 'vfx', icon: '🏃‍♂️💨', type: 'video', file: 'media/videos/cartoon_running_speed_dash_vfx/1080p60/CartoonRunningSpeedDashVFX.mp4', badge: '1080p 60fps', tags: ['cartoon running vfx', 'bhagne par dhua vfx', 'speed dash lines', 'running dust trail', 'tom and jerry running vfx', 'fast run overlay', 'vfx'] },
+            { id: 'dizzy_stars_comedy_vfx', name: 'Cartoon Dizzy Head Stars Comedy VFX (चक्कर आने पर सिर के चारों तरफ घूमने वाले तारे Overlay)', category: 'vfx', icon: '💫⭐', type: 'video', file: 'media/videos/dizzy_stars_comedy_vfx/1080p60/CartoonDizzyStarsComedyVFX.mp4', badge: '1080p 60fps', tags: ['dizzy stars vfx', 'chakkar aane wale tare', 'head spinning stars', 'funny comedy overlay', 'tom and jerry stars', 'cartoon dizzy vfx', 'vfx'] },
+            { id: 'cloud_lightning_text_vfx', name: 'Cloud Storm Lightning Overlay VFX (बादल से कड़कती बिजली का शॉकवेव Overlay)', category: 'vfx', icon: '☁️⚡', type: 'video', file: 'media/videos/cloud_lightning_text_vfx/1080p60/CloudLightningTextVFX.mp4', badge: '1080p 60fps', tags: ['cloud lightning vfx', 'lightning strike overlay', 'storm cloud vfx', 'badal aur bijli vfx', 'thunder overlay', 'vfx'] },
+            { id: 'electric_lightning_vfx', name: 'High Voltage Electric Lightning Shockwave VFX (बिजली का शॉकवेव रिंग Overlay)', category: 'vfx', icon: '🌩️', type: 'video', file: 'media/videos/electric_lightning_vfx/1080p60/ElectricLightningShockwaveVFX.mp4', badge: '1080p 60fps', tags: ['electric lightning vfx', 'lightning ring mp4', 'shockwave vfx', 'bijli ki awaz', 'punch impact vfx', 'action reels overlay', 'electric burst', 'vfx'] },
+            { id: 'sci_fi_energy_ring_vfx', name: 'Sci-Fi Glowing Energy Ring VFX (फ्यूचरिस्टिक ऊर्जा रिंग VFX Overlay)', category: 'vfx', icon: '⚡', type: 'video', file: 'media/videos/futuristic_sci_fi_ring/1080p60/FuturisticSciFiEnergyRing.mp4', badge: '1080p 60fps', tags: ['sci fi energy ring', 'glowing ring vfx', 'futuristic ring', 'energy ring mp4', 'tech overlay', 'vfx download', 'ring animation', 'vfx'] },
+
+            // CF Series Uploaded WAV Audio Files with Embedded Metadata (Hosted on GitHub CDN: 0605yudhik/creatorsfree-sfx)
+            { id: 'slap_var1', name: 'Cinematic Heavy Slap 1 (थप्पड़ की आवाज़)', category: 'cinematic', icon: '✋', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_slap_heavy_v1.wav', badge: 'CF Series', tags: ['slap', 'thappad ki awaz', 'thappad sound', 'thappad ki awaz download', 'hit', 'punch', 'face', 'action', 'thud', 'impact', 'bollywood', 'funny'] },
+            { id: 'slap_var2', name: 'Cinematic Slap Impact 2 (थप्पड़ साउंड)', category: 'cinematic', icon: '💥', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_slap_heavy_v2.wav', badge: 'CF Series', tags: ['slap', 'thappad ki awaz', 'thappad sound', 'hit', 'punch', 'face', 'action', 'impact', 'meme'] },
+            { id: 'slap_var3', name: 'Punchy Face Slap 3 (थप्पड़ की आवाज)', category: 'cinematic', icon: '🥊', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_slap_heavy_v3.wav', badge: 'CF Series', tags: ['slap', 'thappad ki awaz', 'punch', 'boxing', 'fight', 'comedy', 'meme'] },
+            { id: 'slap_var4', name: 'Dramatic Slap Hit 4 (ड्रामा थप्पड़)', category: 'cinematic', icon: '⚡', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_slap_heavy_v4.wav', badge: 'CF Series', tags: ['slap', 'thappad ki awaz', 'dramatic', 'hit', 'shock', 'drama', 'action'] },
+            
+            { id: 'slip_var1', name: 'Cartoon Slip & Fall 1 (गिरने की आवाज़)', category: 'funny', icon: '🍌', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_slip_v1.wav', badge: 'CF Series', tags: ['slip', 'girne ki awaz', 'fall', 'cartoon girne ki awaz', 'cartoon', 'banana', 'comedy', 'funny', 'fail'] },
+            { id: 'slip_var2', name: 'Cartoon Slip & Fall 2 (फनी गिरने की आवाज)', category: 'funny', icon: '🤪', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_slip_v2.wav', badge: 'CF Series', tags: ['slip', 'girne ki awaz', 'fall', 'silly', 'humor', 'meme', 'shorts'] },
+            { id: 'slip_var3', name: 'Cartoon Slip & Fall 3 (कार्टून स्लिप)', category: 'funny', icon: '🤸', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_slip_v3.wav', badge: 'CF Series', tags: ['slip', 'girne ki awaz', 'stunt', 'drop', 'slide', 'whoop', 'reels'] },
+            { id: 'slip_var4', name: 'Cartoon Slip & Fall 4 (चक्कर और गिरावट)', category: 'funny', icon: '💫', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_slip_v4.wav', badge: 'CF Series', tags: ['slip', 'girne ki awaz', 'dizzy', 'comedy', 'spin', 'funny', 'fail'] },
+            
+            { id: 'ballywood_dhishum1', name: 'Bollywood Action Dhishum 1 (ढिशुम साउंड)', category: 'cinematic', icon: '🎬', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_bollywood_dhishum_v1.wav', badge: 'CF Series', tags: ['dhishum', 'dishoom sound effect', 'dishum ki awaz', 'dishoom', 'bollywood', 'action', 'heavy', 'bass', 'fight'] },
+            { id: 'ballywood_dhishum2', name: 'Bollywood Action Dhishum 2 (बॉलीवुड एक्शन)', category: 'cinematic', icon: '💥', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_bollywood_dhishum_v2.wav', badge: 'CF Series', tags: ['dhishum', 'dishoom sound effect', 'dishum ki awaz', 'bollywood', 'action', 'heavy', 'bass', 'punch'] },
+
+            { id: 'throat_clearing1', name: 'Dry Throat Clearing Ahem 1 (खांसी / गला साफ़)', category: 'funny', icon: '🗣️', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_throat_clearing_v1.wav', badge: 'CF Series', tags: ['khansi ki awaz', 'khansi sound effect', 'cough sound effect', 'gala saaf karne ki awaz', 'ahem', 'clearing', 'funny', 'speech'] },
+            { id: 'throat_clearing2', name: 'Dry Throat Clearing Ahem 2 (खांसी की आवाज)', category: 'funny', icon: '🎙️', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_throat_clearing_v2.wav', badge: 'CF Series', tags: ['khansi ki awaz', 'khansi sound effect', 'cough sound effect', 'gala saaf karne ki awaz', 'cough', 'ahem', 'clearing', 'funny', 'audio'] },
+
+            { id: 'body_scratch1', name: 'Fingernail Scratch Sound 1 (खुजली की आवाज़)', category: 'funny', icon: '💅', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_body_scratch_v1.wav', badge: 'CF Series', tags: ['khujli ki awaz', 'khujli sound effect', 'scratching sound effect', 'scratch', 'body', 'itch', 'fingernail', 'funny', 'skin'] },
+            { id: 'body_scratch2', name: 'Fingernail Scratch Sound 2 (खुजली साउंड)', category: 'funny', icon: '✋', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_body_scratch_v2.wav', badge: 'CF Series', tags: ['khujli ki awaz', 'khujli sound effect', 'scratching sound effect', 'scratch', 'body', 'itch', 'fingernail', 'funny', 'skin'] },
+            { id: 'body_scratch3', name: 'Fingernail Scratch Sound 3 (खुजली आवाज)', category: 'funny', icon: '🖐️', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_body_scratch_v3.wav', badge: 'CF Series', tags: ['khujli ki awaz', 'khujli sound effect', 'scratching sound effect', 'scratch', 'body', 'itch', 'fingernail', 'funny', 'skin'] },
+            { id: 'body_scratch4', name: 'Fingernail Scratch Sound 4 (त्वचा खुजली)', category: 'funny', icon: '✌️', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_body_scratch_v4.wav', badge: 'CF Series', tags: ['khujli ki awaz', 'khujli sound effect', 'scratching sound effect', 'scratch', 'body', 'itch', 'fingernail', 'funny', 'skin'] },
+
+            { id: 'punch_var1', name: '80s Bollywood Punch 1 (मारपीट पंच साउंड)', category: 'cinematic', icon: '👊', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_bollywood_punch_v1.wav', badge: 'CF Series', tags: ['punch', 'marpeet sound effect', 'fight sound effect', 'bollywood', '80s', 'retro', 'action', 'fight', 'mithun', 'hero'] },
+            { id: 'punch_var2', name: '80s Bollywood Punch 2 (एक्शन पंच)', category: 'cinematic', icon: '💥', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_bollywood_punch_v2.wav', badge: 'CF Series', tags: ['punch', 'dishoom', 'hit', 'heavy', 'fight', 'action'] },
+            { id: 'punch_var3', name: '80s Bollywood Punch 3 (मुक्का साउंड)', category: 'cinematic', icon: '🥊', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_bollywood_punch_v3.wav', badge: 'CF Series', tags: ['punch', 'dishoom', 'hit', 'heavy', 'fight', 'action'] },
+            { id: 'punch_var4', name: '80s Bollywood Punch 4 (पावर पंच)', category: 'cinematic', icon: '⚡', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_bollywood_punch_v4.wav', badge: 'CF Series', tags: ['punch', 'power', 'superhero', 'smash', 'impact', 'loud'] },
+
+            // Newly Added Firefly Sound Effects (Batch 2: Breathing, Snap, Gasp & Fart)
+            { id: 'deep_breath_v1', name: 'Calm Deep Breathing 1 (गहरी सांस की आवाज)', category: 'cinematic', icon: '🧘', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_deep_breathing_v1.wav', badge: 'CF Series', tags: ['saans ki awaz', 'saans sound', 'breathing sound effect', 'deep breath', 'meditation', 'calm', 'relax'] },
+            { id: 'deep_breath_v2', name: 'Calm Deep Breathing 2 (गहरी सांस की आवाज)', category: 'cinematic', icon: '🧘', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_deep_breathing_v2.wav', badge: 'CF Series', tags: ['saans ki awaz', 'saans sound', 'breathing sound effect', 'deep breath', 'meditation', 'calm', 'relax'] },
+            { id: 'deep_breath_v3', name: 'Calm Deep Breathing 3 (गहरी सांस की आवाज)', category: 'cinematic', icon: '🧘', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_deep_breathing_v3.wav', badge: 'CF Series', tags: ['saans ki awaz', 'saans sound', 'breathing sound effect', 'deep breath', 'meditation', 'calm', 'relax'] },
+            { id: 'deep_breath_v4', name: 'Calm Deep Breathing 4 (गहरी सांस की आवाज)', category: 'cinematic', icon: '🧘', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_deep_breathing_v4.wav', badge: 'CF Series', tags: ['saans ki awaz', 'saans sound', 'breathing sound effect', 'deep breath', 'meditation', 'calm', 'relax'] },
+            
+            { id: 'finger_snap_v1', name: 'Double Finger Snap (चुटकी बजाने की आवाज़)', category: 'tech', icon: '🤌', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_finger_snap_v1.wav', badge: 'CF Series', tags: ['chutki ki awaz', 'chutki sound', 'finger snap sound effect', 'snap', 'click'] },
+            { id: 'fast_breath_v1', name: 'Exhausted Heavy Breathing (हाँफने की आवाज़)', category: 'funny', icon: '🏃', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_fast_breathing_v1.wav', badge: 'CF Series', tags: ['hanfne ki awaz', 'heavy breathing sound', 'tired breath', 'run', 'panic'] },
+            
+            { id: 'relieved_breath_v1', name: 'Relieved Deep Breath 1 (चैन की सांस)', category: 'cinematic', icon: '😌', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_relieved_breath_v1.wav', badge: 'CF Series', tags: ['chain ki saans', 'relief breath sound', 'sigh sound effect', 'sigh', 'peace'] },
+            { id: 'relieved_breath_v2', name: 'Relieved Deep Breath 2 (चैन की सांस)', category: 'cinematic', icon: '😌', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_relieved_breath_v2.wav', badge: 'CF Series', tags: ['chain ki saans', 'relief breath sound', 'sigh sound effect', 'sigh', 'peace'] },
+            { id: 'relieved_breath_v3', name: 'Relieved Deep Breath 3 (चैन की सांस)', category: 'cinematic', icon: '😌', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_relieved_breath_v3.wav', badge: 'CF Series', tags: ['chain ki saans', 'relief breath sound', 'sigh sound effect', 'sigh', 'peace'] },
+            
+            { id: 'sharp_gasp_v1', name: 'Sudden Shocked Gasp 1 (चौंकने की आवाज़)', category: 'funny', icon: '😱', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_sharp_gasp_v1.wav', badge: 'CF Series', tags: ['chowkne ki awaz', 'shocked gasp sound', 'gasp sound effect', 'shock', 'surprise', 'haat'] },
+            { id: 'sharp_gasp_v2', name: 'Sudden Shocked Gasp 2 (हैरानी की आवाज)', category: 'funny', icon: '😱', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_sharp_gasp_v2.wav', badge: 'CF Series', tags: ['chowkne ki awaz', 'shocked gasp sound', 'gasp sound effect', 'shock', 'surprise'] },
+            { id: 'sharp_gasp_v3', name: 'Sudden Shocked Gasp 3 (शॉक साउंड)', category: 'funny', icon: '😱', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_sharp_gasp_v3.wav', badge: 'CF Series', tags: ['chowkne ki awaz', 'shocked gasp sound', 'gasp sound effect', 'shock', 'surprise'] },
+            { id: 'sharp_gasp_v4', name: 'Sudden Shocked Gasp 4 (चौंकना)', category: 'funny', icon: '😱', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_sharp_gasp_v4.wav', badge: 'CF Series', tags: ['chowkne ki awaz', 'shocked gasp sound', 'gasp sound effect', 'shock', 'surprise'] },
+            
+            { id: 'cartoon_fart_v1', name: 'Funny Cartoon Fart 1 (पाद की आवाज़)', category: 'funny', icon: '💨', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_fart_v1.wav', badge: 'CF Series', tags: ['paad ki awaz', 'paad sound effect', 'fart sound effect', 'funny fart', 'comedy fart', 'meme'] },
+            { id: 'cartoon_fart_v2', name: 'Funny Cartoon Fart 2 (फनी पाद साउंड)', category: 'funny', icon: '💨', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_fart_v2.wav', badge: 'CF Series', tags: ['paad ki awaz', 'paad sound effect', 'fart sound effect', 'funny fart', 'comedy fart', 'meme'] },
+            { id: 'cartoon_fart_v3', name: 'Funny Cartoon Fart 3 (कॉमेडी पाद की आवाज)', category: 'funny', icon: '💨', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_fart_v3.wav', badge: 'CF Series', tags: ['paad ki awaz', 'paad sound effect', 'fart sound effect', 'funny fart', 'comedy fart', 'meme'] },
+            { id: 'cartoon_fart_v4', name: 'Funny Cartoon Fart 4 (कॉमिक फार्ट)', category: 'funny', icon: '💨', type: 'file', file: 'https://raw.githubusercontent.com/0605yudhik/creatorsfree-sfx/main/cf_cartoon_fart_v4.wav', badge: 'CF Series', tags: ['paad ki awaz', 'paad sound effect', 'fart sound effect', 'funny fart', 'comedy fart', 'meme'] },
+
+            // Synthesized Essential Sound Effects (Including Dakar & Burp)
+            { id: 'burp_dakar', name: 'Funny Burp Dakar Sound (डकार की आवाज़)', category: 'funny', icon: '😮‍💨', type: 'sad_trombone', badge: 'Meme Viral', tags: ['dakar ki awaz', 'dakar sound effect', 'burp sound effect', 'burp ki awaz', 'funny dakar', 'comedy', 'meme'] },
+            { id: 'whoosh_fast', name: 'Fast Air Whoosh (हूश साउंड)', category: 'transitions', icon: '💨', type: 'whoosh', badge: 'Popular', tags: ['whoosh', 'transition', 'swoosh', 'slide', 'air', 'fast', 'woosh ki awaz'] },
+            { id: 'mouse_click', name: 'Mouse Button Click (क्लिक साउंड)', category: 'tech', icon: '🖱️', type: 'click', badge: 'Essential', tags: ['click', 'mouse', 'button', 'ui', 'tech', 'select', 'click ki awaz'] },
+            { id: 'pop_bubble', name: 'UI Pop Sound (पॉप साउंड)', category: 'tech', icon: '🎉', type: 'pop', badge: 'Clean', tags: ['pop', 'bubble', 'ui', 'text', 'notification', 'clean', 'pop ki awaz'] },
+            { id: 'bell_chime', name: 'Subscribe Bell Chime (घंटी की आवाज़)', category: 'tech', icon: '🔔', type: 'bell', badge: 'YouTube', tags: ['bell', 'subscribe', 'ghanti ki awaz', 'ding', 'chime', 'youtube', 'notification'] },
+            { id: 'vine_boom', name: 'Vine Boom Bass (धमाका साउंड)', category: 'meme', icon: '💥', type: 'boom', badge: 'Meme Viral', tags: ['vine boom', 'boom', 'bass', 'thud', 'meme', 'dramatic', 'shock', 'dhamaka sound'] },
+            { id: 'coin_drop', name: 'Rupee Coin Chime (सिक्के की आवाज़)', category: 'tech', icon: '💰', type: 'coin', badge: 'Chime', tags: ['coin', 'sikka ki awaz', 'money', 'rupee', 'gold', 'cash', 'reward', 'game'] },
+            { id: 'keyboard_type', name: 'Keyboard Key Press (टाइपिंग की आवाज़)', category: 'tech', icon: '⌨️', type: 'keyboard', badge: 'UI', tags: ['keyboard', 'typing ki awaz', 'type', 'typing', 'key', 'pc', 'code'] },
+            { id: 'camera_shutter', name: 'Camera Shutter Click (कैमरा क्लिक)', category: 'tech', icon: '📸', type: 'shutter', badge: 'Photo', tags: ['camera', 'camera ki awaz', 'shutter', 'photo', 'snap', 'picture', 'flash'] },
+            { id: 'sad_trombone', name: 'Sad Comedy Horn (दुखी कॉमेडी हॉर्न)', category: 'funny', icon: '🎺', type: 'sad_trombone', badge: 'Funny', tags: ['sad', 'dukhi sound', 'fail', 'trombone', 'horn', 'wa wa wa', 'funny', 'comedy'] },
+            { id: 'clock_tick', name: 'Clock Ticking Second (घड़ी की सुई)', category: 'cinematic', icon: '⏰', type: 'tick', badge: 'Timer', tags: ['clock', 'ghadi ki awaz', 'tick', 'time', 'timer', 'second', 'countdown'] },
+            { id: 'game_over', name: 'Gaming Retro Beep (गेम ओवर बीप)', category: 'gaming', icon: '🎮', type: 'game_beep', badge: 'Gaming', tags: ['gaming', 'retro', 'beep', 'arcade', 'game over', '8bit'] },
+            { id: 'level_up', name: 'Level Up Fanfare (जीत का म्यूजिक)', category: 'gaming', icon: '⭐', type: 'level_up', badge: 'Win', tags: ['level up', 'jeeth sound', 'win', 'victory', 'fanfare', 'trophy', 'gaming'] }
+        ];
+
+        let activeAudio = null;
+        let currentFilterCategory = 'all';
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function renderSFX(filterCategory = 'all', searchQuery = '') {
+            const grid = document.getElementById('sfxGrid');
+            grid.innerHTML = '';
+
+            let filtered = filterCategory === 'all' ? soundList : soundList.filter(s => s.category === filterCategory);
+
+            if (searchQuery) {
+                const q = searchQuery.toLowerCase();
+                filtered = filtered.filter(s => 
+                    s.name.toLowerCase().includes(q) ||
+                    s.category.toLowerCase().includes(q) ||
+                    s.badge.toLowerCase().includes(q) ||
+                    (s.tags && s.tags.some(t => t.toLowerCase().includes(q))) ||
+                    (s.id && s.id.toLowerCase().includes(q))
+                );
+            }
+
+            const counterText = document.getElementById('matchCountText');
+            if (counterText) {
+                if (searchQuery) {
+                    counterText.innerHTML = `⚡ Found <strong>${filtered.length}</strong> sound effect${filtered.length === 1 ? '' : 's'} for "<em>${searchQuery}</em>"`;
+                } else {
+                    counterText.innerHTML = `⚡ <strong>${soundList.length}</strong> Royalty-Free Sound Effects Available`;
+                }
+            }
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div style="grid-column: 1 / -1; background: #111827; border: 1px dashed rgba(255,255,255,0.15); border-radius: 16px; padding: 40px 20px; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 12px;">🔍</div>
+                        <h3 style="color: #fff; font-size: 1.2rem; margin: 0 0 8px 0;">No sound effects found for "${searchQuery}"</h3>
+                        <p style="color: #94a3b8; font-size: 0.92rem; margin: 0 0 20px 0;">Try searching for terms like <em>slap, whoosh, click, punch, vine boom, bell, or bollywood</em>.</p>
+                        <button onclick="clearSFXSearch()" style="background: #3DDC84; color: #0f172a; border: none; padding: 10px 20px; border-radius: 10px; font-weight: 800; cursor: pointer;">
+                            🔄 Reset Search Filter
+                        </button>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(sound => {
+                const card = document.createElement('div');
+                card.className = 'sfx-card';
+                card.innerHTML = `
+                    <div class="sfx-card-top">
+                        <div class="sfx-icon-box">${sound.icon}</div>
+                        <div class="sfx-info">
+                            <h3>${sound.name}</h3>
+                            <span class="sfx-badge">${sound.badge}</span>
+                        </div>
+                    </div>
+                    <div class="sfx-card-controls">
+                        <button class="btn-play" onclick="playSFXItem('${sound.id}', this)">
+                            <span>▶️ Play</span>
+                            <div class="wave-anim">
+                                <div class="wave-bar"></div>
+                                <div class="wave-bar"></div>
+                                <div class="wave-bar"></div>
+                            </div>
+                        </button>
+                        <button class="btn-download" onclick="downloadSFXItem('${sound.id}')" title="Download Free WAV">
+                            📥 Download
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function handleSFXSearch(query) {
+            const clearBtn = document.getElementById('btnClearSFXSearch');
+            if (clearBtn) clearBtn.style.display = query.trim() ? 'flex' : 'none';
+            renderSFX(currentFilterCategory, query.trim());
+        }
+
+        function clearSFXSearch() {
+            const input = document.getElementById('sfxSearchInput');
+            if (input) input.value = '';
+            const clearBtn = document.getElementById('btnClearSFXSearch');
+            if (clearBtn) clearBtn.style.display = 'none';
+            renderSFX(currentFilterCategory, '');
+        }
+
+        function filterCategory(cat) {
+            currentFilterCategory = cat;
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            if (event && event.target) event.target.classList.add('active');
+            const searchVal = document.getElementById('sfxSearchInput') ? document.getElementById('sfxSearchInput').value.trim() : '';
+            renderSFX(cat, searchVal);
+        }
+
+        const audioCache = {};
+
+        // Ultra-Reliable Dual Engine Audio Player (Web Audio API Buffer Decoding + HTML5 Fallback)
+        async function playSFXItem(id, btnEl) {
+            const sound = soundList.find(s => s.id === id);
+            if (!sound) return;
+
+            // Unlock Web Audio Context on user click (Mandatory for Chrome & iOS Safari)
+            if (audioCtx && audioCtx.state === 'suspended') {
+                try { await audioCtx.resume(); } catch(e) {}
+            }
+
+            if (activeAudio) {
+                try { activeAudio.pause(); } catch(e) {}
+                activeAudio = null;
+            }
+
+            document.querySelectorAll('.wave-anim').forEach(w => w.classList.remove('playing'));
+            const anim = btnEl ? btnEl.querySelector('.wave-anim') : null;
+            if (anim) anim.classList.add('playing');
+
+            const stopAnim = () => {
+                if (anim) anim.classList.remove('playing');
+            };
+
+            if (sound.type === 'video') {
+                openVFXVideoModal(sound);
+                stopAnim();
+                return;
+            }
+
+            if (sound.type === 'file' && sound.file) {
+                try {
+                    // Engine 1: Web Audio API Buffer Playback (Instant 0ms, zero lag, works cross-platform)
+                    if (!audioCache[sound.file]) {
+                        const response = await fetch(sound.file);
+                        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                        const arrayBuffer = await response.arrayBuffer();
+                        audioCache[sound.file] = await audioCtx.decodeAudioData(arrayBuffer);
+                    }
+                    const source = audioCtx.createBufferSource();
+                    source.buffer = audioCache[sound.file];
+                    source.connect(audioCtx.destination);
+                    source.start(0);
+                    source.onended = stopAnim;
+                } catch (err) {
+                    console.warn("Web Audio API decode fallback to HTML5 Audio element:", err);
+                    // Engine 2: Fallback to HTML5 Audio element
+                    try {
+                        const audio = new Audio(sound.file);
+                        activeAudio = audio;
+                        audio.onended = stopAnim;
+                        audio.onerror = stopAnim;
+                        await audio.play();
+                    } catch (e) {
+                        console.error("HTML5 Audio playback error:", e);
+                        stopAnim();
+                    }
+                }
+            } else {
+                try {
+                    const buffer = generateAudioBuffer(sound.type);
+                    const source = audioCtx.createBufferSource();
+                    source.buffer = buffer;
+                    source.connect(audioCtx.destination);
+                    source.start(0);
+                    source.onended = stopAnim;
+                } catch (e) {
+                    console.error("Synthesizer error:", e);
+                    stopAnim();
+                }
+            }
+        }
+
+        function downloadSFXItem(id) {
+            const sound = soundList.find(s => s.id === id);
+            if (!sound) return;
+
+            if (sound.type === 'video' || (sound.file && sound.file.endsWith('.mp4'))) {
+                const a = document.createElement('a');
+                a.href = sound.file;
+                a.download = `CreatorsFree_${sound.id}.mp4`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                return;
+            }
+
+            if (sound.type === 'file' && sound.file) {
+                const a = document.createElement('a');
+                a.href = sound.file;
+                a.download = `${sound.name.replace(/\s+/g, '_')}.wav`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            } else {
+                downloadSFX(sound.type, sound.name);
+            }
+        }
+
+        // Synthesize High Quality Audio Buffers
+        function generateAudioBuffer(type) {
+            const sampleRate = audioCtx.sampleRate;
+            let duration = 0.3;
+            if (type === 'boom' || type === 'sad_trombone' || type === 'level_up') duration = 1.2;
+            if (type === 'whoosh' || type === 'swish') duration = 0.45;
+
+            const buffer = audioCtx.createBuffer(1, sampleRate * duration, sampleRate);
+            const data = buffer.getChannelData(0);
+
+            for (let i = 0; i < buffer.length; i++) {
+                const t = i / sampleRate;
+
+                if (type === 'whoosh') {
+                    // White noise filtered sweep
+                    const noise = (Math.random() * 2 - 1);
+                    const envelope = Math.sin((t / duration) * Math.PI);
+                    data[i] = noise * envelope * 0.5;
+                } else if (type === 'click') {
+                    // Mouse click sharp pulse
+                    const freq = 1200;
+                    data[i] = Math.sin(2 * Math.PI * freq * t) * Math.exp(-t * 80) * 0.6;
+                } else if (type === 'pop') {
+                    // Pop bubble sweep
+                    const freq = 300 + (1200 - 300) * (t / duration);
+                    data[i] = Math.sin(2 * Math.PI * freq * t) * Math.exp(-t * 25) * 0.7;
+                } else if (type === 'bell') {
+                    // Two-harmonic bell chime
+                    const f1 = 1046.5; // C6
+                    const f2 = 2093.0;
+                    data[i] = (Math.sin(2 * Math.PI * f1 * t) + 0.4 * Math.sin(2 * Math.PI * f2 * t)) * Math.exp(-t * 5) * 0.5;
+                } else if (type === 'boom') {
+                    // Deep 808 sub bass drop
+                    const freq = 140 * Math.exp(-t * 4);
+                    data[i] = Math.sin(2 * Math.PI * freq * t) * Math.exp(-t * 1.8) * 0.8;
+                } else if (type === 'coin') {
+                    // Mario coin chime (B5 -> E6)
+                    const freq = t < 0.1 ? 987.77 : 1318.51;
+                    data[i] = Math.sin(2 * Math.PI * freq * t) * Math.exp(-t * 8) * 0.5;
+                } else if (type === 'keyboard') {
+                    // Mechanical switch click
+                    data[i] = (Math.random() * 2 - 1) * Math.exp(-t * 120) * 0.4;
+                } else if (type === 'punch') {
+                    // Thud punch impact
+                    const freq = 100 * Math.exp(-t * 20);
+                    data[i] = (Math.sin(2 * Math.PI * freq * t) + (Math.random() * 0.5)) * Math.exp(-t * 15) * 0.7;
+                } else if (type === 'glitch') {
+                    // Digital glitch frequency hop
+                    const freq = (i % 100 < 50) ? 800 : 250;
+                    data[i] = (Math.sin(2 * Math.PI * freq * t) + (Math.random() * 0.3)) * Math.exp(-t * 6) * 0.5;
+                } else if (type === 'sad_trombone') {
+                    // Descending pitch bend
+                    const freq = 300 - (120 * (t / duration));
+                    data[i] = (Math.sin(2 * Math.PI * freq * t) > 0 ? 0.3 : -0.3) * Math.exp(-t * 1.2) * 0.4;
+                } else if (type === 'level_up') {
+                    // Arpeggio chime
+                    const step = Math.floor(t * 10);
+                    const notes = [523.25, 659.25, 783.99, 1046.50];
+                    const freq = notes[step % notes.length];
+                    data[i] = Math.sin(2 * Math.PI * freq * t) * Math.exp(-t * 2) * 0.5;
+                } else {
+                    // Default click/swish
+                    data[i] = Math.sin(2 * Math.PI * 600 * t) * Math.exp(-t * 30) * 0.4;
+                }
+            }
+
+            return buffer;
+        }
+
+        // On-the-Fly WAV Audio File Generator & Downloader
+        function downloadSFX(type, name) {
+            const buffer = generateAudioBuffer(type);
+            const wavBlob = bufferToWaveBlob(buffer);
+            const url = URL.createObjectURL(wavBlob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `CreatorsFree_${name.replace(/\s+/g, '_')}_SFX.wav`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Convert AudioBuffer to WAV Blob
+        function bufferToWaveBlob(abuffer) {
+            const numOfChan = abuffer.numberOfChannels;
+            const length = abuffer.length * numOfChan * 2 + 44;
+            const outBuffer = new ArrayBuffer(length);
+            const view = new DataView(outBuffer);
+            const channels = [];
+            let sample = 0;
+            let offset = 0;
+            let pos = 0;
+
+            function writeString(str) {
+                for (let i = 0; i < str.length; i++) {
+                    view.setUint8(pos++, str.charCodeAt(i));
+                }
+            }
+
+            function setUint16(data) {
+                view.setUint16(pos, data, true);
+                pos += 2;
+            }
+
+            function setUint32(data) {
+                view.setUint32(pos, data, true);
+                pos += 4;
+            }
+
+            writeString('RIFF');
+            setUint32(length - 8);
+            writeString('WAVE');
+            writeString('fmt ');
+            setUint32(16);
+            setUint16(1);
+            setUint16(numOfChan);
+            setUint32(abuffer.sampleRate);
+            setUint32(abuffer.sampleRate * 2 * numOfChan);
+            setUint16(numOfChan * 2);
+            setUint16(16);
+            writeString('data');
+            setUint32(length - pos - 4);
+
+            for (let i = 0; i < abuffer.numberOfChannels; i++) {
+                channels.push(abuffer.getChannelData(i));
+            }
+
+            while (offset < abuffer.length) {
+                for (let i = 0; i < numOfChan; i++) {
+                    sample = Math.max(-1, Math.min(1, channels[i][offset]));
+                    sample = (0.5 + sample < 0 ? sample * 32768 : sample * 32767) | 0;
+                    view.setInt16(pos, sample, true);
+                    pos += 2;
+                }
+                offset++;
+            }
+
+            return new Blob([outBuffer], { type: 'audio/wav' });
+        }
+
+        // VFX Video Overlay Modal Preview Player
+        function openVFXVideoModal(sound) {
+            let modal = document.getElementById('vfxModalOverlay');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'vfxModalOverlay';
+                modal.style.cssText = 'position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px); z-index:9999; display:flex; align-items:center; justify-content:center; padding:20px; box-sizing:border-box;';
+                document.body.appendChild(modal);
+            }
+
+            modal.innerHTML = `
+                <div style="background:#0b0f19; border:1px solid rgba(61,220,132,0.3); border-radius:20px; width:100%; max-width:720px; overflow:hidden; box-shadow:0 25px 50px -12px rgba(0,0,0,0.7); animation:popIn 0.25s ease-out;">
+                    <div style="padding:16px 20px; background:#111827; border-bottom:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:space-between;">
+                        <div style="display:flex; align-items:center; gap:10px;">
+                            <span style="font-size:1.4rem;">${sound.icon}</span>
+                            <div>
+                                <h3 style="margin:0; font-size:1.05rem; color:#fff;">${sound.name}</h3>
+                                <span style="font-size:0.75rem; color:#3DDC84; font-weight:700;">${sound.badge} • Royalty-Free VFX</span>
+                            </div>
+                        </div>
+                        <button onclick="closeVFXVideoModal()" style="background:rgba(255,255,255,0.1); border:none; color:#fff; width:32px; height:32px; border-radius:50%; font-weight:bold; cursor:pointer; font-size:1.1rem;">✕</button>
+                    </div>
+                    <div style="background:#000; padding:10px; text-align:center;">
+                        <video src="${sound.file}" controls autoplay loop style="width:100%; max-height:420px; border-radius:12px; outline:none; object-fit:contain;"></video>
+                    </div>
+                    <div style="padding:16px 20px; background:#0b0f19; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+                        <span style="font-size:0.85rem; color:#94a3b8;">Format: MP4 (1080p 60FPS) • License: Free Commercial Use</span>
+                        <button onclick="downloadSFXItem('${sound.id}')" style="background:#3DDC84; color:#0f172a; border:none; padding:10px 20px; border-radius:10px; font-weight:800; cursor:pointer; font-size:0.92rem; display:flex; align-items:center; gap:6px;">
+                            📥 Download Free MP4
+                        </button>
+                    </div>
+                </div>
+            `;
+            modal.style.display = 'flex';
+        }
+
+        function closeVFXVideoModal() {
+            const modal = document.getElementById('vfxModalOverlay');
+            if (modal) {
+                const vid = modal.querySelector('video');
+                if (vid) vid.pause();
+                modal.style.display = 'none';
+            }
+        }
+
+        // Initialize grid on load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderSFX('all');
+        });
+    </script>
+</body>
+</html>

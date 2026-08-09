@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Social Media Poster & Banner Maker Tool | Creators Free</title>
+    <meta name="description" content="Design custom social media posters, festival banners, and graphics easily online. Free banner maker tool for YouTube, Instagram, and Facebook.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/header-footer.js" defer></script>
+    <!-- Vercel Web Analytics Real Visitor Tracking -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    <style>
+        .creator-box {
+            background: #ffffff !important;
+            color: #222222 !important;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            max-width: 950px;
+            margin: 20px auto 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .creator-inputs {
+            flex: 1;
+            min-width: 300px;
+        }
+        .creator-inputs h3 {
+            color: #111111 !important;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .cf-field {
+            margin-bottom: 12px;
+        }
+        .cf-field label {
+            display: block;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+            color: #444444 !important;
+        }
+        .cf-field textarea, .cf-field input[type="text"], .cf-field input[type="file"], .cf-field input[type="color"], .cf-field input[type="range"], .cf-field select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #cccccc !important;
+            border-radius: 5px;
+            background: #f9f9f9 !important;
+            box-sizing: border-box;
+        }
+        .cf-field textarea {
+            height: 70px;
+            resize: vertical;
+        }
+        .cf-btns {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .cf-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #ffffff !important;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .cf-btn-png { background-color: #007bff !important; }
+        .cf-btn-jpg { background-color: #10b981 !important; }
+        .cf-btn-png:hover { background-color: #0056b3 !important; }
+        .cf-btn-jpg:hover { background-color: #059669 !important; }
+        .creator-preview {
+            flex: 1.2;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background: #f1f2f6;
+            padding: 15px;
+            border-radius: 8px;
+            position: relative;
+        }
+        .india-flag-banner {
+            position: absolute;
+            top: -18px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 999px;
+            padding: 8px 14px;
+            color: #111;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            z-index: 2;
+        }
+        .india-flag-pill {
+            width: 36px;
+            height: 22px;
+            border-radius: 999px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12);
+            animation: wave-flag 2.5s ease-in-out infinite;
+        }
+        .india-flag-pill::before,
+        .india-flag-pill::after,
+        .india-flag-pill .middle {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 33.3333%;
+        }
+        .india-flag-pill::before { top: 0; background: #ff9933; }
+        .india-flag-pill .middle { top: 33.3333%; background: #ffffff; }
+        .india-flag-pill::after { top: 66.6666%; background: #138808; }
+        .india-flag-pill .chakra {
+            position: absolute;
+            left: 50%;
+            top: 39%;
+            width: 10px;
+            height: 10px;
+            margin-left: -5px;
+            border: 2px solid #0f172a;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+        .india-flag-pill .chakra::before {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            border-radius: 50%;
+            background: transparent;
+            box-shadow: inset 0 0 0 2px #0f172a;
+        }
+        @keyframes wave-flag {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(1.5deg); }
+        }
+        #posterCanvas {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        @media (max-width: 980px) {
+            .creator-box {
+                flex-direction: column-reverse;
+            }
+            .creator-preview {
+                position: sticky;
+                top: 0;
+                z-index: 99;
+                padding: 10px;
+                border: 2px solid #007bff;
+                border-radius: 8px;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+                background: #ffffff;
+            }
+            #posterCanvas {
+                max-height: 260px;
+                width: auto !important;
+                object-fit: contain;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="container" style="padding: 30px 15px;">
+        <section style="text-align: center; margin-bottom: 25px;">
+            <div style="font-size: 2.8rem; margin-bottom: 8px;">🎨</div>
+            <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 10px;">
+                Social Media <span style="color: #007bff;">Poster & Banner Maker</span>
+            </h1>
+            <p style="color: #94a3b8; max-width: 650px; margin: 0 auto; font-size: 0.95rem;">
+                Apne YouTube, Instagram, aur Festival Announcements ke liye high-quality posters aur banners 1-click me design karein.
+            </p>
+        </section>
+
+        <section class="container" style="margin-bottom: 30px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: center; background: rgba(255,255,255,0.04); border: 1px solid rgba(148,163,184,0.15); border-radius: 18px; padding: 22px;">
+                <div style="max-width: 720px; color: #e2e8f0;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 8px;">India Independence Day Template</h2>
+                    <p style="margin: 0; color: #cbd5e1; font-size: 0.95rem;">Load a patriotic animated tricolor background with happy Independence Day wishes, upload your own photo and brand details, and create a ready-to-share story or status.</p>
+                </div>
+                <button id="loadIndiaTemplate" class="cf-btn cf-btn-png" style="min-width: 220px;">Load Independence Day Template</button>
+            </div>
+        </section>
+
+        <div class="creator-box">
+            <div class="creator-inputs">
+                <h3>Poster Customization Controls</h3>
+                <div class="cf-field">
+                    <label>Choose Poster Size Ratio:</label>
+                    <select id="canvasRatioSelect">
+                        <option value="1:1">Square Post (1080 x 1080 - Instagram / FB)</option>
+                        <option value="16:9" selected>Landscape Banner (1280 x 720 - YouTube / Banner)</option>
+                        <option value="9:16">Vertical Story (1080 x 1920 - Reels / Story)</option>
+                    </select>
+                </div>
+                <div class="cf-field">
+                    <label>Poster Main Text:</label>
+                    <textarea id="cfText" placeholder="Type headline text...">{SPECIAL OFFER} 50% OFF\nGRAND FESTIVAL BANNER 🚀</textarea>
+                    <small style="font-size:0.75rem; color:#666;">💡 Text ko highlight karne ke liye use <b>{curly brackets}</b> me likhein.</small>
+                </div>
+                <div class="cf-field" style="background: #f8f9fa; padding: 10px; border-radius: 5px; border: 1px solid #e9ecef;">
+                    <label>Text Size: <span id="textSizeVal">50px</span></label>
+                    <input type="range" id="textSizeSlider" min="20" max="120" value="50">
+                    <div style="display: flex; gap: 10px; margin-top: 8px;">
+                        <div style="flex:1;">
+                            <label>Base Text Color:</label>
+                            <input type="color" id="cfColor" value="#ffffff" />
+                        </div>
+                        <div style="flex:1;">
+                            <label>Highlight Color:</label>
+                            <input type="color" id="cfHighlightColor" value="#ffeb3b" />
+                        </div>
+                    </div>
+                </div>
+                <div class="cf-field">
+                    <label>1. Upload Person / Character Cutout (PNG):</label>
+                    <input type="file" id="cfPerson" accept="image/*" />
+                </div>
+                <div class="cf-field" style="background: #f1f2f6; padding: 10px; border-radius: 5px;">
+                    <label>Photo Scale: <span id="scaleVal">100%</span></label>
+                    <input type="range" id="scaleSlider" min="20" max="250" value="100">
+                    <label style="margin-top:8px; display:block;">Left / Right Shift: <span id="xPosVal">0</span></label>
+                    <input type="range" id="xPosSlider" min="-500" max="500" value="0">
+                    <label style="margin-top:8px; display:block;">Up / Down Shift: <span id="yPosVal">0</span></label>
+                    <input type="range" id="yPosSlider" min="-500" max="500" value="0">
+                </div>
+                <div class="cf-field">
+                    <label>2. Upload Custom Background Image:</label>
+                    <input type="file" id="cfBg" accept="image/*" />
+                </div>
+                <div class="cf-field" style="background: #eef2f7; padding: 10px; border-radius: 5px; border: 1px solid #dce4ec;">
+                    <label style="color:#007bff !important;">🏷️ Branding / Footer Details:</label>
+                    <input type="text" id="cfBrandName" placeholder="Brand Handle or Website (e.g. www.creatorsfree.com)" style="margin-bottom:8px;" />
+                    <label>Upload Brand Logo Image:</label>
+                    <input type="file" id="cfBrandLogo" accept="image/*" />
+                </div>
+                <div class="cf-btns">
+                    <button class="cf-btn cf-btn-png" onclick="downloadPoster('png')">Download PNG (HD)</button>
+                    <button class="cf-btn cf-btn-jpg" onclick="downloadPoster('jpg')">Download JPG</button>
+                </div>
+            </div>
+            <div class="creator-preview" id="posterPreviewBox" style="cursor: zoom-in;" title="Click or Tap for Full Screen Preview">
+                <div class="india-flag-banner">
+                    <div class="india-flag-pill"><div class="middle"></div><div class="chakra"></div></div>
+                    Animated Independence Day Flag
+                </div>
+                <label style="font-weight:bold; margin-bottom:8px; color:#333;">Live Poster Preview Canvas (Tap for Full Screen):</label>
+                <canvas id="posterCanvas" width="1280" height="720"></canvas>
+            </div>
+        </div>
+
+        <!-- Fullscreen Lightbox Preview Modal -->
+        <div class="preview-lightbox-modal" id="lightboxModal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(10,15,29,0.92); backdrop-filter:blur(10px); justify-content:center; align-items:center; padding:20px; box-sizing:border-box;">
+            <div style="position:relative; max-width:92vw; max-height:92vh; display:flex; flex-direction:column; align-items:center;">
+                <button type="button" id="lightboxCloseBtn" style="position:absolute; top:-45px; right:-5px; background:rgba(255,255,255,0.2); color:#fff; border:2px solid #fff; border-radius:50%; width:40px; height:40px; font-size:22px; font-weight:bold; cursor:pointer; display:flex; align-items:center; justify-content:center;">&times;</button>
+                <img src="" id="lightboxImg" style="max-width:92vw; max-height:85vh; border-radius:12px; box-shadow:0 25px 60px rgba(0,0,0,0.9); object-fit:contain; border:2px solid #007bff;" alt="Full Screen Poster Preview">
+            </div>
+        </div>
+
+        <article class="guide-container" style="max-width: 950px; margin: 40px auto; background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 30px; color: #cbd5e1; line-height: 1.8;">
+            <h2 style="font-size: 1.6rem; color: #f8fafc; border-left: 4px solid #007bff; padding-left: 12px; margin-bottom: 20px;">Social Media Poster & Banner Design Complete Guide</h2>
+            <p style="margin-bottom: 20px; font-size: 0.98rem;">Aaj ke digital daur me social media par apne brand, channel, ya business ko promote karne ke liye ek achha visual banner zaroori hai. Hamara <strong>Free Poster Maker Tool</strong> aapko bina kisi Photoshop ya graphics knowledge ke HD banners banane ki azadi deta hai.</p>
+            <hr style="border: 0; border-top: 1px solid #334155; margin: 25px 0;">
+            <h3 style="font-size: 1.25rem; color: #38bdf8; margin-bottom: 10px;">1. Correct Canvas Dimensions Chuniye</h3>
+            <p style="margin-bottom: 20px; font-size: 0.95rem;">Har platform ka aspect ratio alag hota hai. Instagram Post ke liye <strong>Square (1:1)</strong> select karein, YouTube Thumbnails ya Banners ke liye <strong>Landscape (16:9)</strong>, aur Instagram Stories / Shorts Promotion ke liye <strong>Vertical (9:16)</strong> preset chuniye.</p>
+            <h3 style="font-size: 1.25rem; color: #38bdf8; margin-bottom: 10px;">2. High-Contrast Text Color Combination</h3>
+            <p style="margin-bottom: 0; font-size: 0.95rem;">Hamesha dark background par light colors (Yellow, White, Cyan) ka use karein. Hamare tool me <code>{curly brackets}</code> me likhe gaye text par automatic color highlight effect milta hai jo viewer ka dhyan turant aakarshit karta hai.</p>
+        </article>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+    (function() {
+        function initPosterApp() {
+            var canvas = document.getElementById('posterCanvas');
+            if (!canvas) return;
+            var ctx = canvas.getContext('2d');
+
+            var ratioSelect = document.getElementById('canvasRatioSelect');
+            var textInput = document.getElementById('cfText');
+            var textColor = document.getElementById('cfColor');
+            var highlightColor = document.getElementById('cfHighlightColor');
+            var textSizeSlider = document.getElementById('textSizeSlider');
+
+            var personInput = document.getElementById('cfPerson');
+            var bgInput = document.getElementById('cfBg');
+
+            var brandNameInput = document.getElementById('cfBrandName');
+            var brandLogoInput = document.getElementById('cfBrandLogo');
+
+            var scaleSlider = document.getElementById('scaleSlider');
+            var xPosSlider = document.getElementById('xPosSlider');
+            var yPosSlider = document.getElementById('yPosSlider');
+
+            var bgImg = new Image();
+            var personImg = new Image();
+            var brandLogoImg = new Image();
+
+            var isBgLoaded = false;
+            var isIndiaBg = false;
+            var isPersonLoaded = false;
+            var isBrandLogoLoaded = false;
+            var animationFrameId = null;
+            var flagPhase = 0;
+
+            function drawIndependenceBackground() {
+                flagPhase += 0.08;
+                var stripeHeight = canvas.height / 3;
+                var waveHeight = canvas.width * 0.015;
+
+                function drawWaveStripe(yStart, color) {
+                    ctx.beginPath();
+                    ctx.moveTo(0, yStart);
+                    for (var x = 0; x <= canvas.width; x += 10) {
+                        var t = x / canvas.width * Math.PI * 4;
+                        var y = yStart + Math.sin(t + flagPhase) * waveHeight;
+                        ctx.lineTo(x, y);
+                    }
+                    ctx.lineTo(canvas.width, yStart + stripeHeight);
+                    ctx.lineTo(0, yStart + stripeHeight);
+                    ctx.closePath();
+                    ctx.fillStyle = color;
+                    ctx.fill();
+                }
+
+                drawWaveStripe(0, '#ff9933');
+                drawWaveStripe(stripeHeight - 10, '#ffffff');
+                drawWaveStripe(stripeHeight * 2 - 20, '#138808');
+
+                var cx = canvas.width * 0.5;
+                var cy = canvas.height * 0.48;
+                var radius = Math.min(canvas.width, canvas.height) * 0.08;
+                ctx.strokeStyle = '#0f172a';
+                ctx.lineWidth = Math.max(6, radius * 0.08);
+                ctx.beginPath();
+                ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+                ctx.stroke();
+
+                for (var i = 0; i < 24; i++) {
+                    var angle = (Math.PI * 2 / 24) * i;
+                    var x = cx + Math.cos(angle) * radius * 0.85;
+                    var y = cy + Math.sin(angle) * radius * 0.85;
+                    ctx.beginPath();
+                    ctx.moveTo(cx, cy);
+                    ctx.lineTo(x, y);
+                    ctx.stroke();
+                }
+
+                ctx.beginPath();
+                ctx.arc(cx, cy, radius * 0.5, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            function loadIndependenceDayTemplate() {
+                isIndiaBg = true;
+                isBgLoaded = false;
+                bgImg.src = '';
+                ratioSelect.value = '9:16';
+                updateCanvasDimensions();
+                textInput.value = '{JAI HIND} 15 AUGUST\nHappy Independence Day 🇮🇳';
+                textColor.value = '#ffffff';
+                highlightColor.value = '#ff9933';
+                textSizeSlider.value = 58;
+                document.getElementById('textSizeVal').innerText = '58px';
+                startAnimationLoop();
+            }
+
+            function updateCanvasDimensions() {
+                var ratio = ratioSelect.value;
+                if (ratio === '1:1') {
+                    canvas.width = 1080;
+                    canvas.height = 1080;
+                } else if (ratio === '9:16') {
+                    canvas.width = 1080;
+                    canvas.height = 1920;
+                } else {
+                    canvas.width = 1280;
+                    canvas.height = 720;
+                }
+                renderCanvas();
+            }
+            function startAnimationLoop() {
+                if (animationFrameId) return;
+                function animate() {
+                    renderCanvas();
+                    animationFrameId = requestAnimationFrame(animate);
+                }
+                animationFrameId = requestAnimationFrame(animate);
+            }
+            function stopAnimationLoop() {
+                if (animationFrameId) {
+                    cancelAnimationFrame(animationFrameId);
+                    animationFrameId = null;
+                }
+            }
+
+            function renderCanvas() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                if (isIndiaBg) {
+                    drawIndependenceBackground();
+                } else if (isBgLoaded) {
+                    ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
+                } else {
+                    var grad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+                    grad.addColorStop(0, '#0f172a');
+                    grad.addColorStop(0.5, '#1e293b');
+                    grad.addColorStop(1, '#0284c7');
+                    ctx.fillStyle = grad;
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                }
+
+                if (isPersonLoaded) {
+                    var scale = scaleSlider.value / 100;
+                    var offsetX = parseInt(xPosSlider.value, 10);
+                    var offsetY = parseInt(yPosSlider.value, 10);
+
+                    var aspect = personImg.width / personImg.height;
+                    var targetHeight = canvas.height * scale;
+                    var targetWidth = targetHeight * aspect;
+
+                    var xPos = (canvas.width - targetWidth) + offsetX;
+                    var yPos = (canvas.height - targetHeight) + offsetY;
+
+                    ctx.drawImage(personImg, xPos, yPos, targetWidth, targetHeight);
+                }
+
+                var fontSize = parseInt(textSizeSlider.value, 10);
+                ctx.font = '800 ' + fontSize + 'px sans-serif';
+                ctx.textBaseline = 'top';
+
+                var rawText = textInput.value || 'Type your headline...';
+                var lines = rawText.split('\n');
+                var startY = canvas.height * 0.12;
+                var lineHeight = fontSize * 1.3;
+
+                for (var i = 0; i < lines.length; i++) {
+                    var line = lines[i];
+                    var tokens = [];
+                    var regex = /\{([^}]+)\}|([^\{]+)/g;
+                    var match;
+
+                    while ((match = regex.exec(line)) !== null) {
+                        if (match[1] !== undefined) {
+                            tokens.push({ text: match[1], isHighlight: true });
+                        } else if (match[2] !== undefined) {
+                            tokens.push({ text: match[2], isHighlight: false });
+                        }
+                    }
+
+                    var currentX = 60;
+
+                    for (var k = 0; k < tokens.length; k++) {
+                        var token = tokens[k];
+                        var textStr = token.text;
+
+                        ctx.strokeStyle = '#000000';
+                        ctx.lineWidth = Math.max(4, fontSize / 8);
+                        ctx.strokeText(textStr, currentX, startY + (i * lineHeight));
+
+                        ctx.fillStyle = token.isHighlight ? highlightColor.value : textColor.value;
+                        ctx.fillText(textStr, currentX, startY + (i * lineHeight));
+
+                        currentX += ctx.measureText(textStr).width;
+                    }
+                }
+
+                var brandText = brandNameInput.value.trim();
+                if (brandText !== '' || isBrandLogoLoaded) {
+                    var footerY = canvas.height - 50;
+                    var logoRadius = 22;
+                    var startX = 60;
+
+                    if (isBrandLogoLoaded) {
+                        ctx.save();
+                        ctx.beginPath();
+                        ctx.arc(startX + logoRadius, footerY, logoRadius, 0, Math.PI * 2, true);
+                        ctx.closePath();
+                        ctx.clip();
+                        ctx.drawImage(brandLogoImg, startX, footerY - logoRadius, logoRadius * 2, logoRadius * 2);
+                        ctx.restore();
+
+                        startX += (logoRadius * 2) + 12;
+                    }
+
+                    if (brandText !== '') {
+                        ctx.font = '600 22px sans-serif';
+                        ctx.fillStyle = '#ffffff';
+                        ctx.strokeStyle = '#000000';
+                        ctx.lineWidth = 3;
+                        ctx.strokeText(brandText, startX, footerY - 10);
+                        ctx.fillText(brandText, startX, footerY - 10);
+                    }
+                }
+            }
+
+            ratioSelect.addEventListener('change', updateCanvasDimensions);
+
+            bgInput.addEventListener('change', function(e) {
+                var file = e.target.files[0];
+                if (file) {
+                    var reader = new FileReader();
+                    reader.onload = function(evt) {
+                        bgImg.src = evt.target.result;
+                        bgImg.onload = function() {
+                            isBgLoaded = true;
+                            isIndiaBg = false;
+                            stopAnimationLoop();
+                            renderCanvas();
+                        };
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            personInput.addEventListener('change', function(e) {
+                var file = e.target.files[0];
+                if (file) {
+                    var reader = new FileReader();
+                    reader.onload = function(evt) {
+                        personImg.src = evt.target.result;
+                        personImg.onload = function() { isPersonLoaded = true; renderCanvas(); };
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            brandLogoInput.addEventListener('change', function(e) {
+                var file = e.target.files[0];
+                if (file) {
+                    var reader = new FileReader();
+                    reader.onload = function(evt) {
+                        brandLogoImg.src = evt.target.result;
+                        brandLogoImg.onload = function() { isBrandLogoLoaded = true; renderCanvas(); };
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            scaleSlider.addEventListener('input', function() {
+                document.getElementById('scaleVal').innerText = scaleSlider.value + '%';
+                renderCanvas();
+            });
+
+            xPosSlider.addEventListener('input', function() {
+                document.getElementById('xPosVal').innerText = xPosSlider.value;
+                renderCanvas();
+            });
+
+            yPosSlider.addEventListener('input', function() {
+                document.getElementById('yPosVal').innerText = yPosSlider.value;
+                renderCanvas();
+            });
+
+            textSizeSlider.addEventListener('input', function() {
+                document.getElementById('textSizeVal').innerText = textSizeSlider.value + 'px';
+                renderCanvas();
+            });
+
+            textInput.addEventListener('input', renderCanvas);
+            textColor.addEventListener('input', renderCanvas);
+            highlightColor.addEventListener('input', renderCanvas);
+            brandNameInput.addEventListener('input', renderCanvas);
+
+            document.getElementById('loadIndiaTemplate').addEventListener('click', function() {
+                loadIndependenceDayTemplate();
+            });
+
+            if (window.location.hash === '#independence-day') {
+                loadIndependenceDayTemplate();
+            }
+
+            var previewBox = document.getElementById('posterPreviewBox');
+            var lightboxModal = document.getElementById('lightboxModal');
+            var lightboxImg = document.getElementById('lightboxImg');
+            var lightboxClose = document.getElementById('lightboxCloseBtn');
+
+            if (previewBox && lightboxModal && lightboxImg) {
+                previewBox.addEventListener('click', function() {
+                    lightboxImg.src = canvas.toDataURL('image/png');
+                    lightboxModal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                });
+
+                if (lightboxClose) {
+                    lightboxClose.addEventListener('click', function() {
+                        lightboxModal.style.display = 'none';
+                        document.body.style.overflow = '';
+                    });
+                }
+
+                lightboxModal.addEventListener('click', function(e) {
+                    if (e.target === lightboxModal) {
+                        lightboxModal.style.display = 'none';
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+
+            updateCanvasDimensions();
+
+            window.downloadPoster = function(format) {
+                var link = document.createElement('a');
+                if (format === 'jpg') {
+                    link.download = 'social-poster.jpg';
+                    link.href = canvas.toDataURL('image/jpeg', 0.95);
+                } else {
+                    link.download = 'social-poster.png';
+                    link.href = canvas.toDataURL('image/png');
+                }
+                link.click();
+            };
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initPosterApp);
+        } else {
+            initPosterApp();
+        }
+    })();
+    </script>
+</body>
+</html>

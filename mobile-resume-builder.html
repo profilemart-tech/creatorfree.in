@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Step-by-Step Resume Builder Online (No MS Word Needed) - Creators Free</title>
+    <meta name="description" content="Build a professional Indian resume on your mobile phone in 4 easy steps without MS Word. Includes live preview toggle tab, education tables, Indian declaration line, PDF & Word (.doc) download. 100% Private.">
+    <meta name="keywords" content="mobile resume builder India, step by step resume maker online, fresher resume format mobile PDF, CV builder for mobile phones no MS Word, mobile friendly resume generator">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/mobile-resume.css">
+
+    <!-- Client-Side PDF Generation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+    <script src="js/header-footer.js" defer></script>
+    <script src="js/mobile-resume.js" defer></script>
+    <!-- Vercel Web Analytics Real Visitor Tracking -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Mobile Step-by-Step Resume Builder Tool",
+          "url": "https://creatorsfree.in/mobile-resume-builder.html",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+          },
+          "description": "Mobile optimized 4-step wizard application to create professional Indian style resumes with education tables, declaration lines, and PDF export."
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="builder-container">
+        <!-- Hero Header -->
+        <header class="builder-header">
+            <h1>Mobile Step-by-Step Resume Builder</h1>
+            <p>Create a job-ready Indian resume in 4 simple steps on your mobile phone without MS Word skills.</p>
+        </header>
+
+        <!-- Quick Mode Switcher Banner -->
+        <div class="mode-switch-bar">
+            <span>📱 <strong>Using a Desktop / PC?</strong> Try our <a href="resume-creator.html" style="color:var(--primary); font-weight:700;">Desktop Split-Screen Resume Builder</a> for side-by-side editing.</span>
+            <button class="btn btn-sample" id="btnLoadSample">✨ Load Sample Resume Data</button>
+        </div>
+
+        <!-- Sticky Mobile View Switcher (Edit Form vs Live Preview) -->
+        <div class="view-toggle-bar">
+            <button class="view-toggle-btn active" id="toggleEditBtn">✏️ Edit Form (Step-by-Step)</button>
+            <button class="view-toggle-btn" id="togglePreviewBtn">👁️ View Live A4 Resume</button>
+        </div>
+
+        <!-- 1-Click Direct Linked Text Switcher -->
+        <div class="linked-toggle-bar" id="linkedEditHeaderBar" style="display:flex; justify-content:space-between; align-items:center; background:#1e293b; border:1px solid var(--border-color); border-radius:12px; padding:10px 16px; margin-bottom:16px;">
+            <span style="color:#cbd5e1; font-size:0.9rem; font-weight:600;">✏️ Editing Form</span>
+            <a href="javascript:void(0)" class="link-view-preview" style="color:#38bdf8; font-weight:800; font-size:0.95rem; text-decoration:underline;">👁️ View Full Resume Preview ➔</a>
+        </div>
+
+        <!-- Step Progress Indicator Pills -->
+        <div class="step-progress-bar">
+            <div class="step-pill active" data-step="1">
+                <span>Step 1</span>
+                <span>Personal</span>
+            </div>
+            <div class="step-pill" data-step="2">
+                <span>Step 2</span>
+                <span>Education</span>
+            </div>
+            <div class="step-pill" data-step="3">
+                <span>Step 3</span>
+                <span>Experience</span>
+            </div>
+            <div class="step-pill" data-step="4">
+                <span>Step 4</span>
+                <span>Skills & Finish</span>
+            </div>
+        </div>
+
+        <!-- Main Form Panel (Step Wizard) -->
+        <section class="form-panel" id="formPanel">
+            
+            <!-- STEP 1: Personal Information & Theme Settings -->
+            <div class="wizard-step active" data-step="1">
+                
+                <!-- Theme & Template Settings -->
+                <div class="section-box">
+                    <h2>🎨 Step 1: Choose Theme & Template</h2>
+                    
+                    <label>Resume Accent Color</label>
+                    <div class="theme-selector">
+                        <div class="theme-swatch active" style="background:#1e3a8a;" data-color="#1e3a8a" data-light="#e0e7ff" title="Navy Blue"></div>
+                        <div class="theme-swatch" style="background:#065f46;" data-color="#065f46" data-light="#d1fae5" title="Forest Emerald"></div>
+                        <div class="theme-swatch" style="background:#581c87;" data-color="#581c87" data-light="#f3e8ff" title="Royal Purple"></div>
+                        <div class="theme-swatch" style="background:#334155;" data-color="#334155" data-light="#f1f5f9" title="Executive Slate"></div>
+                        <div class="theme-swatch" style="background:#111827;" data-color="#111827" data-light="#e2e8f0" title="Charcoal Black"></div>
+                    </div>
+
+                    <label>Resume Format Style</label>
+                    <div class="templates-grid">
+                        <div class="template-item active" data-template="standard">Standard Indian</div>
+                        <div class="template-item" data-template="fresher">Fresher / Student</div>
+                        <div class="template-item" data-template="modern">Modern Executive</div>
+                        <div class="template-item" data-template="simple">Simple Clean</div>
+                    </div>
+                </div>
+
+                <!-- Personal Information -->
+                <div class="section-box">
+                    <h2>👤 Personal Contact Information</h2>
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="nameInput">Full Name *</label>
+                            <input type="text" id="nameInput" placeholder="e.g. Rahul Sharma">
+                        </div>
+                        <div class="field-group">
+                            <label for="phoneInput">Phone Number (+91) *</label>
+                            <input type="tel" id="phoneInput" placeholder="+91 XXXXXXXXXX">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="emailInput">Email Address *</label>
+                            <input type="email" id="emailInput" placeholder="xxxx@xxx.com">
+                        </div>
+                        <div class="field-group">
+                            <label for="addressInput">Current Location (City, State) *</label>
+                            <input type="text" id="addressInput" placeholder="e.g. New Delhi, India">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="linkedinInput">LinkedIn / Portfolio URL (Optional)</label>
+                            <input type="url" id="linkedinInput" placeholder="e.g. linkedin.com/in/rahul">
+                        </div>
+                        <div class="field-group">
+                            <label for="photoFileInput">Profile Photo (Optional)</label>
+                            <input type="file" id="photoFileInput" accept="image/*">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- STEP 2: Objective & Educational Qualifications -->
+            <div class="wizard-step" data-step="2">
+                
+                <!-- Objective / Summary -->
+                <div class="section-box">
+                    <h2>🎯 Step 2: Career Objective & Education</h2>
+                    <div class="field-group">
+                        <label for="objectiveInput">Career Objective / Professional Summary:</label>
+                        <textarea id="objectiveInput" placeholder="Write a short summary about your goals..."></textarea>
+
+                        <div class="sample-chips">
+                            <span class="sample-chip" data-type="fresher">+ Fresher / Student</span>
+                            <span class="sample-chip" data-type="it">+ IT / Developer</span>
+                            <span class="sample-chip" data-type="sales">+ Sales & Marketing</span>
+                            <span class="sample-chip" data-type="teacher">+ Teacher / Educator</span>
+                            <span class="sample-chip" data-type="admin">+ Office Admin / Bank</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Educational Qualifications -->
+                <div class="section-box">
+                    <h2>🎓 Educational Qualifications</h2>
+                    <span style="font-size:0.8rem; color:var(--text-muted); display:block; margin-bottom:12px;">Formatted into a clean table (Standard for Indian resumes).</span>
+                    
+                    <div id="eduContainer">
+                        <!-- Education rows rendered dynamically -->
+                    </div>
+
+                    <button type="button" class="btn-add" id="btnAddEdu">+ Add Education / Degree</button>
+                </div>
+
+            </div>
+
+            <!-- STEP 3: Work Experience & Projects -->
+            <div class="wizard-step" data-step="3">
+                
+                <!-- Work Experience -->
+                <div class="section-box">
+                    <h2>💼 Step 3: Work Experience & Projects</h2>
+                    
+                    <div id="expContainer">
+                        <!-- Experience rows rendered dynamically -->
+                    </div>
+
+                    <button type="button" class="btn-add" id="btnAddExp">+ Add Work Experience / Internship</button>
+                </div>
+
+                <!-- Academic / Personal Projects -->
+                <div class="section-box">
+                    <h2>🚀 Projects (Academic / Personal)</h2>
+                    
+                    <div id="projContainer">
+                        <!-- Project rows rendered dynamically -->
+                    </div>
+
+                    <button type="button" class="btn-add" id="btnAddProj">+ Add Project</button>
+                </div>
+
+            </div>
+
+            <!-- STEP 4: Skills, Languages & Indian Declaration -->
+            <div class="wizard-step" data-step="4">
+                
+                <!-- Skills, Certifications & Languages -->
+                <div class="section-box">
+                    <h2>⚡ Step 4: Skills & Declaration</h2>
+                    <div class="field-group">
+                        <label for="skillsInput">Key Skills (Comma separated)</label>
+                        <input type="text" id="skillsInput" placeholder="e.g. JavaScript, HTML5, Excel, Communication">
+                    </div>
+                    <div class="field-group">
+                        <label for="languagesInput">Languages Known</label>
+                        <input type="text" id="languagesInput" placeholder="e.g. English, Hindi, Punjabi">
+                    </div>
+                    <div class="field-group">
+                        <label for="certsInput">Certifications & Achievements (Optional)</label>
+                        <textarea id="certsInput" placeholder="e.g. Google Web Certificate, College Hackathon Winner"></textarea>
+                    </div>
+                </div>
+
+                <!-- Indian Declaration Section -->
+                <div class="section-box">
+                    <h2>📜 Declaration (Standard Indian CV Format)</h2>
+                    <div class="field-group">
+                        <label for="declTextInput">Declaration Statement</label>
+                        <textarea id="declTextInput" style="min-height:50px;">I hereby declare that all the information provided above is true and correct to the best of my knowledge and belief.</textarea>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="declDateInput">Date</label>
+                            <input type="date" id="declDateInput">
+                        </div>
+                        <div class="field-group">
+                            <label for="declPlaceInput">Place (City)</label>
+                            <input type="text" id="declPlaceInput" placeholder="e.g. New Delhi">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Wizard Controls Navigation -->
+            <div class="wizard-nav">
+                <button type="button" class="btn-wizard btn-prev" id="btnPrev" style="display:none;">← Previous Step</button>
+                <button type="button" class="btn-wizard btn-next" id="btnNext">Next Step (Step 2 of 4) →</button>
+            </div>
+
+        </section>
+
+        <!-- Right Live Preview Panel (Visible when user taps View Live A4 Resume tab) -->
+        <section class="preview-panel" id="previewPanel">
+            <div style="display:flex; justify-content:space-between; align-items:center; background:#1e293b; border:1px solid var(--border-color); border-radius:12px; padding:10px 16px; margin-bottom:16px;">
+                <a href="javascript:void(0)" class="link-back-edit" style="color:#38bdf8; font-weight:800; font-size:0.95rem; text-decoration:underline;">⬅️ Back to Edit Resume</a>
+                <span style="font-size:0.85rem; color:#94a3b8; font-weight:600;">Full A4 Preview</span>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                <h2 style="font-size:1.2rem; color:var(--text-main); margin:0;">👁️ Live Resume Preview</h2>
+                <span style="font-size:0.8rem; color:var(--primary); font-weight:600;">Standard A4 Size</span>
+            </div>
+
+            <div class="a4-wrapper">
+                <!-- Live rendered A4 Resume Document -->
+                <div id="resumePreview">
+                    <!-- Rendered dynamically by JS -->
+                </div>
+            </div>
+
+            <div class="export-bar">
+                <button class="btn btn-primary" id="btnDownloadPdfDirect">📥 Download PDF File</button>
+                <button class="btn btn-secondary" id="btnDownloadDoc" style="background:#1d4ed8; color:#fff; border:none;">📄 Download Word (.doc)</button>
+                <button class="btn btn-secondary" id="btnPrintPdf" style="background:#059669; color:#fff; border:none;">🖨️ Print Resume</button>
+                <button class="btn btn-secondary" id="btnShareResume" style="background:#0891b2; color:#fff; border:none;">🔗 Share Resume</button>
+            </div>
+        </section>
+
+        <!-- SEO Article & Privacy Guarantee Section -->
+        <article class="seo-article">
+            
+            <!-- 100% Privacy Guarantee Banner -->
+            <div class="privacy-banner">
+                <div class="privacy-banner-icon">🛡️</div>
+                <div>
+                    <h3>100% Private & Secure Guarantee</h3>
+                    <p>Your privacy is strictly protected! <strong>No personal data, resume text, or photos are uploaded to any server.</strong> Everything is generated 100% locally inside your phone browser. You are completely safe here.</p>
+                </div>
+            </div>
+
+            <h2>Mobile Step-by-Step Resume Builder Online – Create Job-Ready CVs on Your Phone</h2>
+            <p>Building a resume on a mobile phone can be challenging when dealing with tiny forms or complex MS Word files. <strong>Creators Free Mobile Resume Builder</strong> solves this by breaking down resume creation into 4 simple guided steps. Whether you are a college fresher or an experienced job applicant across India, you can easily create an elegant Indian-style CV right from your smartphone.</p>
+
+            <h3>Why Mobile Users Love Our Step-by-Step Resume Creator</h3>
+            <ul>
+                <li>📱 <strong>4-Step Guided Wizard:</strong> Easily fill your details step-by-step without feeling overwhelmed by long forms.</li>
+                <li>👁️ <strong>Instant Mobile Preview Toggle:</strong> Tap the top preview tab anytime to inspect your live A4 resume layout.</li>
+                <li>🎓 <strong>Standard Education Table & Declaration:</strong> Formats your qualifications into a clean table and includes the standard Indian declaration footer.</li>
+                <li>📥 <strong>Direct PDF & Word Exports:</strong> Download your completed resume as a crisp PDF file or editable Microsoft Word (.doc) document.</li>
+            </ul>
+
+            <h3>Explore More Free Web Tools on Creators Free</h3>
+            <p>Check out our growing suite of free online utilities:</p>
+            <ul>
+                <li>🖥️ <strong>Desktop Split-Screen Resume Builder:</strong> Using a computer? Try our <a href="resume-creator.html">Desktop Split-Screen Resume Builder</a> for side-by-side editing.</li>
+                <li>📝 <strong>Formal Application Writer:</strong> Need to write an application letter to a Bank Manager or Principal? Use our <a href="application-letter-generator.html">Free Formal Application Letter Generator</a>.</li>
+                <li>📸 <strong>Passport Photo Printer:</strong> Need passport photos for job applications? Use our <a href="a4-photo-printer.html">Free A4 Passport Photo Printer Tool</a>.</li>
+                <li>🏠 <strong>Explore All Tools:</strong> Visit our <a href="index.html">Creators Free Homepage</a>.</li>
+            </ul>
+
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <div class="faq-box">
+                <h4>🔒 Is my personal data saved on your server when using mobile?</h4>
+                <p>No! We guarantee 100% privacy. All your data stays 100% safe inside your device browser and is never stored on any external server.</p>
+            </div>
+
+            <div class="faq-box">
+                <h4>📱 Can I switch between editing and previewing on mobile?</h4>
+                <p>Yes! Simply tap the <strong>"👁️ View Live A4 Resume"</strong> tab at the top of your screen to preview your document anytime.</p>
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- Floating 1-Touch Instant Live Preview Button -->
+    <button id="btnFloatingPreview" type="button" class="floating-preview-btn">
+        👁️ Quick Preview A4
+    </button>
+
+    <!-- Floating 1-Touch Instant Live Preview Modal -->
+    <div id="quickPreviewModal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>👁️ Live A4 Resume Preview</h3>
+                <button id="btnCloseModal" type="button" class="modal-close-btn">❌ Close</button>
+            </div>
+            <div class="modal-body" id="modalPreviewBody">
+                <!-- Cloned A4 Resume Live Preview -->
+            </div>
+            <div class="modal-footer">
+                <button id="modalBtnPdf" type="button" class="btn btn-pdf" style="background:#10b981; color:#ffffff; border:none; padding:10px 20px; border-radius:999px; font-weight:700; cursor:pointer;">📥 Download PDF</button>
+                <button id="modalBtnDoc" type="button" class="btn btn-doc" style="background:#38bdf8; color:#0f172a; border:none; padding:10px 20px; border-radius:999px; font-weight:700; cursor:pointer;">📄 Download Word (.doc)</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+</body>
+</html>

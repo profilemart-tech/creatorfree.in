@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Independence Day Social Media Poster & Card Maker 🇮🇳 - Creators Free</title>
+    <meta name="description" content="Create 15th August Independence Day posters & WhatsApp status graphics with readymade templates! Simply add your photo, logo, and name. 100% Private, zero form hassle, free HD PNG download.">
+    <meta name="keywords" content="Independence Day poster maker free, 15th August WhatsApp status creator, Indian flag photo frame editor, Independence Day card maker with photo and logo, tiranga banner generator">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/independence-poster.css">
+
+    <script src="js/header-footer.js" defer></script>
+    <script src="js/independence-poster.js" defer></script>
+    <!-- Vercel Web Analytics Real Visitor Tracking -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Independence Day Social Media Poster Maker Tool",
+          "url": "https://creatorsfree.in/independence-day-poster-maker.html",
+          "applicationCategory": "DesignApplication",
+          "operatingSystem": "All",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+          },
+          "description": "Free online Independence Day card and social media banner maker to create 15th August graphics with photo framing, brand logos, and patriotic wishes."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is my photo or logo uploaded to your server?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No! We guarantee 100% privacy. All photo framing, logo placement, and text rendering are done 100% locally in your own browser."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I use this tool for WhatsApp status and Instagram posts?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! Our templates are pre-sized in High-HD 1080x1080px (Square Post) and 1080x1920px (Instagram Story / WhatsApp Status)."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="builder-container">
+        <!-- Hero Header -->
+        <header class="builder-header">
+            <h1>15th August Independence Day Poster Maker 🇮🇳</h1>
+            <p>Create ready-to-share patriotic posters & cards for WhatsApp Status, Instagram & Facebook in seconds. No long forms required — just pick a template, add your photo, logo, and customize your name!</p>
+        </header>
+
+        <!-- Main Split Workspace -->
+        <div class="poster-workspace">
+            
+            <!-- Left Control Panel -->
+            <section class="control-panel">
+                
+                <!-- 1. Select Readymade Template -->
+                <div class="section-box">
+                    <h2>🎨 Select Readymade Template</h2>
+                    <div class="templates-grid">
+                        <div class="template-card active" data-template="tiranga_card">
+                            <h4>🇮🇳 Tiranga Card</h4>
+                            <span>Square (1080x1080)</span>
+                        </div>
+                        <div class="template-card" data-template="golden_chakra">
+                            <h4>✨ Golden Chakra</h4>
+                            <span>Square (1080x1080)</span>
+                        </div>
+                        <div class="template-card" data-template="proud_leader">
+                            <h4>🚩 Proud Indian</h4>
+                            <span>Square (1080x1080)</span>
+                        </div>
+                        <div class="template-card" data-template="clean_story">
+                            <h4>📱 WhatsApp Story</h4>
+                            <span>Vertical (1080x1920)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Photo & Logo Uploads -->
+                <div class="section-box">
+                    <h2>🖼️ Add Your Photo & Brand Logo</h2>
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="userPhotoInput">Upload Your Photo *</label>
+                            <input type="file" id="userPhotoInput" accept="image/*">
+                        </div>
+                        <div class="field-group">
+                            <label for="logoPhotoInput">Upload Brand / Shop Logo</label>
+                            <input type="file" id="logoPhotoInput" accept="image/*">
+                        </div>
+                    </div>
+
+                    <!-- Photo Position & Scale Fine-Tuning Sliders -->
+                    <div style="margin-top:10px;">
+                        <label style="font-size:0.85rem; color:var(--saffron);">Fine-Tune Photo Framing:</label>
+                        <div class="slider-group">
+                            <label><span>Photo Zoom:</span> <span id="photoScaleVal">100%</span></label>
+                            <input type="range" id="photoScaleSlider" min="50" max="250" value="100">
+                            
+                            <label style="margin-top:8px;"><span>Left / Right Shift:</span> <span id="photoXVal">0px</span></label>
+                            <input type="range" id="photoXSlider" min="-150" max="150" value="0">
+                            
+                            <label style="margin-top:8px;"><span>Up / Down Shift:</span> <span id="photoYVal">0px</span></label>
+                            <input type="range" id="photoYSlider" min="-150" max="150" value="0">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Name & Designation Details -->
+                <div class="section-box">
+                    <h2>👤 Name & Designation Details</h2>
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="nameInput">Your Full Name *</label>
+                            <input type="text" id="nameInput" placeholder="e.g. Rajesh Kumar" value="Rajesh Kumar">
+                        </div>
+                        <div class="field-group">
+                            <label for="desigInput">Designation / Shop Name *</label>
+                            <input type="text" id="desigInput" placeholder="e.g. Founder @ Tech Store" value="Founder & Owner @ Tech Store">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Wishes & Slogans -->
+                <div class="section-box">
+                    <h2>💬 Patriotic Wish & Message</h2>
+                    <div class="field-group">
+                        <label for="wishTextInput">Edit Wish Text or Click a Preset Below:</label>
+                        <textarea id="wishTextInput" placeholder="Type your Independence Day wish message...">78वें स्वतंत्रता दिवस की हार्दिक शुभकामनाएं! 🇮🇳</textarea>
+
+                        <div class="wish-chips">
+                            <div class="wish-chip" data-wish="78वें स्वतंत्रता दिवस की हार्दिक शुभकामनाएं! 🇮🇳">🇮🇳 78वें स्वतंत्रता दिवस की हार्दिक शुभकामनाएं!</div>
+                            <div class="wish-chip" data-wish="Celebrating 78 Years of Freedom - Proud to be an Indian! 🇮🇳">✨ Celebrating 78 Years of Freedom - Proud to be an Indian!</div>
+                            <div class="wish-chip" data-wish="स्वतंत्र भारत, समृद्ध भारत! जय हिंद, जय भारत! 🚩">🚩 स्वतंत्र भारत, समृद्ध भारत! जय हिंद, जय भारत!</div>
+                            <div class="wish-chip" data-wish="Salute to the Freedom Fighters & Heroes of our Nation! 🇮🇳">🎖️ Salute to the Freedom Fighters & Heroes of our Nation!</div>
+                            <div class="wish-chip" data-wish="Happy Independence Day! May our tricolor fly high forever. 🕊️">🕊️ Happy Independence Day! May our tricolor fly high.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Right Preview Panel (Live Canvas Rendering) -->
+            <section class="preview-panel">
+                <div style="display:flex; justify-content:space-between; align-items:center; width:100%; margin-bottom:8px;">
+                    <h2 style="font-size:1.2rem; color:var(--text-main); margin:0;">👁️ Live Graphic Preview</h2>
+                    <span style="font-size:0.8rem; color:var(--saffron); font-weight:600;">HD Quality</span>
+                </div>
+
+                <button class="btn-fullscreen-hint" id="btnFullscreenHint">🔍 Click to preview full screen</button>
+
+                <div class="canvas-wrapper" id="canvasWrapper" title="Click or Tap to view Full Screen Preview">
+                    <!-- High Resolution HTML5 Canvas -->
+                    <canvas id="posterCanvas" width="1080" height="1080"></canvas>
+                </div>
+
+                <div class="export-bar">
+                    <button class="btn btn-primary" id="btnDownloadPng">📥 Download HD PNG</button>
+                    <button class="btn btn-green" id="btnDownloadJpg">📥 Download JPG</button>
+                    <button class="btn btn-secondary" id="btnSharePoster" style="background:#0891b2; color:#fff; border:none;">📲 Share Poster</button>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- SEO Article & Privacy Guarantee Section -->
+        <article class="seo-article">
+            
+            <!-- 100% Privacy Guarantee Banner -->
+            <div class="privacy-banner">
+                <div class="privacy-banner-icon">🛡️</div>
+                <div>
+                    <h3>100% Private & Safe Guarantee</h3>
+                    <p>Your privacy is strictly protected! <strong>No personal photos, brand logos, or text are saved or uploaded to any server.</strong> Everything is rendered 100% locally inside your web browser. You are completely safe here.</p>
+                </div>
+            </div>
+
+            <h2>Free Independence Day Social Media Poster & Banner Maker (15th August Cards)</h2>
+            <p>Looking to create a patriotic 15th August Independence Day post for your WhatsApp Status, Instagram Reel, Facebook Page, or Business Brand? Designing custom festival graphics shouldn't require complex Photoshop or Canva skills. <strong>Creators Free Independence Day Poster Maker</strong> lets non-technical users, shop owners, business leaders, and creators generate beautiful patriotic cards in seconds without filling out long forms.</p>
+
+            <h3>Why Creators Love Our Readymade Festival Graphic Generator</h3>
+            <ul>
+                <li>⚡ <strong>Zero Form Hassle:</strong> No complicated forms! Just pick a readymade template, upload your photo, logo, and type your name.</li>
+                <li>🖼️ <strong>Automatic Circular Photo Framing:</strong> Your uploaded photo is automatically framed into a stylish circular badge with saffron and gold borders.</li>
+                <li>🇮🇳 <strong>Rich Tricolor & Ashoka Chakra Graphics:</strong> Templates feature authentic Tiranga colors (Saffron, White, Emerald Green) and vector Ashoka Chakra emblems.</li>
+                <li>💬 <strong>Pre-written Hindi & English Wish Presets:</strong> 1-Click patriotic slogans like <em>"78वें स्वतंत्रता दिवस की हार्दिक शुभकामनाएं"</em> and <em>"Proud to be an Indian!"</em>.</li>
+                <li>📥 <strong>Instant High-HD Download:</strong> Export your graphics directly in high-definition PNG or JPG format ready for sharing on social media.</li>
+            </ul>
+
+            <h3>Explore More Free Web Tools on Creators Free</h3>
+            <p>Discover our growing collection of free online tools:</p>
+            <ul>
+                <li>📄 <strong>Indian Resume & CV Builder:</strong> Create professional ATS-friendly resumes with Education Tables & Declaration lines using our <a href="resume-creator.html">Free Indian Resume Builder</a>.</li>
+                <li>📝 <strong>Formal Application Writer:</strong> Write formal letters for Banks, Schools, and Police Stations with our <a href="application-letter-generator.html">Free Formal Application Generator</a>.</li>
+                <li>📸 <strong>Passport Photo Printer:</strong> Print passport photos on A4 sheet without paper waste using our <a href="a4-photo-printer.html">Free Passport Photo Printer Tool</a>.</li>
+                <li>🏠 <strong>Explore All Tools:</strong> Visit our <a href="index.html">Creators Free Homepage</a>.</li>
+            </ul>
+
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <div class="faq-box">
+                <h4>🔒 Are my photos or company logos uploaded to any server?</h4>
+                <p>No! We guarantee 100% privacy. All canvas graphics rendering happens 100% locally inside your web browser. Nothing is saved or stored on any server.</p>
+            </div>
+
+            <div class="faq-box">
+                <h4>📱 Can I use these poster templates for WhatsApp Status & Instagram Stories?</h4>
+                <p>Yes! Simply select the <strong>"📱 WhatsApp Story (1080x1920)"</strong> template for vertical status graphics, or choose any of our Square (1080x1080) templates for Instagram & Facebook posts.</p>
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- Fullscreen Lightbox Preview Modal -->
+    <div class="preview-lightbox-modal" id="lightboxModal">
+        <div class="preview-lightbox-content">
+            <button type="button" class="preview-lightbox-close" id="lightboxCloseBtn">&times;</button>
+            <img src="" id="lightboxImg" class="preview-lightbox-img" alt="Full Screen Independence Day Poster Preview">
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+</body>
+</html>

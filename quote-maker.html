@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Maker - Creators Free</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/header-footer.js" defer></script>
+    <!-- Vercel Web Analytics Real Visitor Tracking -->
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="resume-creator" style="padding-bottom: 60px;">
+        <section class="hero-small">
+            <div class="container">
+                <h1>Quote Maker</h1>
+                <p>Create beautiful quote posters with one click and download them as PNG or JPG.</p>
+            </div>
+        </section>
+
+        <div class="container" style="padding: 30px 0;">
+            <style>
+              .creator-box {
+                background: #ffffff !important;
+                color: #222222 !important;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                max-width: 1200px;
+                margin: 10px auto;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+              }
+              .creator-inputs {
+                flex: 1;
+                min-width: 320px;
+              }
+              .creator-inputs h3 {
+                color: #111111 !important;
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+                border-bottom: 2px solid #ff4757;
+                padding-bottom: 5px;
+              }
+              .cf-field {
+                margin-bottom: 16px;
+              }
+              .cf-field label {
+                display: block;
+                font-weight: bold;
+                font-size: 0.92rem;
+                margin-bottom: 8px;
+                color: #444444 !important;
+              }
+              .cf-field textarea,
+              .cf-field input[type="text"],
+              .cf-field input[type="file"],
+              .cf-field input[type="color"],
+              .cf-field input[type="range"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #cccccc !important;
+                border-radius: 8px;
+                background: #f9f9f9 !important;
+                box-sizing: border-box;
+              }
+              .cf-field textarea {
+                height: 100px;
+                resize: vertical;
+              }
+              .bg-remover-box {
+                background: #eccc6822;
+                border: 1px dashed #ffa502;
+                padding: 12px;
+                border-radius: 8px;
+                margin-bottom: 18px;
+              }
+              .bg-remover-box p {
+                font-size: 0.9rem;
+                color: #555;
+                margin-bottom: 8px;
+              }
+              .btn-remove-bg-external {
+                display: inline-block;
+                background: #ffa502;
+                color: #fff !important;
+                text-decoration: none;
+                font-size: 0.88rem;
+                font-weight: bold;
+                padding: 8px 14px;
+                border-radius: 6px;
+              }
+              .cf-btns {
+                display: flex;
+                gap: 12px;
+                margin-top: 18px;
+                flex-wrap: wrap;
+              }
+              .cf-btn {
+                flex: 1;
+                padding: 12px;
+                border: none;
+                border-radius: 8px;
+                font-weight: bold;
+                cursor: pointer;
+                color: #ffffff !important;
+              }
+              .cf-btn-png { background-color: #ff4757 !important; }
+              .cf-btn-jpg { background-color: #2ed573 !important; }
+              .creator-preview {
+                flex: 1;
+                min-width: 320px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #f1f2f6;
+                padding: 18px;
+                border-radius: 12px;
+              }
+              #quoteCanvas {
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+                background: #ffffff;
+                box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+              }
+              @media (max-width: 980px) {
+                .creator-box {
+                  flex-direction: column-reverse;
+                }
+                .creator-preview {
+                  position: sticky;
+                  top: 0;
+                  z-index: 99;
+                  padding: 10px;
+                  border: 2px solid #ff4757;
+                  border-radius: 8px;
+                  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+                  background: #ffffff;
+                }
+                #quoteCanvas {
+                  max-height: 260px;
+                  width: auto !important;
+                  object-fit: contain;
+                }
+              }
+            </style>
+
+            <div class="creator-box">
+              <div class="creator-inputs">
+                <h3>Template Editor</h3>
+                <div class="cf-field">
+                  <label>Quote Text:</label>
+                  <textarea id="cfText" placeholder="Type or paste your text here...">Ye zindagi hai, {उलझेगी} nahi toh सुलझेगी kaise,\nAur बिखरेgi nahi toh {निखरेgi} kaise ! ❤️</textarea>
+                  <small style="font-size:0.84rem; color:#666;">💡 Kisi shabd ka color highlight karne ke liye use <b>{curly brackets}</b> me likhein.</small>
+                </div>
+
+                <div class="cf-field" style="background: #f8f9fa; padding: 14px; border-radius: 8px; border: 1px solid #e9ecef;">
+                  <label>Text Size (Font Scale): <span id="textSizeVal">28px</span></label>
+                  <input type="range" id="textSizeSlider" min="10" max="100" value="28">
+
+                  <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 150px;">
+                      <label>Base Text Color:</label>
+                      <input type="color" id="cfColor" value="#1a1a1a" />
+                    </div>
+                    <div style="flex: 1; min-width: 150px;">
+                      <label>Highlight Word Color:</label>
+                      <input type="color" id="cfHighlightColor" value="#ff4757" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-remover-box">
+                  <p>💡 Photo ka Background hatana hai? Niche click karke 1-Click me transparent PNG cutout banayein:</p>
+                  <a href="https://www.remove.bg/upload" target="_blank" class="btn-remove-bg-external">✨ Free Background Remover</a>
+                </div>
+
+                <div class="cf-field">
+                  <label>1. Person / Cutout Image (PNG):</label>
+                  <input type="file" id="cfPerson" accept="image/*" />
+                </div>
+
+                <div class="cf-field" style="background: #f1f2f6; padding: 14px; border-radius: 8px;">
+                  <label>Photo Size (Scale): <span id="scaleVal">100%</span></label>
+                  <input type="range" id="scaleSlider" min="20" max="200" value="100">
+
+                  <label style="margin-top:10px; display:block;">Left / Right Shift: <span id="xPosVal">0</span></label>
+                  <input type="range" id="xPosSlider" min="-300" max="300" value="0">
+
+                  <label style="margin-top:10px; display:block;">Up / Down Shift: <span id="yPosVal">0</span></label>
+                  <input type="range" id="yPosSlider" min="-300" max="300" value="0">
+                </div>
+
+                <div class="cf-field">
+                  <label>2. Background Image (e.g. Sea / Ocean):</label>
+                  <input type="file" id="cfBg" accept="image/*" />
+                </div>
+
+                <div class="cf-field" style="background: #eef2f7; padding: 14px; border-radius: 8px; border: 1px solid #dce4ec;">
+                  <label style="color:#007bff !important;">🏷️ Creator Branding / Watermark (Optional):</label>
+                  <input type="text" id="cfBrandName" placeholder="Enter your name or handle (e.g. @creatorsfree)" style="margin-bottom:10px;" />
+                  <label>Small Round Logo / Profile Photo:</label>
+                  <input type="file" id="cfBrandLogo" accept="image/*" />
+                </div>
+
+                <div class="cf-btns">
+                  <button class="cf-btn cf-btn-png" onclick="downloadBloggerQuote('png')">Download PNG</button>
+                  <button class="cf-btn cf-btn-jpg" onclick="downloadBloggerQuote('jpg')">Download JPG</button>
+                </div>
+              </div>
+
+              <div class="creator-preview" id="quotePreviewBox" style="cursor: zoom-in;" title="Click or Tap for Full Screen Preview">
+                <label style="font-weight:bold; margin-bottom:8px; color:#333; display:block;">Live Quote Preview Canvas (Tap for Full Screen):</label>
+                <canvas id="quoteCanvas" width="800" height="1000"></canvas>
+              </div>
+            </div>
+        </div>
+
+        <!-- Fullscreen Lightbox Preview Modal -->
+        <div class="preview-lightbox-modal" id="lightboxModal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(10,15,29,0.92); backdrop-filter:blur(10px); justify-content:center; align-items:center; padding:20px; box-sizing:border-box;">
+            <div style="position:relative; max-width:92vw; max-height:92vh; display:flex; flex-direction:column; align-items:center;">
+                <button type="button" id="lightboxCloseBtn" style="position:absolute; top:-45px; right:-5px; background:rgba(255,255,255,0.2); color:#fff; border:2px solid #fff; border-radius:50%; width:40px; height:40px; font-size:22px; font-weight:bold; cursor:pointer; display:flex; align-items:center; justify-content:center;">&times;</button>
+                <img src="" id="lightboxImg" style="max-width:92vw; max-height:85vh; border-radius:12px; box-shadow:0 25px 60px rgba(0,0,0,0.9); object-fit:contain; border:2px solid #ff4757;" alt="Full Screen Quote Preview">
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+    (function() {
+      function initQuoteApp() {
+        var canvas = document.getElementById('quoteCanvas');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+
+        var textInput = document.getElementById('cfText');
+        var textColor = document.getElementById('cfColor');
+        var highlightColor = document.getElementById('cfHighlightColor');
+        var textSizeSlider = document.getElementById('textSizeSlider');
+        
+        var personInput = document.getElementById('cfPerson');
+        var bgInput = document.getElementById('cfBg');
+
+        var brandNameInput = document.getElementById('cfBrandName');
+        var brandLogoInput = document.getElementById('cfBrandLogo');
+
+        var scaleSlider = document.getElementById('scaleSlider');
+        var xPosSlider = document.getElementById('xPosSlider');
+        var yPosSlider = document.getElementById('yPosSlider');
+
+        var bgImg = new Image();
+        var personImg = new Image();
+        var brandLogoImg = new Image();
+
+        var isBgLoaded = false;
+        var isPersonLoaded = false;
+        var isBrandLogoLoaded = false;
+
+        function escapeQuotes(text) {
+          return text.replace(/\r/g, '');
+        }
+
+        function renderCanvas() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          if (isBgLoaded) {
+            ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
+          } else {
+            var grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
+            grad.addColorStop(0, '#e2d1c3');
+            grad.addColorStop(1, '#fdfbfb');
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+          }
+
+          if (isPersonLoaded) {
+            var scale = scaleSlider.value / 100;
+            var offsetX = parseInt(xPosSlider.value, 10);
+            var offsetY = parseInt(yPosSlider.value, 10);
+
+            var aspect = personImg.width / personImg.height;
+            var targetHeight = 720 * scale;
+            var targetWidth = targetHeight * aspect;
+
+            var xPos = ((canvas.width - targetWidth) / 2) + offsetX;
+            var yPos = (canvas.height - targetHeight) + offsetY;
+
+            ctx.drawImage(personImg, xPos, yPos, targetWidth, targetHeight);
+          }
+
+          var fontSize = parseInt(textSizeSlider.value, 10);
+          ctx.font = '500 ' + fontSize + 'px sans-serif';
+          ctx.textBaseline = 'top';
+
+          var rawText = textInput.value || 'Type or paste your text here...';
+          rawText = escapeQuotes(rawText);
+          var lines = rawText.split('\n');
+          var startY = 120;
+          var lineHeight = fontSize * 1.4;
+
+          for (var i = 0; i < lines.length; i++) {
+            var line = lines[i];
+            var tokens = [];
+            var regex = /\{([^}]+)\}|([^\{]+)/g;
+            var match;
+
+            while ((match = regex.exec(line)) !== null) {
+              if (match[1] !== undefined) {
+                tokens.push({ text: match[1], isHighlight: true });
+              } else if (match[2] !== undefined) {
+                tokens.push({ text: match[2], isHighlight: false });
+              }
+            }
+
+            var totalLineWidth = 0;
+            for (var t = 0; t < tokens.length; t++) {
+              totalLineWidth += ctx.measureText(tokens[t].text).width;
+            }
+
+            var currentX = (canvas.width - totalLineWidth) / 2;
+
+            for (var k = 0; k < tokens.length; k++) {
+              var token = tokens[k];
+              ctx.fillStyle = token.isHighlight ? highlightColor.value : textColor.value;
+              ctx.fillText(token.text, currentX, startY + (i * lineHeight));
+              currentX += ctx.measureText(token.text).width;
+            }
+          }
+
+          var brandText = brandNameInput.value.trim();
+          if (brandText !== '' || isBrandLogoLoaded) {
+            var footerY = canvas.height - 70;
+            var logoRadius = 24;
+            var logoSpacing = 12;
+
+            ctx.font = '600 22px sans-serif';
+            var textWidth = brandText !== '' ? ctx.measureText(brandText).width : 0;
+            var totalBrandWidth = textWidth;
+
+            if (isBrandLogoLoaded) {
+              totalBrandWidth += (logoRadius * 2) + (brandText !== '' ? logoSpacing : 0);
+            }
+
+            var startX = (canvas.width - totalBrandWidth) / 2;
+
+            if (isBrandLogoLoaded) {
+              var logoX = startX + logoRadius;
+              var logoY = footerY;
+
+              ctx.save();
+              ctx.beginPath();
+              ctx.arc(logoX, logoY, logoRadius, 0, Math.PI * 2, true);
+              ctx.closePath();
+              ctx.clip();
+
+              ctx.drawImage(brandLogoImg, logoX - logoRadius, logoY - logoRadius, logoRadius * 2, logoRadius * 2);
+              ctx.restore();
+
+              ctx.beginPath();
+              ctx.arc(logoX, logoY, logoRadius, 0, Math.PI * 2, true);
+              ctx.lineWidth = 2;
+              ctx.strokeStyle = '#ffffff';
+              ctx.stroke();
+
+              startX += (logoRadius * 2) + logoSpacing;
+            }
+
+            if (brandText !== '') {
+              ctx.fillStyle = textColor.value;
+              ctx.textAlign = 'left';
+              ctx.textBaseline = 'middle';
+              ctx.fillText(brandText, startX, footerY);
+            }
+          }
+        }
+
+        bgInput.addEventListener('change', function(e) {
+          var file = e.target.files[0];
+          if (file) {
+            var reader = new FileReader();
+            reader.onload = function(evt) {
+              bgImg.src = evt.target.result;
+              bgImg.onload = function() { isBgLoaded = true; renderCanvas(); };
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+
+        personInput.addEventListener('change', function(e) {
+          var file = e.target.files[0];
+          if (file) {
+            var reader = new FileReader();
+            reader.onload = function(evt) {
+              personImg.src = evt.target.result;
+              personImg.onload = function() { isPersonLoaded = true; renderCanvas(); };
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+
+        brandLogoInput.addEventListener('change', function(e) {
+          var file = e.target.files[0];
+          if (file) {
+            var reader = new FileReader();
+            reader.onload = function(evt) {
+              brandLogoImg.src = evt.target.result;
+              brandLogoImg.onload = function() { isBrandLogoLoaded = true; renderCanvas(); };
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+
+        scaleSlider.addEventListener('input', function() {
+          document.getElementById('scaleVal').innerText = scaleSlider.value + '%';
+          renderCanvas();
+        });
+
+        xPosSlider.addEventListener('input', function() {
+          document.getElementById('xPosVal').innerText = xPosSlider.value;
+          renderCanvas();
+        });
+
+        yPosSlider.addEventListener('input', function() {
+          document.getElementById('yPosVal').innerText = yPosSlider.value;
+          renderCanvas();
+        });
+
+        textSizeSlider.addEventListener('input', function() {
+          document.getElementById('textSizeVal').innerText = textSizeSlider.value + 'px';
+          renderCanvas();
+        });
+
+        textInput.addEventListener('input', renderCanvas);
+        textColor.addEventListener('input', renderCanvas);
+        highlightColor.addEventListener('input', renderCanvas);
+        brandNameInput.addEventListener('input', renderCanvas);
+
+        var previewBox = document.getElementById('quotePreviewBox');
+        var lightboxModal = document.getElementById('lightboxModal');
+        var lightboxImg = document.getElementById('lightboxImg');
+        var lightboxClose = document.getElementById('lightboxCloseBtn');
+
+        if (previewBox && lightboxModal && lightboxImg) {
+          previewBox.addEventListener('click', function() {
+            lightboxImg.src = canvas.toDataURL('image/png');
+            lightboxModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+          });
+
+          if (lightboxClose) {
+            lightboxClose.addEventListener('click', function() {
+              lightboxModal.style.display = 'none';
+              document.body.style.overflow = '';
+            });
+          }
+
+          lightboxModal.addEventListener('click', function(e) {
+            if (e.target === lightboxModal) {
+              lightboxModal.style.display = 'none';
+              document.body.style.overflow = '';
+            }
+          });
+        }
+
+        renderCanvas();
+
+        window.downloadBloggerQuote = function(format) {
+          var link = document.createElement('a');
+          if (format === 'jpg') {
+            link.download = 'creatorsfree-quote.jpg';
+            link.href = canvas.toDataURL('image/jpeg', 0.95);
+          } else {
+            link.download = 'creatorsfree-quote.png';
+            link.href = canvas.toDataURL('image/png');
+          }
+          link.click();
+        };
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initQuoteApp);
+      } else {
+        initQuoteApp();
+      }
+    })();
+    </script>
+</body>
+</html>

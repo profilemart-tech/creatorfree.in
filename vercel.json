@@ -1,0 +1,25 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/index", "destination": "/index.html" },
+    { "source": "/social-media", "destination": "/social-media.html" },
+    { "source": "/youtube-tools", "destination": "/youtube-tools.html" },
+    { "source": "/tools", "destination": "/tools.html" },
+    { "source": "/effects", "destination": "/effects.html" },
+    { "source": "/video-effects", "destination": "/video-effects.html" },
+    { "source": "/sound-effects", "destination": "/sound-effects.html" },
+    { "source": "/thumbnail-booster-pack", "destination": "/thumbnail-booster-pack.html" },
+    { "source": "/indian-2d-characters", "destination": "/indian-2d-characters.html" },
+    { "source": "/creator-assets", "destination": "/creator-assets.html" },
+    { "source": "/a4-photo-printer", "destination": "/a4-photo-printer.html" },
+    { "source": "/youtube-thumbnail-maker", "destination": "/youtube-thumbnail-maker.html" },
+    { "source": "/mobile-resume-builder", "destination": "/mobile-resume-builder.html" },
+    { "source": "/resume-creator", "destination": "/resume-creator.html" },
+    { "source": "/application-letter-generator", "destination": "/application-letter-generator.html" },
+    { "source": "/independence-day-poster-maker", "destination": "/independence-day-poster-maker.html" },
+    { "source": "/poster-maker", "destination": "/poster-maker.html" },
+    { "source": "/quote-maker", "destination": "/quote-maker.html" },
+    { "source": "/blog", "destination": "/blog.html" }
+  ]
+}

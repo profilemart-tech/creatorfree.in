@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Print Presets - Creators Free</title>
+    <meta name="description" content="Choose photo print sizes, quantity layouts, and download print-ready sheets without Photoshop.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/header-footer.js" defer></script>
+    <script src="js/photo-print-presets.js" defer></script>
+    <!-- Vercel Web Analytics Real Visitor Tracking -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    <style>
+        .print-tool {
+            padding: 40px 0;
+        }
+        .print-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 24px;
+        }
+        .print-panel,
+        .print-preview {
+            background: #111827;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.16);
+        }
+        .print-panel h2,
+        .print-preview h2 {
+            margin-top: 0;
+            color: #f8fafc;
+            font-size: 1.7rem;
+        }
+        .print-panel .field {
+            margin-bottom: 18px;
+        }
+        .print-panel label {
+            display: block;
+            margin-bottom: 8px;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .print-panel select,
+        .print-panel input[type="file"] {
+            width: 100%;
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: #0f172a;
+            color: #f8fafc;
+            padding: 14px;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+        }
+        .print-panel .preset-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+        .print-panel .preset-card {
+            background: #16243d;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 14px;
+            color: #e2e8f0;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        .print-preview {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            align-items: center;
+        }
+        .preview-frame {
+            width: 100%;
+            background: #0f172a;
+            border-radius: 24px;
+            padding: 18px;
+            border: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            justify-content: center;
+        }
+        #printPreviewCanvas {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+        }
+        .preview-status {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+        .download-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+        .download-actions button {
+            padding: 13px 18px;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            background: #38bdf8;
+            color: #0f172a;
+            font-weight: 700;
+            transition: transform 0.15s ease;
+        }
+        .download-actions button:hover {
+            transform: translateY(-1px);
+        }
+        .print-note {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+        @media (max-width: 980px) {
+            .print-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main class="container print-tool">
+        <section class="hero-small">
+            <div class="container" style="text-align:center;">
+                <h1>Photo Print Presets</h1>
+                <p>Choose print sizes, quantity layouts, and download ready-to-print photo sheets without Photoshop.</p>
+            </div>
+        </section>
+
+        <section class="print-grid">
+            <div class="print-panel">
+                <h2>Print Settings</h2>
+                <div class="field">
+                    <label for="printImageUpload">Upload a Photo</label>
+                    <input type="file" id="printImageUpload" accept="image/*">
+                </div>
+                <div class="field">
+                    <label>
+                        <input type="checkbox" id="backgroundRemovalCheckbox">
+                        Remove solid background from photo
+                    </label>
+                </div>
+                <div class="field">
+                    <label for="backgroundImageUpload">Add a custom photo background</label>
+                    <input type="file" id="backgroundImageUpload" accept="image/*">
+                </div>
+                <div class="field">
+                    <label for="photoTextInput">Text on photo</label>
+                    <input type="text" id="photoTextInput" maxlength="40" placeholder="e.g. Family photo">
+                </div>
+                <div class="field">
+                    <label for="photoTextColor">Text color</label>
+                    <input type="color" id="photoTextColor" value="#ffffff">
+                </div>
+                <div class="field">
+                    <label for="photoTextSize">Text size</label>
+                    <input type="range" id="photoTextSize" min="16" max="48" value="24">
+                </div>
+                <div class="field">
+                    <label for="photoTextPositionSelect">Text position</label>
+                    <select id="photoTextPositionSelect">
+                        <option value="bottom">Bottom</option>
+                        <option value="top">Top</option>
+                        <option value="center">Center</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="printSizeSelect">Photo Size (inside A4 sheet)</label>
+                    <select id="printSizeSelect">
+                        <option value="passport">Passport (2 x 2 in)</option>
+                        <option value="postcard">Postcard (4 x 6 in)</option>
+                        <option value="4x6">4 x 6 in</option>
+                        <option value="5x7">5 x 7 in</option>
+                        <option value="6x8">6 x 8 in</option>
+                        <option value="8x10">8 x 10 in</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="printQuantitySelect">Quantity</label>
+                    <select id="printQuantitySelect"></select>
+                </div>
+                <div class="field">
+                    <label>A4 Page Orientation</label>
+                    <select id="orientationSelect">
+                        <option value="portrait">Portrait (A4)</option>
+                        <option value="landscape">Landscape (A4)</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="sheetBackgroundSelect">Page Background</label>
+                    <select id="sheetBackgroundSelect">
+                        <option value="white">White</option>
+                        <option value="lightGray">Light Gray</option>
+                        <option value="ivory">Ivory</option>
+                        <option value="blueGradient">Blue Gradient</option>
+                        <option value="greenGradient">Green Gradient</option>
+                        <option value="custom">Custom color</option>
+                    </select>
+                </div>
+                <div class="field" id="customBackgroundField" style="display:none;">
+                    <label for="sheetBackgroundColor">Page Color</label>
+                    <input type="color" id="sheetBackgroundColor" value="#ffffff">
+                </div>
+                <div class="field">
+                    <label for="imageBackgroundSelect">Photo Background</label>
+                    <select id="imageBackgroundSelect">
+                        <option value="white">White</option>
+                        <option value="lightGray">Light Gray</option>
+                        <option value="ivory">Ivory</option>
+                        <option value="black">Black</option>
+                        <option value="custom">Custom color</option>
+                    </select>
+                </div>
+                <div class="field" id="customImageBackgroundField" style="display:none;">
+                    <label for="imageBackgroundColor">Photo Background Color</label>
+                    <input type="color" id="imageBackgroundColor" value="#ffffff">
+                </div>
+                <div class="field">
+                    <label for="decorativeStyleSelect">Photo border style</label>
+                    <select id="decorativeStyleSelect">
+                        <option value="none">None</option>
+                        <option value="rounded">Rounded corners</option>
+                        <option value="colorful">Colorful border</option>
+                        <option value="elegant">Elegant corners</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>
+                        <input type="checkbox" id="showDateOnPhotoCheckbox">
+                        Add date on photo
+                    </label>
+                </div>
+                <div class="field">
+                    <label for="photoDateInput">Photo date</label>
+                    <input type="date" id="photoDateInput">
+                </div>
+                <div class="field">
+                    <label for="additionalSizeSelect">Optional additional photo size</label>
+                    <select id="additionalSizeSelect">
+                        <option value="passport">Passport (2 x 2 in)</option>
+                        <option value="postcard">Postcard (4 x 6 in)</option>
+                        <option value="4x6">4 x 6 in</option>
+                        <option value="5x7">5 x 7 in</option>
+                        <option value="6x8">6 x 8 in</option>
+                        <option value="8x10">8 x 10 in</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="additionalQuantitySelect">Additional quantity</label>
+                    <select id="additionalQuantitySelect"></select>
+                </div>
+                <div class="field">
+                    <label>A4 Sheet Settings</label>
+                    <div class="preset-list">
+                        <div class="preset-card">A4 page: 8.27 x 11.69 in</div>
+                        <div class="preset-card">Orientation set to the page mode you need</div>
+                        <div class="preset-card">Only valid print sizes are shown</div>
+                        <div class="preset-card">Quantity updates automatically</div>
+                    </div>
+                </div>
+                <div class="field" style="margin-top: 8px;">
+                    <p class="print-note">This tool places selected photo copies on an A4 sheet in a paper-saving layout, starting from the top-left corner. Use your print shop settings to add bleed and crop marks if needed.</p>
+                </div>
+            </div>
+
+            <div class="print-preview">
+                <h2>Print Sheet Preview</h2>
+                <div class="preview-frame">
+                    <canvas id="printPreviewCanvas" width="1080" height="1080"></canvas>
+                </div>
+                <div class="preview-status">
+                    <span id="sheetSizeText">Sheet size: 8.27 x 11.69 in (A4)</span>
+                    <span id="photoSizeText">Photo size: 4 x 6 in</span>
+                    <span id="layoutText">Layout: 1 copy</span>
+                    <span id="backgroundText">Page Bg: White</span>
+                    <span id="photoBgText">Photo Bg: White</span>
+                    <span id="decorativeText">Frame: None</span>
+                    <span id="dateText">Date label: None</span>
+                </div>
+                <div class="download-actions">
+                    <button id="downloadPrintSheet">Download Sheet JPG</button>
+                </div>
+                <p class="print-note">A print-ready JPG is generated for A4 page size. For commercial output, choose 300 DPI in your printing workflow.</p>
+            </div>
+        </section>
+
+        <section class="container" style="margin-top: 30px;">
+            <div class="print-guide" style="background: #111827; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 24px; box-shadow: 0 20px 45px rgba(0,0,0,0.16);">
+                <h2 style="color:#f8fafc; margin-top:0;">Common Photo Sizes for A4 Printing</h2>
+                <div class="guide-grid" style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
+                    <div class="preset-card">Passport: 2 x 2 in — perfect for ID photos and small wallet prints.</div>
+                    <div class="preset-card">Postcard: 4 x 6 in — classic photo print for albums and gifts.</div>
+                    <div class="preset-card">4 x 6 in — standard photo size for quick prints.</div>
+                    <div class="preset-card">5 x 7 in — popular for framed photos and invitations.</div>
+                    <div class="preset-card">6 x 8 in — larger photo print for desktop display.</div>
+                    <div class="preset-card">8 x 10 in — premium portrait and poster-style prints.</div>
+                </div>
+                <p style="color:#94a3b8; font-size:0.95rem; margin-top:18px;">This tool works only with A4 sheets. Choose a photo size and quantity, and the preview will place your selected photos correctly on the A4 page.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

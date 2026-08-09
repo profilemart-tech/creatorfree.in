@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free YouTube Thumbnail Maker Online (No Watermark) | CreatorsFree</title>
+    <meta name="description" content="Design high-CTR 1080p HD YouTube thumbnails online for free without watermark. Features 1-click MediaPipe AI background removal, Hindi/English fonts (Teko, Bebas Neue), and smart title generator.">
+    <meta name="keywords" content="youtube thumbnail maker free, free thumbnail generator no watermark, youtube thumbnail kaise banaye, thumbnail banane wala app, 1080p thumbnail extractor, online thumbnail editor India">
+    <link rel="canonical" href="https://creatorsfree.in/youtube-thumbnail-maker.html">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Open Graph SEO Metadata -->
+    <meta property="og:title" content="Free YouTube Thumbnail Maker Online (No Watermark) | CreatorsFree">
+    <meta property="og:description" content="Create high-CTR YouTube thumbnails and extract 1080p HD images instantly. 100% Free online tool without signup or watermark.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://creatorsfree.in/youtube-thumbnail-maker.html">
+
+    <!-- Google Fonts for High-CTR YouTube Headlines -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:wght@900&family=Poppins:wght@900&family=Rozha+One&family=Teko:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/youtube-thumbnail-maker.css">
+    <script src="js/header-footer.js" defer></script>
+    <script src="js/youtube-thumbnail-maker.js" defer></script>
+    <!-- Vercel Analytics -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets & AI Overviews -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Free YouTube Thumbnail Maker & HD Extractor",
+          "url": "https://creatorsfree.in/youtube-thumbnail-maker.html",
+          "applicationCategory": "DesignApplication",
+          "operatingSystem": "All",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+          },
+          "description": "Free online browser-based YouTube thumbnail generator with 1-click AI background removal, custom Hindi/English fonts, and high-CTR title suggestions without watermark."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "YouTube thumbnail ka standard size kya hai?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "YouTube thumbnail ka standard dimension 1280x720 pixels hai jiska aspect ratio 16:9 hota hai. File size 2MB se kam hona chahiye."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Kya CreatorsFree YouTube Thumbnail Maker free hai aur bina watermark ke hai?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Haan, CreatorsFree Thumbnail Maker 100% free hai. Isme koi watermark nahi lagta aur na hi koi signup ya subscription ki zaroorat hoti hai."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Mobile se YouTube thumbnail HD mein kaise banaye?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Aap kisi bhi mobile browser mein creatorsfree.in/youtube-thumbnail-maker khol kar photo upload karein, AI background remove karein, Teko/Bebas Neue fonts se text likhein, aur 1080p HD Image download karein."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Photo ka background 1-click mein kaise remove kare?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Thumbnail Maker mein photo upload karke '✨ Remove Background' button par click karein. MediaPipe AI automatic 1-3 seconds mein subject ko background se alag kar deta hai."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="studio-container">
+        <!-- Studio Header -->
+        <header class="studio-header">
+            <h1>Free YouTube Thumbnail Maker & 1080p HD Generator</h1>
+            <p>Design viral high-CTR text badges, AI photo cutouts, and custom headlines in seconds</p>
+        </header>
+
+        <!-- Answer-First Snippet for Google AI Overviews & Search Snippets -->
+        <div class="answer-snippet-box" style="background:rgba(15,23,42,0.8); border:1px solid rgba(61,220,132,0.3); border-radius:12px; padding:16px; margin-bottom:20px; font-size:0.92rem; color:#cbd5e1; line-height:1.6;">
+            <p style="margin:0;"><strong>CreatorsFree YouTube Thumbnail Maker</strong> ek free, browser-based online design tool hai jisse aap bina Photoshop ke 1080p Full HD viral thumbnails bana sakte hain. Mobile ya PC par 1-click MediaPipe AI background removal, custom Hindi/English fonts (Teko, Bebas Neue, Rozha One), aur smart high-CTR title suggestions use karein — bina watermark aur bina signup ke.</p>
+        </div>
+
+        <!-- Studio Grid Workspace -->
+        <div class="studio-grid">
+            
+            <!-- Left: Canvas Studio Display -->
+            <section class="canvas-column">
+                <div class="canvas-wrapper">
+                    <canvas id="ytCanvas" width="1280" height="720"></canvas>
+                </div>
+
+                <div class="canvas-actions">
+                    <button type="button" id="btnDownloadHd" class="btn-primary">
+                        📥 Download 1080p HD Image
+                    </button>
+                </div>
+            </section>
+
+            <!-- Right: Minimalist Tools Control Panel -->
+            <section class="tools-column">
+                
+                <!-- Inner Mobile Action Bar -->
+                <div class="mobile-action-bar" style="margin-bottom:8px;">
+                    <button type="button" class="btn-primary" onclick="document.getElementById('btnDownloadHd').click();" style="width:100%; padding:12px; font-size:0.92rem;">
+                        📥 Download 1080p HD Image
+                    </button>
+                </div>
+
+                <!-- FEATURE 3: Beginner Quick Templates Section -->
+                <div class="tool-section">
+                    <div class="tool-section-title">
+                        <span>⚡ Quick Layout Presets</span>
+                        <span style="font-size:0.72rem; color:#3DDC84; font-weight:700;">1-Click Auto Layout</span>
+                    </div>
+                    <div class="quick-templates-grid">
+                        <div class="quick-template-card" data-preset="gaming">
+                            <div class="quick-template-icon">🎮</div>
+                            <div class="quick-template-name">Gaming</div>
+                        </div>
+                        <div class="quick-template-card" data-preset="vlog">
+                            <div class="quick-template-icon">📹</div>
+                            <div class="quick-template-name">Vlog</div>
+                        </div>
+                        <div class="quick-template-card" data-preset="tutorial">
+                            <div class="quick-template-icon">📚</div>
+                            <div class="quick-template-name">Tutorial</div>
+                        </div>
+                        <div class="quick-template-card" data-preset="devotional">
+                            <div class="quick-template-icon">🛕</div>
+                            <div class="quick-template-name">Devotional</div>
+                        </div>
+                        <div class="quick-template-card" data-preset="tech">
+                            <div class="quick-template-icon">💻</div>
+                            <div class="quick-template-name">Tech Review</div>
+                        </div>
+                        <div class="quick-template-card" data-preset="comedy">
+                            <div class="quick-template-icon">🎭</div>
+                            <div class="quick-template-name">Comedy</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool 1: Background & Extractor -->
+                <div class="tool-section">
+                    <div class="tool-section-title">
+                        <span>🖼️ 1. Thumbnail Background</span>
+                    </div>
+                    
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        <div>
+                            <label style="font-size:0.78rem; color:#94a3b8; display:block; margin-bottom:4px;">Paste YouTube Video/Shorts Link:</label>
+                            <div style="display:flex; gap:6px;">
+                                <input type="text" id="ytUrlInput" class="tool-input" placeholder="https://youtube.com/watch?v=...">
+                                <button type="button" id="btnFetchThumbnail" class="btn-secondary" style="width:auto; padding:8px 14px; white-space:nowrap;">⚡ Fetch</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label style="font-size:0.78rem; color:#94a3b8; display:block; margin-bottom:4px;">Or Upload Background Photo:</label>
+                            <input type="file" id="customBgInput" accept="image/*" class="tool-input" style="padding:6px;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool 2: Multi-Text Engine + FEATURE 2: Title Suggester -->
+                <div class="tool-section">
+                    <div class="tool-section-title">
+                        <span>🔤 2. Text Badges & Headlines</span>
+                        <button type="button" id="btnAddTextLayer" class="btn-secondary" style="width:auto; padding:4px 10px; font-size:0.78rem; background:#fbbf24; color:#0f172a; border:none;">➕ Add Text</button>
+                    </div>
+
+                    <!-- FEATURE 2: Smart High-CTR Title Generator Box -->
+                    <div style="background:#0f172a; border:1px solid rgba(61,220,132,0.3); border-radius:10px; padding:12px; margin-bottom:12px;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                            <label style="font-size:0.8rem; color:#3DDC84; font-weight:800; display:block;">💡 Smart Title Generator (High-CTR Ideas):</label>
+                        </div>
+                        <span style="font-size:0.72rem; color:#94a3b8; display:block; margin-bottom:8px;">Smart suggestions based on proven YouTube title patterns</span>
+                        
+                        <div style="display:flex; gap:6px;">
+                            <input type="text" id="topicInput" class="tool-input" placeholder="Enter topic or question (e.g. gaming setup, konsa phone lu)..." style="font-size:0.82rem;">
+                            <button type="button" id="btnSuggestTitles" class="btn-secondary" style="width:auto; background:#3DDC84; color:#0f172a; border:none; font-weight:800; padding:6px 12px; white-space:nowrap;">Generate</button>
+                            <button type="button" id="btnRegenerateTitles" class="btn-secondary" style="width:auto; background:rgba(255,255,255,0.08); color:#f8fafc; border:1px solid var(--border-color); font-weight:700; padding:6px 10px; white-space:nowrap;" title="Generate new title ideas">🔄</button>
+                        </div>
+                        <div id="suggestedTitleChips" style="display:flex; flex-wrap:wrap; gap:6px; margin-top:8px;"></div>
+                    </div>
+
+                    <div id="textLayerListContainer" style="display:flex; flex-direction:column; gap:12px;">
+                        <!-- Text Cards rendered by JS -->
+                    </div>
+                </div>
+
+                <!-- Tool 3: Cutouts & FEATURE 1: Background Removal -->
+                <div class="tool-section">
+                    <div class="tool-section-title">
+                        <span>📸 3. Cutout Photo Overlays</span>
+                    </div>
+
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        <div>
+                            <label style="font-size:0.78rem; color:#94a3b8; display:block; margin-bottom:4px;">Upload Photo (JPG / PNG):</label>
+                            <input type="file" id="multiCutoutInput" accept="image/*" multiple class="tool-input" style="padding:6px;">
+                        </div>
+
+                        <!-- FEATURE 1: Background Removal Progress & Status Notice -->
+                        <div id="bgRemoveStatus" style="display:none; background:rgba(61,220,132,0.1); border:1px solid rgba(61,220,132,0.3); border-radius:8px; padding:8px 10px; font-size:0.8rem; color:#3DDC84; font-weight:700;">
+                            <span class="bg-remove-spinner" style="margin-right:6px;"></span>
+                            <span id="bgRemoveStatusText">Removing background... (~1-3s)</span>
+                        </div>
+
+                        <div id="layerListContainer" style="display:flex; flex-direction:column; gap:8px;">
+                            <!-- Cutout Cards rendered by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Empty Scroll Spacer -->
+                <div class="mobile-scroll-spacer" style="height:220px; width:100%; display:block; pointer-events:none;"></div>
+            </section>
+        </div>
+
+        <!-- Rich SEO Article & FAQ Section for Search Rankings & AI Overviews -->
+        <article class="seo-article-container" style="margin-top:40px; background:#111827; border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:28px; color:#cbd5e1; font-size:0.95rem; line-height:1.6;">
+            <h2 style="color:#fff; margin-top:0; font-size:1.5rem;">Free Online YouTube Thumbnail Maker & 1080p HD Extractor</h2>
+            <p>Creating a high CTR (Click-Through Rate) YouTube thumbnail is the single most important factor for video views. <strong>CreatorsFree YouTube Thumbnail Maker</strong> offers an instant browser-based workspace tailored for Indian YouTubers, vloggers, gamers, and tech reviewers.</p>
+
+            <h3 style="color:#3DDC84; font-size:1.2rem; margin-top:24px;">Key Features of CreatorsFree Thumbnail Generator</h3>
+            <ul style="padding-left:20px; line-height:1.8;">
+                <li><strong>1-Click AI Background Removal:</strong> Integrated Google MediaPipe AI automatically isolates people/subjects from messy backgrounds.</li>
+                <li><strong>High-CTR Headline Fonts:</strong> Pre-loaded with viral creator fonts including Teko, Bebas Neue, Rozha One, Anton, and Montserrat.</li>
+                <li><strong>Smart High-CTR Title Ideas Generator:</strong> Generate 30+ categorized click-worthy title headlines for Hindi and English channels.</li>
+                <li><strong>3D Text & Photo Layer Stacking:</strong> Easily move layers up/down to place text behind subject cutouts for a professional 3D depth effect.</li>
+                <li><strong>100% Free & Privacy-First:</strong> Zero watermark, zero signup required, and zero server image uploads.</li>
+            </ul>
+
+            <h3 style="color:#fff; margin-top:32px; font-size:1.4rem;">Frequently Asked Questions (FAQs)</h3>
+            <div class="faq-list" style="margin-top:16px; display:flex; flex-direction:column; gap:16px;">
+                <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:10px; padding:16px;">
+                    <h4 style="color:#38bdf8; margin:0 0 6px 0; font-size:1rem;">1. YouTube thumbnail ka standard size aur resolution kya hai?</h4>
+                    <p style="margin:0;">YouTube official recommendation ke mutabiq thumbnail resolution <strong>1280 x 720 pixels</strong> (minimum width 640px) aur aspect ratio <strong>16:9</strong> hota hai. File format JPG, PNG ya WEBP hona chahiye aur size 2MB se kam hona chahiye.</p>
+                </div>
+                <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:10px; padding:16px;">
+                    <h4 style="color:#38bdf8; margin:0 0 6px 0; font-size:1rem;">2. Kya thumbnail banane ke liye koi watermark ya charge lagta hai?</h4>
+                    <p style="margin:0;">Bilkul nahi! CreatorsFree YouTube Thumbnail Maker 100% free hai. Export kiye gaye 1080p HD thumbnails par koi watermark nahi lagta aur aap unlimited thumbnails bina kisi signup ke bana sakte hain.</p>
+                </div>
+                <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:10px; padding:16px;">
+                    <h4 style="color:#38bdf8; margin:0 0 6px 0; font-size:1rem;">3. Mobile se YouTube thumbnail HD mein kaise banaye?</h4>
+                    <p style="margin:0;">Aap kisi bhi mobile browser mein creatorsfree.in/youtube-thumbnail-maker open karke background image select karein, text add karein aur 1-tap mein 1080p Full HD thumbnail download karein.</p>
+                </div>
+                <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:10px; padding:16px;">
+                    <h4 style="color:#38bdf8; margin:0 0 6px 0; font-size:1rem;">4. Photo ka background 1-click mein kaise remove kare?</h4>
+                    <p style="margin:0;">Thumbnail Maker mein photo upload karke '✨ Remove Background' button par click karein. MediaPipe AI automatic 1-3 seconds mein subject ko background se alag kar deta hai.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</body>
+</html>
