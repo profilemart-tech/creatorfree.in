@@ -21,5 +21,6 @@
     { "source": "/poster-maker", "destination": "/poster-maker.html" },
     { "source": "/quote-maker", "destination": "/quote-maker.html" },
     { "source": "/blog", "destination": "/blog.html" }
+     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
