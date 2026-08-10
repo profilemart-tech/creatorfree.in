@@ -1,567 +1,123 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Creator Tools, SFX, VFX Overlays & Poster Make</title>
-<meta name="description" content="India's #1 Free Creator Hub. Get HD video overlays, SFX, 3D assets & social media tools.">    <link rel="icon" type="image/png" href="images/favicon.png">
-   <link rel="stylesheet" href="/css/styles.css">
-   <link rel="stylesheet" href="/css/responsive.css">
-   <link rel="stylesheet" href="/css/themes.css">
-    <style>
-        /* Netflix-Style Single Frame Carousel CSS */
-        .showcase-container {
-            margin-bottom: 55px;
-        }
-        .showcase-title-bar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 16px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .showcase-title-text {
-            font-size: 1.35rem;
-            font-weight: 800;
-            color: var(--text-heading);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .netflix-frame {
-            position: relative;
-            width: 100%;
-            max-width: 920px;
-            margin: 0 auto;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow-card);
-            min-height: 380px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .netflix-slide {
-            padding: 30px 24px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            flex: 1;
-            transition: opacity 0.3s ease;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .netflix-media-box {
-            width: 100%;
-            max-width: 480px;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 12px;
-            background: #000000;
-            border: 1px solid var(--border-color);
-            margin-bottom: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
+<title>CreatorsFree - Free Tools for Creators</title>
 
-        .netflix-slide-title {
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: var(--text-heading);
-            margin-bottom: 8px;
-        }
-        .netflix-slide-desc {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            line-height: 1.5;
-            margin-bottom: 18px;
-        }
-
-        /* Controls */
-        .netflix-nav-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.75);
-            color: #ffffff;
-            border: 1px solid var(--border-color);
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            font-weight: 800;
-            cursor: pointer;
-            z-index: 20;
-            transition: all 0.2s ease;
-            backdrop-filter: blur(8px);
-        }
-        .netflix-nav-btn:hover {
-            background: var(--accent-green);
-            color: #000000;
-            transform: translateY(-50%) scale(1.1);
-        }
-        .netflix-nav-prev { left: 16px; }
-        .netflix-nav-next { right: 16px; }
-
-        /* Indicators */
-        .netflix-pagination {
-            display: flex;
-            gap: 8px;
-            justify-content: center;
-            padding-bottom: 18px;
-        }
-        .netflix-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.25);
-            cursor: pointer;
-            transition: all 0.25s ease;
-        }
-        .netflix-dot.active {
-            background: var(--accent-green);
-            width: 28px;
-            border-radius: 999px;
-        }
-
-        /* Action CTA inside Frame */
-        .netflix-cta-btn {
-            background: linear-gradient(135deg, #059669, #3DDC84);
-            color: #000000;
-            padding: 10px 24px;
-            border-radius: 10px;
-            font-weight: 800;
-            text-decoration: none;
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            border: none;
-            transition: transform 0.2s ease;
-        }
-        .netflix-cta-btn:hover {
-            transform: scale(1.05);
-        }
-
-        /* Sticky Zero-Scroll Previewer Bar */
-        #inline-sticky-previewer {
-            position: sticky;
-            top: 65px;
-            z-index: 990;
-            background: var(--bg-glass);
-            backdrop-filter: blur(14px);
-            border-bottom: 2px solid var(--accent-green);
-            padding: 14px 18px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            display: none;
-            border-radius: 14px;
-        }
-    </style>
-   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+<link rel="icon" sizes="32x32" href="images/favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
-<meta name="theme-color" content="#000000">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f6fb;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Search */
+.search {
+  padding: 15px;
+}
+
+.search input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Grid */
+.container {
+  padding: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Bottom Nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  font-size: 20px;
+}
+</style>
 </head>
+
 <body>
-    <div id="header-placeholder"></div>
 
-    <!-- Sticky Zero-Scroll Inline Preview Bar -->
-    <div class="container" style="max-width: 1240px; margin: 0 auto;">
-        <div id="inline-sticky-previewer">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                <span id="sticky-preview-title" style="font-weight: 800; color: var(--accent-green); font-size: 0.95rem;">▶️ Sticky Preview Playing</span>
-                <button onclick="closeStickyPreview()" style="background: none; border: none; color: var(--text-primary); font-weight: 800; font-size: 1.2rem; cursor: pointer;">✕</button>
-            </div>
-            <div id="sticky-preview-content" style="text-align: center;"></div>
-        </div>
-    </div>
+<header class="header">
+  CreatorsFree 🚀
+</header>
 
-    <!-- Hero Section -->
-    <header style="text-align: center; padding: 40px 16px 25px 16px;">
-        <span style="background: rgba(61, 220, 132, 0.15); color: var(--accent-green); border: 1px solid var(--border-accent); padding: 6px 18px; border-radius: 999px; font-size: 0.88rem; font-weight: 800; display: inline-block; margin-bottom: 14px;">
-            🇮🇳 INDIA'S #1 100% FREE CREATOR UTILITY HUB
-        </span>
-        <h1 style="font-size: 2.4rem; font-weight: 900; color: var(--text-heading); max-width: 900px; margin: 0 auto 12px auto; line-height: 1.25;">
-            Build Better Content Faster With Free Assets, Video FX, & Smart Tools
-        </h1>
-        <p style="font-size: 1rem; color: var(--text-secondary); max-width: 750px; margin: 0 auto 22px auto; line-height: 1.6;">
-            Download 1080p 60FPS Video FX Overlays, 38+ Comedy Sound Clips, 3D Vector Booster Packs, A4 Passport Photo Printers, & Social Media Poster Generators.
-        </p>
-        <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-            <a href="effects.html" style="background: linear-gradient(135deg, #059669, #3DDC84); color: #000000; padding: 12px 24px; border-radius: 12px; font-weight: 800; text-decoration: none; font-size: 0.95rem;">⚡ Explore Video & Sound FX</a>
-            <a href="tools.html" style="background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border-color); padding: 12px 24px; border-radius: 12px; font-weight: 700; text-decoration: none; font-size: 0.95rem;">🛠️ Open Utility Tools</a>
-        </div>
-    </header>
+<div class="search">
+  <input type="text" placeholder="Search tools...">
+</div>
 
-    <main class="container" style="max-width: 1240px; margin: 20px auto; padding: 0 16px;">
-        
-        <!-- Showcase 1: Social Media (Netflix Single Frame Slider) -->
-        <section class="showcase-container">
-            <div class="showcase-title-bar">
-                <div class="showcase-title-text">📱 1. Social Media Posters & Banners</div>
-                <a href="social-media.html" style="color: #ff9933; text-decoration: none; font-weight: 700; font-size: 0.9rem;">View All Posters ➔</a>
-            </div>
-            
-            <div class="netflix-frame">
-                <button class="netflix-nav-btn netflix-nav-prev" onclick="moveFrameSlide('social', -1)">◀</button>
-                <button class="netflix-nav-btn netflix-nav-next" onclick="moveFrameSlide('social', 1)">▶</button>
-                
-                <div id="social-frame-content" class="netflix-slide"></div>
-                
-                <div id="social-frame-dots" class="netflix-pagination"></div>
-            </div>
-        </section>
+<div class="container">
 
-        <!-- Showcase 2: YouTube (Netflix Single Frame Slider) -->
-        <section class="showcase-container">
-            <div class="showcase-title-bar">
-                <div class="showcase-title-text">📺 2. YouTube Creator Assets & Badges</div>
-                <a href="youtube-tools.html" style="color: #ff4b4b; text-decoration: none; font-weight: 700; font-size: 0.9rem;">View All YouTube Tools ➔</a>
-            </div>
-            
-            <div class="netflix-frame">
-                <button class="netflix-nav-btn netflix-nav-prev" onclick="moveFrameSlide('youtube', -1)">◀</button>
-                <button class="netflix-nav-btn netflix-nav-next" onclick="moveFrameSlide('youtube', 1)">▶</button>
-                
-                <div id="youtube-frame-content" class="netflix-slide"></div>
-                
-                <div id="youtube-frame-dots" class="netflix-pagination"></div>
-            </div>
-        </section>
+  <div class="grid">
 
-        <!-- Showcase 3: Tools (Netflix Single Frame Slider) -->
-        <section class="showcase-container">
-            <div class="showcase-title-bar">
-                <div class="showcase-title-text">🛠️ 3. Utility Tools & Document Generators</div>
-                <a href="tools.html" style="color: #38bdf8; text-decoration: none; font-weight: 700; font-size: 0.9rem;">View All Tools ➔</a>
-            </div>
-            
-            <div class="netflix-frame">
-                <button class="netflix-nav-btn netflix-nav-prev" onclick="moveFrameSlide('tools', -1)">◀</button>
-                <button class="netflix-nav-btn netflix-nav-next" onclick="moveFrameSlide('tools', 1)">▶</button>
-                
-                <div id="tools-frame-content" class="netflix-slide"></div>
-                
-                <div id="tools-frame-dots" class="netflix-pagination"></div>
-            </div>
-        </section>
+    <a href="/youtube-tools" class="card">🎬 YouTube Tools</a>
+    <a href="/effects" class="card">✨ Video Effects</a>
+    <a href="/sound-effects" class="card">🔊 Sound Effects</a>
+    <a href="/poster-maker" class="card">🖼 Poster Maker</a>
+    <a href="/resume-creator" class="card">📄 Resume Builder</a>
+    <a href="/quote-maker" class="card">💬 Quote Maker</a>
 
-        <!-- Showcase 4: Effects (Netflix Single Frame Slider) -->
-        <section class="showcase-container">
-            <div class="showcase-title-bar">
-                <div class="showcase-title-text">⚡ 4. Video FX, Sound Effects (SFX), & 2D Rigs</div>
-                <a href="effects.html" style="color: #c084fc; text-decoration: none; font-weight: 700; font-size: 0.9rem;">View All Effects ➔</a>
-            </div>
-            
-            <div class="netflix-frame">
-                <button class="netflix-nav-btn netflix-nav-prev" onclick="moveFrameSlide('effects', -1)">◀</button>
-                <button class="netflix-nav-btn netflix-nav-next" onclick="moveFrameSlide('effects', 1)">▶</button>
-                
-                <div id="effects-frame-content" class="netflix-slide"></div>
-                
-                <div id="effects-frame-dots" class="netflix-pagination"></div>
-            </div>
-        </section>
+  </div>
 
-    </main>
+</div>
 
-    <div id="footer-placeholder"></div>
-   <script src="/js/main.js"></script>
-<script src="/js/header-footer.js"></script>
-    <script>
-        // Data for Netflix-Style Single Frame Sliders
-        const frameData = {
-            social: [
-                {
-                    title: "🇮🇳 15th August Patriotic Tiranga Poster",
-                    desc: "Tiranga background with custom photo & Hindi greeting generator for Independence Day.",
-                    mediaType: "image",
-                    mediaSrc: "media/banner_15_august_hero.jpg",
-                    ctaText: "🎨 Create Poster",
-                    ctaUrl: "independence-day-poster-maker.html"
-                },
-                {
-                    title: "🪔 Festival Greetings Banner Generator",
-                    desc: "Diwali & Janmashtami Facebook status & WhatsApp banner generator with high contrast text.",
-                    mediaType: "image",
-                    mediaSrc: "media/banner_diwali_sample.jpg",
-                    ctaText: "🎨 Edit Banner",
-                    ctaUrl: "poster-maker.html"
-                },
-                {
-                    title: "💬 Hindi Suvichar & Quote Banner Maker",
-                    desc: "Dark aesthetic motivational quote generator for Instagram stories and status posts.",
-                    mediaType: "image",
-                    mediaSrc: "media/banner_suvichar_quote.jpg",
-                    ctaText: "💬 Make Quote",
-                    ctaUrl: "quote-maker.html"
-                },
-                {
-                    title: "🏪 Shop Opening & Announcement Poster",
-                    desc: "Grand opening ad poster for small businesses, local shops, and festival offers.",
-                    mediaType: "image",
-                    mediaSrc: "media/banner_shop_opening.jpg",
-                    ctaText: "🎨 Create Ad",
-                    ctaUrl: "poster-maker.html"
-                },
-                {
-                    title: "📱 Instagram Reels Product Overlay Frame",
-                    desc: "9:16 vertical overlay frame for e-commerce and social product showcases.",
-                    mediaType: "image",
-                    mediaSrc: "media/banner_reels_ad.jpg",
-                    ctaText: "📱 Use Frame",
-                    ctaUrl: "social-media.html"
-                }
-            ],
-            youtube: [
-                {
-                    title: "📱 Tech & Smartphone Review Cover (1080p)",
-                    desc: "High contrast smartphone unboxing thumbnail layout style for Indian tech creators.",
-                    mediaType: "image",
-                    mediaSrc: "media/yt_tech_review_thumb.jpg",
-                    ctaText: "🔍 Extract 1080p",
-                    ctaUrl: "youtube-thumbnail-maker.html?query=Tech+Reviews+India"
-                },
-                {
-                    title: "📈 Finance & Trading High-CTR Style",
-                    desc: "Stock market chart glow style with green bull market arrows for trading videos.",
-                    mediaType: "image",
-                    mediaSrc: "media/yt_stock_market_thumb.jpg",
-                    ctaText: "🔍 Extract 1080p",
-                    ctaUrl: "youtube-thumbnail-maker.html?query=Stock+Market+India"
-                },
-                {
-                    title: "📚 SSC CGL Exam Prep Cover Generator",
-                    desc: "Educational exam strategy cover with bold yellow badges and high contrast text.",
-                    mediaType: "image",
-                    mediaSrc: "media/yt_ssc_exam_thumb.jpg",
-                    ctaText: "🔍 Extract 1080p",
-                    ctaUrl: "youtube-thumbnail-maker.html?query=SSC+CGL+Preparation"
-                },
-                {
-                    title: "🎬 Indian Daily Vlog Style Cover",
-                    desc: "Family vlog thumbnail layout with vibrant pop colors and custom badge badges.",
-                    mediaType: "image",
-                    mediaSrc: "media/yt_daily_vlog_thumb.jpg",
-                    ctaText: "🔍 Extract 1080p",
-                    ctaUrl: "youtube-thumbnail-maker.html?query=Indian+Daily+Vlog"
-                },
-                {
-                    title: "🍔 Cooking Special Recipe Cover",
-                    desc: "Food channel thumbnail style with glowing recipe badges for Indian cooking videos.",
-                    mediaType: "image",
-                    mediaSrc: "media/yt_cooking_recipe_thumb.jpg",
-                    ctaText: "🔍 Extract 1080p",
-                    ctaUrl: "youtube-thumbnail-maker.html?query=Indian+Recipes+Cooking"
-                }
-            ],
-            tools: [
-                {
-                    title: "🖼️ A4 Passport Photo Printer (8/16/32 Grid)",
-                    desc: "Arrange 8, 16, or 32 passport size photos on an A4 sheet for instant home printing.",
-                    mediaType: "icon",
-                    iconSymbol: "🖼️",
-                    ctaText: "🖼️ Print Passport Photos",
-                    ctaUrl: "a4-photo-printer.html"
-                },
-                {
-                    title: "📄 Mobile Resume Builder (Instant PDF)",
-                    desc: "Build professional single-page PDF resumes for government and private jobs on phone.",
-                    mediaType: "icon",
-                    iconSymbol: "📄",
-                    ctaText: "📄 Build Resume",
-                    ctaUrl: "resume-creator.html"
-                },
-                {
-                    title: "✉️ Application Letter Writer (English & Hindi)",
-                    desc: "Generate formal job applications, leave letters, and office requests in seconds.",
-                    mediaType: "icon",
-                    iconSymbol: "✉️",
-                    ctaText: "✉️ Write Application",
-                    ctaUrl: "application-letter-generator.html"
-                },
-                {
-                    title: "🎨 High-CTR Text Badge Editor",
-                    desc: "Create glowing viral badges like 'VIRAL', 'FREE', 'PROVED', and 'SHOCKING' in transparent PNG.",
-                    mediaType: "icon",
-                    iconSymbol: "🎨",
-                    ctaText: "🎨 Create Text Badges",
-                    ctaUrl: "youtube-thumbnail-maker.html?tab=editor"
-                },
-                {
-                    title: "📐 Photo Print Presets Calculator",
-                    desc: "Calculate exact pixel width and height for 4x6, 5x7, and 8x10 photo prints.",
-                    mediaType: "icon",
-                    iconSymbol: "📐",
-                    ctaText: "📐 Calculate Presets",
-                    ctaUrl: "photo-print-presets.html"
-                }
-            ],
-            effects: [
-                {
-                    title: "🌈 Animated Corner Color Video Background (1080p 60FPS)",
-                    desc: "Python generated 1080p 60FPS animating corner gradient background video.",
-                    mediaType: "video",
-                    mediaSrc: "media/cf_youtube_corner_gradient_bg_1080p.mp4",
-                    ctaText: "▶️ Play Sticky Preview",
-                    isStickyTrigger: true,
-                    stickyType: "video",
-                    stickyTitle: "🌈 Corner Color Video Background (1080p 60FPS)"
-                },
-                {
-                    title: "⚡ Cyber Subscribe VFX Overlay (22nd Century)",
-                    desc: "22nd Century neon cyberpunk animated subscribe button overlay.",
-                    mediaType: "video",
-                    mediaSrc: "media/vfx_cyber_subscribe_22nd_century_overlay_1080p.mp4",
-                    ctaText: "▶️ Play Sticky Preview",
-                    isStickyTrigger: true,
-                    stickyType: "video",
-                    stickyTitle: "⚡ Cyber Subscribe VFX Overlay"
-                },
-                {
-                    title: "🔊 38+ Free Sound Effects Pack (Thappad, Dhishum, Whoosh)",
-                    desc: "Thappad (Slap), Dhishum, Cough, Burp, Whoosh, UI Clicks, & Meme sound clips.",
-                    mediaType: "audio",
-                    mediaSrc: "sfx/dhishum_slap_sound_effect.mp3",
-                    ctaText: "🔊 Play Sound Sample",
-                    isStickyTrigger: true,
-                    stickyType: "audio",
-                    stickyTitle: "🔊 Thappad & Dhishum Comedy SFX"
-                },
-                {
-                    title: "🔮 Sci-Fi Glowing Energy Portal Ring",
-                    desc: "Sci-Fi holographic spinning energy portal overlay in 1080p resolution.",
-                    mediaType: "video",
-                    mediaSrc: "media/vfx_futuristic_sci_fi_ring.mp4",
-                    ctaText: "▶️ Play Sticky Preview",
-                    isStickyTrigger: true,
-                    stickyType: "video",
-                    stickyTitle: "🔮 Sci-Fi Glowing Energy Portal Ring"
-                },
-                {
-                    title: "🎭 Radha 360° Master 2D Animation Character Rig",
-                    desc: "12-in-1 Sprite Sheet & Lipsync Expression Sheet package for 2D animation.",
-                    mediaType: "image",
-                    mediaSrc: "media/radha_360_rig_thumb.jpg",
-                    ctaText: "🎭 Download 2D Character Rig",
-                    ctaUrl: "indian-2d-characters.html"
-                }
-            ]
-        };
+<nav class="bottom-nav">
+  <a href="/">🏠</a>
+  <a href="/tools">🧰</a>
+  <a href="/blog">📰</a>
+</nav>
 
-        // State trackers for single frame sliders
-        const currentFrameIndex = {
-            social: 0,
-            youtube: 0,
-            tools: 0,
-            effects: 0
-        };
-
-        function renderFrameSlide(category) {
-            const index = currentFrameIndex[category];
-            const data = frameData[category][index];
-            const contentEl = document.getElementById(`${category}-frame-content`);
-            const dotsEl = document.getElementById(`${category}-frame-dots`);
-
-            // Build Visual Content
-            let visualHTML = "";
-            if (data.mediaType === "video") {
-                visualHTML = `<video class="netflix-media-box" autoplay loop muted playsinline src="${data.mediaSrc}"></video>`;
-            } else if (data.mediaType === "audio") {
-                visualHTML = `
-                    <div class="netflix-media-box" style="display:flex; flex-direction:column; align-items:center; justify-content:center; background:#0f172a; padding:15px;">
-                        <span style="font-size:3rem; margin-bottom:10px;">🔊</span>
-                        <audio src="${data.mediaSrc}" controls style="width:90%;"></audio>
-                    </div>
-                `;
-            } else if (data.mediaType === "icon") {
-                visualHTML = `
-                    <div class="netflix-media-box" style="display:flex; align-items:center; justify-content:center; background:#1e293b; font-size:4rem;">
-                        ${data.iconSymbol}
-                    </div>
-                `;
-            } else {
-                visualHTML = `<img class="netflix-media-box" src="${data.mediaSrc}" onerror="this.src='images/favicon.png'" alt="${data.title}">`;
-            }
-
-            // Build CTA Button
-            let ctaHTML = "";
-            if (data.isStickyTrigger) {
-                ctaHTML = `<button onclick="previewMediaInSticky('${data.stickyType}', '${data.mediaSrc}', '${data.stickyTitle}')" class="netflix-cta-btn">${data.ctaText}</button>`;
-            } else {
-                ctaHTML = `<a href="${data.ctaUrl}" class="netflix-cta-btn">${data.ctaText} ➔</a>`;
-            }
-
-            contentEl.innerHTML = `
-                ${visualHTML}
-                <div class="netflix-slide-title">${data.title}</div>
-                <div class="netflix-slide-desc">${data.desc}</div>
-                ${ctaHTML}
-            `;
-
-            // Build Dots Pagination
-            let dotsHTML = "";
-            for (let i = 0; i < frameData[category].length; i++) {
-                dotsHTML += `<div class="netflix-dot ${i === index ? 'active' : ''}" onclick="setFrameSlide('${category}', ${i})"></div>`;
-            }
-            dotsEl.innerHTML = dotsHTML;
-        }
-
-        function moveFrameSlide(category, direction) {
-            const total = frameData[category].length;
-            currentFrameIndex[category] = (currentFrameIndex[category] + direction + total) % total;
-            renderFrameSlide(category);
-        }
-
-        function setFrameSlide(category, index) {
-            currentFrameIndex[category] = index;
-            renderFrameSlide(category);
-        }
-
-        // Initialize All 4 Frame Sliders on Load
-        document.addEventListener("DOMContentLoaded", function() {
-            renderFrameSlide("social");
-            renderFrameSlide("youtube");
-            renderFrameSlide("tools");
-            renderFrameSlide("effects");
-        });
-
-        // Sticky Zero-Scroll Inline Preview Logic
-        function previewMediaInSticky(type, src, title) {
-            const previewer = document.getElementById('inline-sticky-previewer');
-            const titleEl = document.getElementById('sticky-preview-title');
-            const contentEl = document.getElementById('sticky-preview-content');
-
-            titleEl.innerText = "▶️ Sticky Preview: " + title;
-            previewer.style.display = 'block';
-
-            if (type === 'video') {
-                contentEl.innerHTML = `
-                    <video src="${src}" autoplay loop controls style="max-width: 100%; max-height: 250px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></video>
-                `;
-            } else if (type === 'audio') {
-                contentEl.innerHTML = `
-                    <audio src="${src}" autoplay controls style="width: 100%; margin-top: 10px;"></audio>
-                `;
-            }
-        }
-
-        function closeStickyPreview() {
-            const previewer = document.getElementById('inline-sticky-previewer');
-            const contentEl = document.getElementById('sticky-preview-content');
-            contentEl.innerHTML = '';
-            previewer.style.display = 'none';
-        }
-    </script>
 </body>
 </html>
