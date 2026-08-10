@@ -97,5 +97,92 @@
         .dropdown-content a:hover {
             background-color: var(--bg-card-hover, #334155);
         }
+        /* =====================================================
+   MOBILE HEADER - 2 ROW MENU FIX
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Header ko screen ke andar rakho */
+    .site-header {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: visible;
+    }
+
+    /* Logo + navigation container */
+    .site-header > .container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 10px 12px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+    /* Logo */
+    .site-header > .container > a {
+        max-width: 100%;
+        justify-content: center;
+        font-size: 1.2rem !important;
+    }
+
+    .site-header > .container > a img {
+        height: 30px !important;
+    }
+
+    /* MAIN MENU */
+    .site-header .nav-links {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        display: flex !important;
+
+        /* 2 rows */
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+
+        justify-content: center !important;
+        align-items: center !important;
+
+        gap: 8px 10px !important;
+
+        overflow: visible !important;
+    }
+
+    /* Individual menu items */
+    .site-header .nav-links > a,
+    .site-header .nav-links > .dropdown {
+        flex: 0 0 auto;
+        max-width: 48%;
+        box-sizing: border-box;
+    }
+
+    /* Menu text slightly smaller on mobile */
+    .site-header .nav-links > a,
+    .site-header .nav-links .dropdown-trigger {
+        font-size: 0.82rem !important;
+        white-space: nowrap;
+    }
+
+    /* Theme button */
+    .site-header .theme-toggle-btn {
+        font-size: 0.78rem !important;
+        padding: 6px 9px !important;
+        max-width: 48%;
+        box-sizing: border-box;
+    }
+
+    /* Dropdown on mobile */
+    .site-header .dropdown-content {
+        position: absolute !important;
+        left: 50% !important;
+        transform: translateX(-50%);
+        max-width: calc(100vw - 24px);
+        box-sizing: border-box;
+    }
+}
     </style>
 </header>
