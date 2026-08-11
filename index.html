@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CreatorsFree – Free Creator Tools, VFX, SFX & Templates</title>
-<meta name="description" content="Free creator tools, VFX, SFX, backgrounds, templates, poster maker, resume builder and resources for YouTubers and content creators."><meta name="robots" content="index, follow">
+<meta name="description" content="Free creator tools, VFX, SFX, backgrounds, templates, poster maker, resume builder and resources for YouTubers and content creators.">
+<meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://www.creatorsfree.in/">
 
@@ -74,6 +75,12 @@ body {
   transform: scale(1.05);
 }
 
+/* Resume Special Highlight Card */
+.card-featured {
+  border: 2px solid #2563eb;
+  background: #f8fafc;
+}
+
 /* Bottom Nav */
 .bottom-nav {
   position: fixed;
@@ -110,15 +117,16 @@ body {
   <div class="grid">
 
     <a href="/effects" class="card">
-  <img src="/images/video-assets-icon.png"
-       alt="Video Assets"
-       class="menu-icon">
-  <span>Video Effects</span>
-</a>
+      <img src="/images/video-assets-icon.png" alt="Video Assets" class="menu-icon">
+      <span>Video Effects</span>
+    </a>
     <a href="/effects" class="card">✨ Video Effects</a>
     <a href="/sound-effects" class="card">🔊 Sound Effects</a>
     <a href="/poster-maker" class="card">🖼 Poster Maker</a>
-    <a href="/resume-creator" class="card">📄 Resume Builder</a>
+    
+    <!-- UPDATED: Naya Free Resume Builder Link -->
+    <a href="/free-resume-builder" class="card card-featured">📄 Free Resume Builder ⚡</a>
+    
     <a href="/quote-maker" class="card">💬 Quote Maker</a>
 
   </div>
@@ -128,6 +136,7 @@ body {
 <nav class="bottom-nav">
   <a href="/">🏠</a>
   <a href="/tools">🧰</a>
+  <a href="/free-resume-builder" title="Free Resume Builder">📄</a>
   <a href="/blog">📰</a>
 </nav>
 
