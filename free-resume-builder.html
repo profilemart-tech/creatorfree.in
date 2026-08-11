@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" sizes="32x32" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png" />
   
   <!-- SEO MASTER META TAGS -->
   <title>Free ATS Resume Builder | CreatorsFree</title>
   <meta name="description" content="Free ATS resume builder for freshers and professionals. Create a professional resume online and download PDF or Word without a watermark." />
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="canonical" href="https://www.creatorsfree.in/free-resume-builder" />
+<link rel="canonical" href="https://www.creatorsfree.in/free-resume-builder" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
   <!-- OPEN GRAPH METADATA -->
@@ -226,19 +226,40 @@
       .resume-paper { transform: scale(1) !important; margin: 0 !important; box-shadow: none; width: 100%; }
       @page { size: A4; margin: 10mm; }
     }
-  </style>
+  
+    /* CREATORSFREE SITE NAVIGATION */
+    .cf-site-header{position:sticky;top:0;z-index:1000;background:#fff;padding:12px 15px;text-align:center;font-weight:800;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+    .cf-site-header a{color:#111827;text-decoration:none}
+    .cf-site-brand{display:inline-flex;align-items:center;gap:8px;justify-content:center}
+    .cf-site-brand img{width:30px;height:30px;object-fit:contain;border-radius:6px}
+    .cf-site-nav-links{display:flex;justify-content:center;flex-wrap:wrap;gap:7px 16px;margin-top:7px;font-size:12px;font-weight:600}
+    .cf-site-nav-links a{color:#475569}
+    .cf-site-nav-links a:hover,.cf-site-nav-links a:focus-visible{color:#2563eb;text-decoration:underline}
+    .cf-bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:1001;background:#fff;display:flex;justify-content:space-around;align-items:center;padding:9px 0;box-shadow:0 -2px 10px rgba(0,0,0,.05)}
+    .cf-bottom-nav a{text-decoration:none;font-size:20px;line-height:1;padding:4px 12px}
+    .cf-bottom-nav a[aria-current="page"]{transform:scale(1.08)}
+    body{padding-bottom:58px}
+    .download-ad-zone{margin:30px auto;padding:0 16px;max-width:970px}
+    .download-ad-gap{height:28px}
+    .ad-slot{min-height:100px;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;box-sizing:border-box;border-radius:6px;background:#f8fafc}
+    .ad-label{font-size:.68rem;color:#64748b;letter-spacing:.04em;text-transform:uppercase}
+    @media(max-width:600px){.cf-site-header{padding:10px;font-size:16px}.cf-site-brand img{width:26px;height:26px}.cf-site-nav-links{gap:6px 12px;font-size:11px}.cf-bottom-nav{padding:8px 0}.cf-bottom-nav a{font-size:19px;padding:4px 10px}}
+
+</style>
 </head>
 <body>
-<header class="site-shell-header">
-  <nav class="site-nav" aria-label="Main navigation">
-    <a class="site-brand" href="https://www.creatorsfree.in/" aria-label="CreatorsFree Home">CreatorsFree</a>
-    <div class="site-nav-links">
-      <a href="https://www.creatorsfree.in/">Home</a>
-      <a href="https://www.creatorsfree.in/tools">Tools</a>
-      <a href="https://www.creatorsfree.in/blog">Resources</a>
-    </div>
-  </nav>
-</header>
+  <header class="cf-site-header">
+    <a class="cf-site-brand" href="/" aria-label="CreatorsFree Home">
+      <img src="/images/favicon.png" alt="" width="30" height="30" />
+      <span>CreatorsFree</span>
+    </a>
+    <nav class="cf-site-nav-links" aria-label="Site navigation">
+      <a href="/">Home</a>
+      <a href="/tools">Tools</a>
+      <a href="/free-resume-builder" aria-current="page">Resume</a>
+      <a href="/blog">Blog</a>
+    </nav>
+  </header>
 
 
   <div class="header">
@@ -350,12 +371,12 @@
         <button class="btn btn-next" id="btnNext" onclick="changeStep(1)">Next Step ➔</button>
       </div>
 
-      <!-- AD SPACE: keep clearly separated from download/print controls -->
+      <!-- Advertisement: intentionally separated from download/print controls -->
       <div class="download-ad-zone" aria-label="Advertisement">
         <div class="download-ad-gap"></div>
         <div class="ad-slot">
           <span class="ad-label">Advertisement</span>
-          <!-- Insert the approved AdSense ad unit code here. -->
+          <!-- Paste the approved AdSense ad unit code inside this slot. -->
         </div>
       </div>
 
@@ -885,18 +906,13 @@
         wordStyles +
         "</style></head><body>";
 
-      const footer = "<footer class="site-footer">
-  <div class="site-footer-inner">
-    <nav class="footer-links" aria-label="Footer navigation">
-      <a href="https://www.creatorsfree.in/about-us">About Us</a>
-      <a href="https://www.creatorsfree.in/contact-us">Contact Us</a>
-      <a href="https://www.creatorsfree.in/privacy-policy">Privacy Policy</a>
-      <a href="https://www.creatorsfree.in/terms-and-conditions">Terms &amp; Conditions</a>
-      <a href="https://www.creatorsfree.in/disclaimer">Disclaimer</a>
-    </nav>
-    <p class="footer-copy">© 2026 CreatorsFree. All rights reserved.</p>
-  </div>
-</footer>
+      const footer = "  <nav class="cf-bottom-nav" aria-label="Primary navigation">
+    <a href="/" aria-label="Home">🏠</a>
+    <a href="/tools" aria-label="Tools">🧰</a>
+    <a href="/free-resume-builder" aria-label="Free Resume Builder" aria-current="page">📄</a>
+    <a href="/blog" aria-label="Blog">📰</a>
+  </nav>
+
 </body></html>";
       const sourceHTML = header + '<div class="resume-paper ' + paper.className.replace("resume-paper", "").trim() + '">' + paperHTML + '</div>' + footer;
 
