@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- FAVICON ICONS (ADDED) -->
+  <!-- FAVICON ICONS -->
   <link rel="icon" sizes="32x32" href="images/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
 
@@ -42,13 +42,13 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', 'Inter', -apple-system, sans-serif; }
     body { background-color: var(--bg-color); color: var(--text-color); min-height: 100vh; }
 
-    /* WEBSITE MAIN HEADER (ADDED) */
+    /* WEBSITE MAIN HEADER */
     .site-header {
       position: sticky; top: 0; background: white; padding: 15px; text-align: center;
       font-weight: 800; font-size: 18px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 100;
     }
 
-    /* Tool Top Bar */
+    /* Tool Sub-Header */
     .tool-bar { background: #0f172a; color: #fff; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center; }
     .tool-bar h2 { font-size: 0.95rem; font-weight: 700; }
     .badge-free { background: #10b981; color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; margin-left: 5px; }
@@ -58,14 +58,13 @@
     /* Main Container Layout */
     .app-layout { display: flex; flex-direction: column; }
 
-    /* 1/3 Upper Sticky Live Preview */
+    /* Left Preview Pane (Fixed Sharp Background & Scaling) */
     .preview-pane {
-      height: 35vh; background: #64748b; overflow: auto; display: flex;
-      justify-content: center; align-items: flex-start; padding: 10px; border-bottom: 3px solid #0f172a;
-      position: sticky; top: 52px; z-index: 80;
+      background: #525659; overflow: auto; display: flex;
+      justify-content: center; align-items: flex-start; padding: 20px 10px; border-bottom: 3px solid #0f172a;
     }
 
-    /* 2/3 Lower Step-by-Step Editor Pane */
+    /* Lower Step-by-Step Editor Pane */
     .form-pane { background: #ffffff; padding: 15px; display: flex; flex-direction: column; }
 
     /* Step Navigation Bar */
@@ -94,35 +93,24 @@
     .btn-next { background: #2563eb; color: white; flex: 1; }
     .btn-prev { background: #64748b; color: white; flex: 1; }
 
-    /* Export Grid (Step 4) */
-    .export-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+    /* Export Grid & AdSense Spacing Fix */
+    .export-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 25px; }
     .btn-export { padding: 10px; font-weight: 700; border: none; border-radius: 6px; cursor: pointer; color: white; font-size: 0.82rem; text-align: center; }
     .bg-pdf { background: #10b981; }
     .bg-doc { background: #2563eb; }
     .bg-print { background: #475569; }
     .bg-share { background: #8b5cf6; }
 
-    /* Fixed AdSense Banner Slot Styling */
-.adsense-spot {
-  min-height: 90px;
-  background: #f8fafc;
-  border: 1px dashed #cbd5e1;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  color: #94a3b8;
-  padding: 5px;
-}
+    /* Policy-Compliant AdSense Slot with Margin */
+    .adsense-spot-container { margin: 20px 0 30px 0; }
+    .adsense-spot { min-height: 90px; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: #94a3b8; padding: 5px; }
 
-/* Clear gap between Ad Banner and Export Buttons to prevent accidental clicks */
-.export-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 25px; /* Added 25px top spacing */
-}
+    /* Crisp A4 Resume Paper Scaling */
+    .resume-paper {
+      background: #ffffff; width: 210mm; min-height: 297mm; padding: 12mm;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3); color: #1e293b;
+      transform: scale(0.68) !important; transform-origin: top center; margin-bottom: -90mm !important;
+    }
 
     /* Resume Typography */
     .doc-top-header { text-align: center; font-size: 1.2rem; font-weight: 800; color: var(--primary-color); margin-bottom: 8px; text-transform: uppercase; }
@@ -141,14 +129,14 @@
     .res-item-flex { display: flex; justify-content: space-between; font-weight: 700; font-size: 0.82rem; }
     .res-text { font-size: 0.8rem; line-height: 1.4; white-space: pre-line; color: #334155; }
 
-    /* WEBSITE FOOTER (ADDED) */
+    /* WEBSITE FOOTER */
     .site-footer {
       background: #0f172a; color: #ffffff; padding: 30px 15px 80px; text-align: center; margin-top: 40px;
     }
     .site-footer a { color: #cbd5e1; text-decoration: none; margin: 0 8px; font-size: 0.85rem; }
     .site-footer a:hover { color: #3b82f6; }
 
-    /* BOTTOM NAV (ADDED FROM INDEX.HTML) */
+    /* BOTTOM NAV */
     .bottom-nav {
       position: fixed; bottom: 0; width: 100%; background: white;
       display: flex; justify-content: space-around; padding: 10px 0;
@@ -156,12 +144,12 @@
     }
     .bottom-nav a { text-decoration: none; font-size: 20px; }
 
-    /* Desktop View Adjustments */
+    /* Desktop View Adjustments (Sharp Scaling & Sticky Preview) */
     @media (min-width: 769px) {
       .app-layout { flex-direction: row; }
       .preview-pane { height: 100vh; flex: 1; border-bottom: none; border-right: 2px solid #0f172a; position: sticky; top: 0; }
       .form-pane { flex: 1; overflow-y: auto; }
-      .resume-paper { transform: scale(0.72); margin-bottom: -80mm; }
+      .resume-paper { transform: scale(0.72) !important; margin-bottom: -80mm !important; }
     }
 
     @media print {
@@ -174,7 +162,7 @@
 </head>
 <body>
 
-  <!-- WEBSITE MAIN HEADER (ADDED) -->
+  <!-- WEBSITE MAIN HEADER -->
   <header class="site-header">
     <div class="hero">
       <h1>CreatorsFree</h1>
@@ -264,30 +252,18 @@
           <div class="form-group"><label>Gender & Marital Status</label><input type="text" id="inGender" oninput="render()" placeholder="Male | Single"></div>
         </div>
 
-        <!-- STEP 4: Download & AdSense -->
-      <!-- STEP 4: Download & AdSense (Policy Compliant Fix Applied) -->
-<div class="step-content" id="step4">
-  <div style="text-align:center; padding:5px;">
-    <div style="font-weight:700; color:#10b981; font-size:1.05rem;">🎉 Resume Complete Without Watermark!</div>
-    <p style="font-size:0.78rem; color:#64748b; margin-top:2px;">Instant free download in PDF or Word format:</p>
-    
-    <!-- ADSENSE CONTAINER SPOT (30px Safety Margin + Label Added) -->
-    <div class="adsense-spot-container" style="margin: 20px 0 30px 0;">
-      <span style="display: block; font-size: 0.68rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; font-weight: 600;">Advertisement</span>
-      <div class="adsense-spot">
-        <!-- Paste your Google AdSense Code Unit Here -->
-        <span>Ad Unit Placeholder</span>
-      </div>
-    </div>
-
-    <div class="export-grid">
-      <button class="btn-export bg-pdf" onclick="window.print()">Download PDF (Free)</button>
-      <button class="btn-export bg-doc" onclick="downloadWordDoc()">Download Word (.doc)</button>
-      <button class="btn-export bg-print" onclick="window.print()">Print Resume</button>
-      <button class="btn-export bg-share" onclick="shareResume()">Share Resume 🔗</button>
-    </div>
-  </div>
-</div>
+        <!-- STEP 4: Download & AdSense (Policy Compliant Padding) -->
+        <div class="step-content" id="step4">
+          <div style="text-align:center; padding:5px;">
+            <div style="font-weight:700; color:#10b981; font-size:1.05rem;">🎉 Resume Complete Without Watermark!</div>
+            <p style="font-size:0.78rem; color:#64748b; margin-top:2px;">Instant free download in PDF or Word format:</p>
+            
+            <div class="adsense-spot-container">
+              <span style="display: block; font-size: 0.68rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; font-weight: 600;">Advertisement</span>
+              <div class="adsense-spot">
+                <span>Ad Unit Placeholder</span>
+              </div>
+            </div>
 
             <div class="export-grid">
               <button class="btn-export bg-pdf" onclick="window.print()">Download PDF (Free)</button>
@@ -354,7 +330,7 @@
     </div>
   </div>
 
-  <!-- WEBSITE FOOTER SECTION (ADDED) -->
+  <!-- WEBSITE FOOTER SECTION -->
   <footer class="site-footer">
     <div style="max-width: 1000px; margin: 0 auto;">
       <h3 style="color: #3b82f6; font-size: 1.1rem; margin-bottom: 8px;">CreatorsFree – Free Creator Tools</h3>
@@ -373,7 +349,7 @@
     </div>
   </footer>
 
-  <!-- BOTTOM FIXED NAV (ADDED FROM INDEX.HTML) -->
+  <!-- BOTTOM FIXED NAV -->
   <nav class="bottom-nav">
     <a href="/">🏠</a>
     <a href="/tools">🧰</a>
@@ -498,20 +474,18 @@
       document.body.appendChild(fileDownload); fileDownload.href = source; fileDownload.download = 'Resume.doc'; fileDownload.click(); document.body.removeChild(fileDownload);
     }
 
-  function shareResume() {
+    function shareResume() {
       const shareData = {
         title: 'CreatorsFree Free Resume Builder',
         text: 'Create your free ATS Resume online without watermark!',
         url: window.location.href
       };
 
-      // Mobile devices (Android/iOS) ke liye native share sheet kholega
       if (navigator.share && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
         navigator.share(shareData).catch((err) => {
           console.log('Share canceled:', err);
         });
       } else {
-        // Desktop/Laptops par bina crash kiye link clipboard par copy karega
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(window.location.href).then(() => {
             alert("Resume Builder Link copied to clipboard!");
