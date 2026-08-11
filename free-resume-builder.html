@@ -221,13 +221,23 @@
     .continue-label { font-size: 0.72rem; font-weight: 600; color: #2563eb; white-space: nowrap; }
     
     @media print {
-      /* Website-only elements must never enter the printed resume. */
+      /* Print ONLY the actual resume. */
+      body * {
+        visibility: hidden !important;
+      }
+      #paper,
+      #paper * {
+        visibility: visible !important;
+      }
+
       .cf-site-header,
       .cf-site-footer,
       .header,
       .form-pane,
       .step-bar,
-      .seo-explanatory-content {
+      .seo-explanatory-content,
+      .nav-actions,
+      .download-ad-zone {
         display: none !important;
       }
 
@@ -247,6 +257,9 @@
       /* Print the actual A4 resume, not the scaled screen preview. */
       .resume-paper {
         display: block !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
         transform: none !important;
         width: 210mm !important;
         min-height: 297mm !important;
@@ -1001,10 +1014,11 @@
         button.textContent = 'Creating PDF...';
       }
 
+      let exportHost = null;
+
       try {
-        // html2pdf is loaded from the CDN above. Wait briefly if defer has not fired yet.
         let tries = 0;
-        while (typeof window.html2pdf !== 'function' && tries < 50) {
+        while (typeof window.html2pdf !== 'function' && tries < 80) {
           await new Promise(resolve => setTimeout(resolve, 100));
           tries++;
         }
@@ -1012,18 +1026,40 @@
           throw new Error('PDF library could not be loaded.');
         }
 
-        // Clone ONLY the resume. This deliberately excludes:
-        // site header, site footer, builder controls, guide content and browser headers/footers.
+        /*
+         * IMPORTANT:
+         * Do not capture the live preview directly. Its parent has a small
+         * height and overflow:auto, which is correct for the website preview
+         * but wrong for PDF export.
+         *
+         * Instead create a full-size A4 export copy INSIDE the viewport.
+         * The old version placed it at left:-10000px, which could make
+         * html2canvas capture a blank page.
+         */
+        exportHost = document.createElement('div');
+        exportHost.id = 'pdf-export-host';
+        exportHost.style.cssText = `
+          position: fixed !important;
+          left: 0 !important;
+          top: 0 !important;
+          width: 210mm !important;
+          min-height: 297mm !important;
+          background: #ffffff !important;
+          z-index: -1 !important;
+          opacity: 0.01 !important;
+          pointer-events: none !important;
+          overflow: visible !important;
+        `;
+
         const clone = paper.cloneNode(true);
         clone.id = 'pdf-export-paper';
         clone.style.cssText = `
-          position: fixed !important;
-          left: -10000px !important;
-          top: 0 !important;
           display: block !important;
+          position: static !important;
           width: 210mm !important;
           min-height: 297mm !important;
           height: auto !important;
+          max-height: none !important;
           margin: 0 !important;
           padding: 12mm !important;
           box-sizing: border-box !important;
@@ -1034,7 +1070,8 @@
           background: #ffffff !important;
         `;
 
-        document.body.appendChild(clone);
+        exportHost.appendChild(clone);
+        document.body.appendChild(exportHost);
 
         const nameField = document.getElementById('fullName');
         const safeName = (nameField && nameField.value.trim())
@@ -1051,7 +1088,27 @@
             backgroundColor: '#ffffff',
             logging: false,
             scrollX: 0,
-            scrollY: 0
+            scrollY: 0,
+            windowWidth: Math.max(document.documentElement.clientWidth, 1200),
+            windowHeight: Math.max(document.documentElement.clientHeight, 900),
+            onclone: (clonedDoc) => {
+              const clonedHost = clonedDoc.getElementById('pdf-export-host');
+              if (clonedHost) {
+                clonedHost.style.opacity = '1';
+                clonedHost.style.zIndex = '999999';
+                clonedHost.style.left = '0';
+                clonedHost.style.top = '0';
+              }
+              const clonedPaper = clonedDoc.getElementById('pdf-export-paper');
+              if (clonedPaper) {
+                clonedPaper.style.transform = 'none';
+                clonedPaper.style.width = '210mm';
+                clonedPaper.style.minHeight = '297mm';
+                clonedPaper.style.height = 'auto';
+                clonedPaper.style.maxHeight = 'none';
+                clonedPaper.style.overflow = 'visible';
+              }
+            }
           },
           jsPDF: {
             unit: 'mm',
@@ -1065,20 +1122,17 @@
         };
 
         await window.html2pdf().set(options).from(clone).save();
-        clone.remove();
       } catch (error) {
         console.error('Direct PDF export failed:', error);
-        const clone = document.getElementById('pdf-export-paper');
-        if (clone) clone.remove();
         alert('PDF could not be created. Please try Print Resume → Save to PDF.');
       } finally {
+        if (exportHost) exportHost.remove();
         if (button) {
           button.disabled = false;
           button.textContent = 'Save as PDF (Free)';
         }
       }
     }
-
 </script>
   <footer class="cf-site-footer">
     <div class="cf-footer-inner">
