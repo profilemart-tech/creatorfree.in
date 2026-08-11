@@ -221,10 +221,48 @@
     .continue-label { font-size: 0.72rem; font-weight: 600; color: #2563eb; white-space: nowrap; }
     
     @media print {
-      .cf-site-header, .cf-site-footer, .header, .form-pane, .step-bar, .seo-explanatory-content { display: none !important; }
-      .app-layout, .preview-pane { display: block !important; background: none; padding: 0; }
-      .resume-paper { transform: scale(1) !important; margin: 0 !important; box-shadow: none; width: 100%; }
-      @page { size: A4; margin: 10mm; }
+      /* Website-only elements must never enter the printed resume. */
+      .cf-site-header,
+      .cf-site-footer,
+      .header,
+      .form-pane,
+      .step-bar,
+      .seo-explanatory-content {
+        display: none !important;
+      }
+
+      /* Remove the live-preview scroll container while printing. */
+      .app-layout,
+      .preview-pane {
+        display: block !important;
+        background: none !important;
+        padding: 0 !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        position: static !important;
+        border: 0 !important;
+      }
+
+      /* Print the actual A4 resume, not the scaled screen preview. */
+      .resume-paper {
+        display: block !important;
+        transform: none !important;
+        width: 210mm !important;
+        min-height: 297mm !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        margin: 0 auto !important;
+        padding: 12mm !important;
+        box-sizing: border-box !important;
+        box-shadow: none !important;
+      }
+
+      @page {
+        size: A4;
+        margin: 10mm;
+      }
     }
       /* CreatorsFree site header */
     .cf-site-header{background:#fff;color:#111827;border-bottom:1px solid #e2e8f0;padding:10px 15px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.05)}
