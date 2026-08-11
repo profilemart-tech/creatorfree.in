@@ -1027,28 +1027,29 @@
         }
 
         /*
-         * IMPORTANT:
-         * Do not capture the live preview directly. Its parent has a small
-         * height and overflow:auto, which is correct for the website preview
-         * but wrong for PDF export.
-         *
-         * Instead create a full-size A4 export copy INSIDE the viewport.
-         * The old version placed it at left:-10000px, which could make
-         * html2canvas capture a blank page.
+         * Build a completely independent A4 canvas-sized copy.
+         * 210mm ≈ 793.7 CSS px and 297mm ≈ 1122.5 CSS px at 96dpi.
+         * Using fixed CSS pixels prevents html2canvas from calculating a
+         * different content width/offset from the live scaled preview.
          */
+        const A4_W = 794;
+        const A4_H = 1123;
+
         exportHost = document.createElement('div');
         exportHost.id = 'pdf-export-host';
         exportHost.style.cssText = `
           position: fixed !important;
           left: 0 !important;
           top: 0 !important;
-          width: 210mm !important;
-          min-height: 297mm !important;
+          width: ${A4_W}px !important;
+          height: ${A4_H}px !important;
+          margin: 0 !important;
+          padding: 0 !important;
           background: #ffffff !important;
-          z-index: -1 !important;
-          opacity: 0.01 !important;
-          pointer-events: none !important;
           overflow: visible !important;
+          opacity: 0 !important;
+          pointer-events: none !important;
+          z-index: 2147483647 !important;
         `;
 
         const clone = paper.cloneNode(true);
@@ -1056,17 +1057,19 @@
         clone.style.cssText = `
           display: block !important;
           position: static !important;
-          width: 210mm !important;
-          min-height: 297mm !important;
-          height: auto !important;
-          max-height: none !important;
+          width: ${A4_W}px !important;
+          min-width: ${A4_W}px !important;
+          max-width: ${A4_W}px !important;
+          height: ${A4_H}px !important;
+          min-height: ${A4_H}px !important;
+          max-height: ${A4_H}px !important;
           margin: 0 !important;
-          padding: 12mm !important;
+          padding: 45px !important;
           box-sizing: border-box !important;
           transform: none !important;
           transform-origin: top left !important;
           box-shadow: none !important;
-          overflow: visible !important;
+          overflow: hidden !important;
           background: #ffffff !important;
         `;
 
@@ -1089,26 +1092,8 @@
             logging: false,
             scrollX: 0,
             scrollY: 0,
-            windowWidth: Math.max(document.documentElement.clientWidth, 1200),
-            windowHeight: Math.max(document.documentElement.clientHeight, 900),
-            onclone: (clonedDoc) => {
-              const clonedHost = clonedDoc.getElementById('pdf-export-host');
-              if (clonedHost) {
-                clonedHost.style.opacity = '1';
-                clonedHost.style.zIndex = '999999';
-                clonedHost.style.left = '0';
-                clonedHost.style.top = '0';
-              }
-              const clonedPaper = clonedDoc.getElementById('pdf-export-paper');
-              if (clonedPaper) {
-                clonedPaper.style.transform = 'none';
-                clonedPaper.style.width = '210mm';
-                clonedPaper.style.minHeight = '297mm';
-                clonedPaper.style.height = 'auto';
-                clonedPaper.style.maxHeight = 'none';
-                clonedPaper.style.overflow = 'visible';
-              }
-            }
+            windowWidth: A4_W,
+            windowHeight: A4_H
           },
           jsPDF: {
             unit: 'mm',
@@ -1121,6 +1106,8 @@
           }
         };
 
+        // The clone is already an exact A4 canvas; do not capture the live
+        // preview pane or any surrounding website content.
         await window.html2pdf().set(options).from(clone).save();
       } catch (error) {
         console.error('Direct PDF export failed:', error);
@@ -1133,6 +1120,7 @@
         }
       }
     }
+
 </script>
   <footer class="cf-site-footer">
     <div class="cf-footer-inner">
