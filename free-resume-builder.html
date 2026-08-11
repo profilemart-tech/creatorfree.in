@@ -471,8 +471,40 @@
       document.body.appendChild(fileDownload); fileDownload.href = source; fileDownload.download = 'Resume.doc'; fileDownload.click(); document.body.removeChild(fileDownload);
     }
 
-    function shareResume() {
-      if (navigator.share) { navigator.share({ title: 'My Resume', url: window.location.href }); } else { alert("Link copied!"); }
+  function shareResume() {
+      const shareData = {
+        title: 'CreatorsFree Free Resume Builder',
+        text: 'Create your free ATS Resume online without watermark!',
+        url: window.location.href
+      };
+
+      // Mobile devices (Android/iOS) ke liye native share sheet kholega
+      if (navigator.share && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        navigator.share(shareData).catch((err) => {
+          console.log('Share canceled:', err);
+        });
+      } else {
+        // Desktop/Laptops par bina crash kiye link clipboard par copy karega
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            alert("Resume Builder Link copied to clipboard!");
+          }).catch(() => {
+            fallbackCopyText(window.location.href);
+          });
+        } else {
+          fallbackCopyText(window.location.href);
+        }
+      }
+    }
+
+    function fallbackCopyText(text) {
+      const dummy = document.createElement('input');
+      document.body.appendChild(dummy);
+      dummy.value = text;
+      dummy.select();
+      document.execCommand('copy');
+      document.body.removeChild(dummy);
+      alert("Resume Builder Link copied to clipboard!");
     }
 
     function changeTemplate(tpl) { currentTemplate = tpl; document.getElementById('paper').className = `resume-paper ${tpl}`; render(); }
