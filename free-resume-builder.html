@@ -283,6 +283,7 @@
     .cf-footer-copy{margin:0;color:#94a3b8;font-size:11px}
 
 </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
 </head>
 <body>
   <header class="cf-site-header">
@@ -393,7 +394,7 @@
             </div>
 
             <div class="export-grid">
-              <button class="btn-export bg-pdf" onclick="window.print()">Save as PDF (Free)</button>
+              <button class="btn-export bg-pdf" onclick="downloadPDF()">Save as PDF (Free)</button>
               <button class="btn-export bg-doc" onclick="downloadWordDoc()">Download Word (.doc)</button>
               <button class="btn-export bg-print" onclick="window.print()">Print Resume</button>
               <button class="btn-export bg-share" onclick="shareResume()">Share Resume 🔗</button>
@@ -985,7 +986,100 @@
     }
 
     addExperience(); addEducation();
-  </script>
+  
+    async function downloadPDF() {
+      const paper = document.getElementById('paper');
+      const button = document.querySelector('.bg-pdf');
+
+      if (!paper) {
+        alert('Resume preview is not available yet.');
+        return;
+      }
+
+      if (button) {
+        button.disabled = true;
+        button.textContent = 'Creating PDF...';
+      }
+
+      try {
+        // html2pdf is loaded from the CDN above. Wait briefly if defer has not fired yet.
+        let tries = 0;
+        while (typeof window.html2pdf !== 'function' && tries < 50) {
+          await new Promise(resolve => setTimeout(resolve, 100));
+          tries++;
+        }
+        if (typeof window.html2pdf !== 'function') {
+          throw new Error('PDF library could not be loaded.');
+        }
+
+        // Clone ONLY the resume. This deliberately excludes:
+        // site header, site footer, builder controls, guide content and browser headers/footers.
+        const clone = paper.cloneNode(true);
+        clone.id = 'pdf-export-paper';
+        clone.style.cssText = `
+          position: fixed !important;
+          left: -10000px !important;
+          top: 0 !important;
+          display: block !important;
+          width: 210mm !important;
+          min-height: 297mm !important;
+          height: auto !important;
+          margin: 0 !important;
+          padding: 12mm !important;
+          box-sizing: border-box !important;
+          transform: none !important;
+          transform-origin: top left !important;
+          box-shadow: none !important;
+          overflow: visible !important;
+          background: #ffffff !important;
+        `;
+
+        document.body.appendChild(clone);
+
+        const nameField = document.getElementById('fullName');
+        const safeName = (nameField && nameField.value.trim())
+          ? nameField.value.trim().replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '')
+          : 'Resume';
+
+        const options = {
+          margin: 0,
+          filename: `${safeName || 'Resume'}-CreatorsFree.pdf`,
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: {
+            scale: 2,
+            useCORS: true,
+            backgroundColor: '#ffffff',
+            logging: false,
+            scrollX: 0,
+            scrollY: 0
+          },
+          jsPDF: {
+            unit: 'mm',
+            format: 'a4',
+            orientation: 'portrait',
+            compress: true
+          },
+          pagebreak: {
+            mode: ['css', 'legacy']
+          }
+        };
+
+        await window.html2pdf().set(options).from(clone).save();
+        clone.remove();
+      } catch (error) {
+        console.error('Direct PDF export failed:', error);
+        const clone = document.getElementById('pdf-export-paper');
+        if (clone) clone.remove();
+        alert('PDF could not be created. Please try Print Resume → Save to PDF.');
+      } finally {
+        if (button) {
+          button.disabled = false;
+          button.textContent = 'Save as PDF (Free)';
+        }
+      }
+    }
+
+</script>
   <footer class="cf-site-footer">
     <div class="cf-footer-inner">
       <div class="cf-footer-brand">CreatorsFree</div>
