@@ -245,6 +245,14 @@
     .ad-label{font-size:.68rem;color:#64748b;letter-spacing:.04em;text-transform:uppercase}
     @media(max-width:600px){.cf-site-header{padding:10px;font-size:16px}.cf-site-brand img{width:26px;height:26px}.cf-site-nav-links{gap:6px 12px;font-size:11px}.cf-bottom-nav{padding:8px 0}.cf-bottom-nav a{font-size:19px;padding:4px 10px}}
 
+    .cf-site-footer{margin-top:38px;border-top:1px solid #e2e8f0;background:#f8fafc;text-align:center}
+    .cf-footer-inner{max-width:1200px;margin:0 auto;padding:24px 16px 78px;color:#475569;font-size:.78rem}
+    .cf-footer-inner strong{color:#1e3a8a;font-size:1rem}
+    .cf-footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 16px;margin:10px 0}
+    .cf-footer-links a{color:#475569;text-decoration:none}
+    .cf-footer-links a:hover,.cf-footer-links a:focus-visible{color:#2563eb;text-decoration:underline}
+    .cf-footer-inner p{margin:0;color:#64748b;font-size:.72rem}
+
 </style>
 </head>
 <body>
@@ -913,6 +921,19 @@
     <a href="/blog" aria-label="Blog">📰</a>
   </nav>
 
+  <footer class="cf-site-footer">
+    <div class="cf-footer-inner">
+      <strong>CreatorsFree</strong>
+      <div class="cf-footer-links">
+        <a href="/">Home</a>
+        <a href="/tools">Tools</a>
+        <a href="/free-resume-builder">Resume Builder</a>
+        <a href="/blog">Blog</a>
+      </div>
+      <p>© 2026 CreatorsFree. Free creator tools and resources.</p>
+    </div>
+  </footer>
+
 </body></html>";
       const sourceHTML = header + '<div class="resume-paper ' + paper.className.replace("resume-paper", "").trim() + '">' + paperHTML + '</div>' + footer;
 
@@ -964,6 +985,7 @@
     }
 
     addExperience(); addEducation();
+    render();
   </script>
 </body>
 </html>
