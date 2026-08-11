@@ -229,6 +229,17 @@
   </style>
 </head>
 <body>
+<header class="site-shell-header">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="site-brand" href="https://www.creatorsfree.in/" aria-label="CreatorsFree Home">CreatorsFree</a>
+    <div class="site-nav-links">
+      <a href="https://www.creatorsfree.in/">Home</a>
+      <a href="https://www.creatorsfree.in/tools">Tools</a>
+      <a href="https://www.creatorsfree.in/blog">Resources</a>
+    </div>
+  </nav>
+</header>
+
 
   <div class="header">
     <div class="header-title">CreatorsFree ATS Resume Builder <span class="badge-free">100% Free - No Watermark</span></div>
@@ -337,6 +348,15 @@
       <div class="nav-actions">
         <button class="btn btn-prev" id="btnPrev" onclick="changeStep(-1)" style="display:none;">Previous Step</button>
         <button class="btn btn-next" id="btnNext" onclick="changeStep(1)">Next Step ➔</button>
+      </div>
+
+      <!-- AD SPACE: keep clearly separated from download/print controls -->
+      <div class="download-ad-zone" aria-label="Advertisement">
+        <div class="download-ad-gap"></div>
+        <div class="ad-slot">
+          <span class="ad-label">Advertisement</span>
+          <!-- Insert the approved AdSense ad unit code here. -->
+        </div>
       </div>
 
       <!-- SEO CONTENT & BEGINNER RESUME GUIDE -->
@@ -865,7 +885,19 @@
         wordStyles +
         "</style></head><body>";
 
-      const footer = "</body></html>";
+      const footer = "<footer class="site-footer">
+  <div class="site-footer-inner">
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="https://www.creatorsfree.in/about-us">About Us</a>
+      <a href="https://www.creatorsfree.in/contact-us">Contact Us</a>
+      <a href="https://www.creatorsfree.in/privacy-policy">Privacy Policy</a>
+      <a href="https://www.creatorsfree.in/terms-and-conditions">Terms &amp; Conditions</a>
+      <a href="https://www.creatorsfree.in/disclaimer">Disclaimer</a>
+    </nav>
+    <p class="footer-copy">© 2026 CreatorsFree. All rights reserved.</p>
+  </div>
+</footer>
+</body></html>";
       const sourceHTML = header + '<div class="resume-paper ' + paper.className.replace("resume-paper", "").trim() + '">' + paperHTML + '</div>' + footer;
 
       const source = 'data:application/msword;charset=utf-8,' + encodeURIComponent(sourceHTML);
