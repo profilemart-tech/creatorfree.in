@@ -225,6 +225,7 @@
       body * {
         visibility: hidden !important;
       }
+
       #paper,
       #paper * {
         visibility: visible !important;
@@ -241,40 +242,69 @@
         display: none !important;
       }
 
-      /* Remove the live-preview scroll container while printing. */
-      .app-layout,
+      body {
+        background: #ffffff !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .app-layout {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
       .preview-pane {
         display: block !important;
-        background: none !important;
-        padding: 0 !important;
+        width: 100% !important;
         height: auto !important;
+        min-height: 0 !important;
         max-height: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #ffffff !important;
         overflow: visible !important;
         position: static !important;
         border: 0 !important;
-      }
-
-      /* Print the actual A4 resume, not the scaled screen preview. */
-      .resume-paper {
-        display: block !important;
-        position: absolute !important;
-        left: 0 !important;
-        top: 0 !important;
-        transform: none !important;
-        width: 210mm !important;
-        min-height: 297mm !important;
-        height: auto !important;
-        max-height: none !important;
-        overflow: visible !important;
-        margin: 0 auto !important;
-        padding: 12mm !important;
-        box-sizing: border-box !important;
         box-shadow: none !important;
       }
 
+      #paper.resume-paper {
+        display: block !important;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        width: 210mm !important;
+        min-width: 210mm !important;
+        max-width: 210mm !important;
+        min-height: 297mm !important;
+        height: auto !important;
+        max-height: none !important;
+        margin: 0 !important;
+        padding: 12mm !important;
+        box-sizing: border-box !important;
+        transform: none !important;
+        transform-origin: top left !important;
+        background: #ffffff !important;
+        color: #1e293b !important;
+        box-shadow: none !important;
+        overflow: visible !important;
+      }
+
+      #paper .res-item {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      #paper .res-sec-title {
+        break-after: avoid !important;
+        page-break-after: avoid !important;
+      }
+
       @page {
-        size: A4;
-        margin: 10mm;
+        size: A4 portrait;
+        margin: 0;
       }
     }
       /* CreatorsFree site header */
@@ -1019,83 +1049,118 @@
       let exportHost = null;
 
       try {
+        // Always capture the latest resume data.
+        render();
+
+        // Wait for fonts and browser rendering to settle.
+        if (document.fonts && document.fonts.ready) {
+          await document.fonts.ready;
+        }
+        await new Promise(resolve => setTimeout(resolve, 300));
+
+        // Wait for html2pdf.js.
         let tries = 0;
-        while (typeof window.html2pdf !== 'function' && tries < 80) {
+        while (typeof window.html2pdf !== 'function' && tries < 100) {
           await new Promise(resolve => setTimeout(resolve, 100));
           tries++;
         }
+
         if (typeof window.html2pdf !== 'function') {
           throw new Error('PDF library could not be loaded.');
         }
 
-        /*
-         * Build a completely independent A4 canvas-sized copy.
-         * 210mm ≈ 793.7 CSS px and 297mm ≈ 1122.5 CSS px at 96dpi.
-         * Using fixed CSS pixels prevents html2canvas from calculating a
-         * different content width/offset from the live scaled preview.
-         */
+        // A4 at 96 CSS DPI.
         const A4_W = 794;
         const A4_H = 1123;
 
+        // Create an export area that html2canvas can actually render.
+        // It is moved far off-screen instead of using opacity:0.
         exportHost = document.createElement('div');
         exportHost.id = 'pdf-export-host';
         exportHost.style.cssText = `
-          position: fixed !important;
-          left: 0 !important;
+          position: absolute !important;
+          left: -10000px !important;
           top: 0 !important;
           width: ${A4_W}px !important;
-          height: ${A4_H}px !important;
+          min-height: ${A4_H}px !important;
           margin: 0 !important;
           padding: 0 !important;
           background: #ffffff !important;
           overflow: visible !important;
-          opacity: 0 !important;
+          opacity: 1 !important;
+          visibility: visible !important;
           pointer-events: none !important;
-          z-index: 2147483647 !important;
+          z-index: -1 !important;
         `;
 
         const clone = paper.cloneNode(true);
         clone.id = 'pdf-export-paper';
         clone.style.cssText = `
           display: block !important;
-          position: static !important;
+          position: relative !important;
+          left: auto !important;
+          top: auto !important;
           width: ${A4_W}px !important;
           min-width: ${A4_W}px !important;
           max-width: ${A4_W}px !important;
-          height: ${A4_H}px !important;
           min-height: ${A4_H}px !important;
-          max-height: ${A4_H}px !important;
+          height: auto !important;
+          max-height: none !important;
           margin: 0 !important;
           padding: 45px !important;
           box-sizing: border-box !important;
           transform: none !important;
           transform-origin: top left !important;
-          box-shadow: none !important;
-          overflow: hidden !important;
           background: #ffffff !important;
+          color: #1e293b !important;
+          box-shadow: none !important;
+          overflow: visible !important;
+          opacity: 1 !important;
+          visibility: visible !important;
         `;
 
         exportHost.appendChild(clone);
         document.body.appendChild(exportHost);
 
-        const nameField = document.getElementById('fullName');
-        const safeName = (nameField && nameField.value.trim())
-          ? nameField.value.trim().replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '')
+        // Correct field ID: the actual HTML uses inName.
+        const nameField = document.getElementById('inName');
+        const safeName = nameField && nameField.value.trim()
+          ? nameField.value.trim()
+              .replace(/[^a-z0-9]+/gi, '-')
+              .replace(/^-+|-+$/g, '')
           : 'Resume';
+
+        // Wait for profile photos or other images inside the resume.
+        const images = clone.querySelectorAll('img');
+        await Promise.all(
+          Array.from(images).map(img => {
+            if (img.complete) return Promise.resolve();
+            return new Promise(resolve => {
+              img.onload = resolve;
+              img.onerror = resolve;
+            });
+          })
+        );
 
         const options = {
           margin: 0,
           filename: `${safeName || 'Resume'}-CreatorsFree.pdf`,
-          image: { type: 'jpeg', quality: 0.98 },
+          image: {
+            type: 'jpeg',
+            quality: 0.98
+          },
           html2canvas: {
             scale: 2,
             useCORS: true,
+            allowTaint: true,
             backgroundColor: '#ffffff',
             logging: false,
             scrollX: 0,
             scrollY: 0,
             windowWidth: A4_W,
-            windowHeight: A4_H
+            windowHeight: A4_H,
+            x: 0,
+            y: 0
           },
           jsPDF: {
             unit: 'mm',
@@ -1104,18 +1169,24 @@
             compress: true
           },
           pagebreak: {
-            mode: ['css', 'legacy']
+            mode: ['css', 'legacy'],
+            avoid: ['.res-item', '.res-sec-title']
           }
         };
 
-        // The clone is already an exact A4 canvas; do not capture the live
-        // preview pane or any surrounding website content.
-        await window.html2pdf().set(options).from(clone).save();
+        await window
+          .html2pdf()
+          .set(options)
+          .from(clone)
+          .save();
+
       } catch (error) {
-        console.error('Direct PDF export failed:', error);
+        console.error('PDF export failed:', error);
         alert('PDF could not be created. Please try Print Resume → Save to PDF.');
       } finally {
-        if (exportHost) exportHost.remove();
+        if (exportHost) {
+          exportHost.remove();
+        }
         if (button) {
           button.disabled = false;
           button.textContent = 'Save as PDF (Free)';
